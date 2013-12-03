@@ -1,13 +1,25 @@
-Sign up to be a videographer
+<h1>Join our filmmaker network!</h1>
+<p>Sign up for our filmmaker mailing list and we will notify you about new project opportunities that you can apply for.</p>
+<form novalidate name="form" ng-submit="create()">
+  <div class="input-block">
+    <label for="name" class="input-label">Name</label>
+    <input type="text" name="name" id="name" ng-model="videographer.name" ng-class="{error: submitted && form.name.$invalid}" required>
+  </div>
 
-<form>
-  <label>
-    Name
-    <input type="text" ng-model="videographer.name" required>
-  </label>
-  <label>
-    Email
-    <input type="text" ng-model="videographer.email" required>
-  </label>
-  <input type="submit" ng-click="create()">
+  <div class="input-block">
+    <label for="email" class="input-label">Email</label>
+    <input type="email" name="email" id="email" ng-model="videographer.email" ng-class="{error: submitted && form.email.$invalid}" required>
+  </div>
+
+  <div class="input-block">
+    <label for="skills" class="input-label">Brief Overview of Skills/Experience</label>
+    <textarea name="skills" id="skills" ng-model="videographer.skills" ng-class="{error: submitted && form.skills.$invalid}" required></textarea>
+  </div>
+
+  <div class="input-block">
+    <label for="portfolio-url" class="input-label">OPTIONAL Link to portfolio</label>
+    <input type="url" name="portfolio-url" id="portfolio-url" ng-model="videographer.portfolio_url" ng-class="{error: submitted && form.portfolio-url.$invalid}">
+  </div>
+
+  <input type="submit">
 </form>
