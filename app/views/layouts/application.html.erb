@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="amassApp">
+<head>
+  <title>Amass</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ol>
+  <li><a href="#/about">About</a></li>
+  <li><a href="#/charity/new">Sign up Charity</a></li>
+  <li><a href="#/videographer/new">Sign up Videographer</a></li>
+</ol>
+
+<%= yield %>
+
+</body>
+</html>
