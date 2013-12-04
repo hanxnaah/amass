@@ -1,56 +1,70 @@
 <h1>Make a free project posting</h1>
 <p>We will promote your project to our network of filmmakers.</p>
 
-<form novalidate name="form" ng-submit="create()">
+<form novalidate name="form" ng-submit="create()" ng-hide="created">
+  <div class="form-error" ng-show="formError">{{formError}}</div>
   <div class="input-block">
     <label for="organization-name" class="input-label">Organization Name</label>
-    <input type="text" name="organization_name" id="organization-name" ng-model="charity.organization_name" ng-class="{error: submitted && form.organization_name.$invalid}" required>
+    <input type="text" name="organization_name" id="organization-name" ng-model="charity.organization_name" ng-class="{error: invalidField(form.organization_name.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.organization_name.$error.required)">Organization name is required.</span>
   </div>
 
   <div class="input-block">
     <label for="contact-name" class="input-label">Contact Name</label>
-    <input type="text" name="contact_name" id="contact-name" ng-model="charity.contact_name" ng-class="{error: submitted && form.contact_name.$invalid}" required>
+    <input type="text" name="contact_name" id="contact-name" ng-model="charity.contact_name" ng-class="{error: invalidField(form.contact_name.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.contact_name.$error.required)">Contact name is required.</span>
   </div>
 
   <div class="input-block">
     <label for="contact-email" class="input-label">Contact Email</label>
-    <input type="email" name="contact_email" id="contact-email" ng-model="charity.contact_email" ng-class="{error: submitted && form.contact_email.$invalid}" required>
+    <input type="email" name="contact_email" id="contact-email" ng-model="charity.contact_email" ng-class="{error: invalidField(form.contact_email.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.contact_email.$error.required)">Contact email is required.</span>
+    <span class="error-message" ng-show="invalidField(form.contact_email.$error.email)">Not a valid email.</span>
   </div>
 
   <div class="input-block">
     <label for="project-name" class="input-label">Video Project Name (ex: Kickstarter video for EthiCal Apparel)</label>
-    <input type="text" name="project_name" id="project-name" ng-model="charity.project_name" ng-class="{error: submitted && form.project_name.$invalid}" required>
+    <input type="text" name="project_name" id="project-name" ng-model="charity.project_name" ng-class="{error: invalidField(form.project_name.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.project_name.$error.required)">Project name is required.</span>
   </div>
 
   <div class="input-block">
     <label for="budget" class="input-label">Budget for Video</label>
-    <input type="number" name="budget" id="budget" ng-model="charity.budget" ng-class="{error: submitted && form.budget.$invalid}" required>
+    <input type="number" name="budget" id="budget" ng-model="charity.budget" ng-class="{error: invalidField(form.budget.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.budget.$error.required)">Budget is required.</span>
+    <span class="error-message" ng-show="invalidField(form.budget.$error.number)">Budget must be a number.</span>
   </div>
 
   <div class="input-block">
     <label for="deadline" class="input-label">Deadline for Video Project</label>
-    <input type="date" name="deadline" id="deadline" ng-model="charity.deadline" ng-class="{error: submitted && form.deadline.$invalid}" required>
+    <input type="date" name="deadline" id="deadline" ng-model="charity.deadline" ng-class="{error: invalidField(form.deadline.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.deadline.$error.required)">Deadline is required.</span>
   </div>
 
   <div class="input-block">
     <label for="location" class="input-label">Location of Video Project</label>
-    <input type="text" name="location" id="location" ng-model="charity.location" ng-class="{error: submitted && form.location.$invalid}" required>
+    <input type="text" name="location" id="location" ng-model="charity.location" ng-class="{error: invalidField(form.location.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.location.$error.required)">Location is required.</span>
   </div>
 
   <div class="input-block">
     <label for="description" class="input-label">Video Project Description (the more detailed the better!)</label>
-    <textarea name="description" id="description" ng-model="charity.description" ng-class="{error: submitted && form.description.$invalid}" required></textarea>
+    <textarea name="description" id="description" ng-model="charity.description" ng-class="{error: invalidField(form.description.$invalid)}" required></textarea>
+    <span class="error-message" ng-show="invalidField(form.description.$error.required)">Description is required.</span>
   </div>
 
   <div class="input-block">
     <label for="length" class="input-label">Budget for Video</label>
-    <input type="number" name="length" id="length" ng-model="charity.length" ng-class="{error: submitted && form.length.$invalid}" required>
+    <input type="number" name="length" id="length" ng-model="charity.length" ng-class="{error: invalidField(form.length.$invalid)}" required>
+    <span class="error-message" ng-show="invalidField(form.length.$error.required)">Length is required.</span>
+    <span class="error-message" ng-show="invalidField(form.length.$error.number)">Length must be number.</span>
   </div>
 
   <div class="input-block">
     <label for="extra-resources" class="input-label">Extra resources that your organization can offer (e.g. cool filming locations, food, transportation, crew)</label>
-    <textarea name="extra_resources" id="extra-resources" ng-model="charity.extra_resources" ng-class="{error: submitted && form.extra_resources.$invalid}"></textarea>
+    <textarea name="extra_resources" id="extra-resources" ng-model="charity.extra_resources" ng-class="{error: invalidField(form.extra_resources.$invalid)}"></textarea>
   </div>
-  <input type="submit">
+  <input ng-disabled="saving" type="submit">
 </form>
+<div ng-show="created">Thanks for your interest! We hope to find you a filmmaker soon.</div>
 

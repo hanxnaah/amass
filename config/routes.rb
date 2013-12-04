@@ -6,6 +6,9 @@ Amass::Application.routes.draw do
   # root 'welcome#index'
   root to: "high_voltage/pages#show", id: "home"
 
+  resources :charities, only: [:create]
+  resources :videographers, only: [:create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

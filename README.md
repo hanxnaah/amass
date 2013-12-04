@@ -1,3 +1,3 @@
 Temporary website for amass.org
 
-Learning angular basics through this app
+Learning angular and mongodb basics through this app
