@@ -1,9 +1,47 @@
+$errorColor: #e42828;
+
 .input-block {
+  margin-bottom: 14px; 
+
   .input-label {
     display: block;
+    margin-bottom: 2px;
   }
 
   input.error, textarea.error {
-    border: 1px red solid;
+    border: 1px $errorColor solid;
   }
+
+  .error-message {
+    color: $errorColor;
+    font-size: 83%;
+    margin-left: 4px;
+  }
+
+  input, textarea {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+}
+
+.submit {
+  background-color: #d77a5c;
+  height: 30px;
+  width: 75px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.form-error {
+  border: 2px solid $errorColor;
+  background-color: #ef8383; 
+  color: white;
+  margin-bottom: 20px;
+  padding: 5px;
 }
