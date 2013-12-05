@@ -1,5 +1,13 @@
 var amassControllers = angular.module("amassControllers", []);
 
+amassControllers.controller('NavBarCtrl', ['$scope', '$location',
+                            function ($scope, $location) {
+                              $scope.isSelected = function (viewLocation) {
+                                console.log(viewLocation, $location.path());
+                                return viewLocation === $location.path();
+                              };
+                            }]);
+
 amassControllers.controller('VideographerNewCtrl', ['$scope', 'Videographer',
                             function ($scope, Videographer) {
                               $scope.videographer = new Videographer();
