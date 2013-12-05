@@ -1,0 +1,38 @@
+.navbar {
+  $navbar-height: 70px;
+  border-bottom: 1px solid #5d5d5d;
+  height: $navbar-height;
+  background-color: white;
+  padding-left: 35px;
+
+  .navbar-item {
+    float: left;
+    text-decoration: none;
+    color: black;
+    line-height: $navbar-height;
+    height: $navbar-height;
+    padding: 0 15px 0 15px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 83%;
+
+    &:hover, &.selected {
+      background-color: #e6e7e8;
+    }
+
+    &.picture {
+      margin-right: 20px;
+    }
+  }
+}
+
+.amass-logo {
+  width: 230px;
+  height: 70px;
+  background-image: image-url("amass_logo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+}
+
