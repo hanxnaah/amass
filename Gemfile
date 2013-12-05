@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 
 gem "mongoid", "~> 4.0.0.alpha1"
 gem "rails_serve_static_assets"
+gem 'newrelic_rpm'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
