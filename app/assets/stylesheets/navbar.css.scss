@@ -1,9 +1,11 @@
+$navbar-height: 70px;
+
 .navbar {
-  $navbar-height: 70px;
   border-bottom: 1px solid #5d5d5d;
   background-color: white;
   overflow: hidden;
   padding-left: 35px;
+  padding-right: 100px;
 
   .navbar-item {
     float: left;
@@ -40,3 +42,7 @@
   background-position: 0 3px;
 }
 
+.sign-up {
+  width: 80px;
+  margin-top: ($navbar-height - 35) / 2;
+}
