@@ -7,8 +7,9 @@ amassControllers.controller('NavBarCtrl', ['$scope', '$location',
                               };
                             }]);
 
-amassControllers.controller('VideographerNewCtrl', ['$scope', 'Videographer',
-                            function ($scope, Videographer) {
+amassControllers.controller('VideographerNewCtrl', ['$scope', '$anchorScroll', 'Videographer',
+                            function ($scope, $anchorScroll, Videographer) {
+                              $anchorScroll();
                               $scope.videographer = new Videographer();
                               $scope.invalidField = function(param) {
                                 return $scope.submitted && param;
@@ -32,8 +33,9 @@ amassControllers.controller('VideographerNewCtrl', ['$scope', 'Videographer',
                               };
                             }]);
 
-amassControllers.controller('CharityNewCtrl', ['$scope', 'Charity',
-                            function ($scope, Charity) {
+amassControllers.controller('CharityNewCtrl', ['$scope', '$anchorScroll', 'Charity',
+                            function ($scope, $anchorScroll, Charity) {
+                              $anchorScroll();
                               $scope.charity = new Charity();
                               $scope.invalidField = function(param) {
                                 return $scope.submitted && param;

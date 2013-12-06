@@ -6,7 +6,9 @@ var amassApp = angular.module('amassApp', [
 
 amassApp.config(['$routeProvider',
                 function($routeProvider) {
-                  $routeProvider.when("/about", {
+                  $routeProvider.when("/", {
+                    templateUrl: "../home.html"
+                  }).when("/about", {
                     templateUrl: "../about.html"
                   }).when("/videographer/new", {
                     templateUrl: "../videographer/new.html",
@@ -15,7 +17,7 @@ amassApp.config(['$routeProvider',
                     templateUrl: "../charity/new.html",
                     controller: 'CharityNewCtrl'
                   }).otherwise({
-                    templateUrl: "../home.html"
+                    redirectTo: "/#/"
                   });
                 }]);
 

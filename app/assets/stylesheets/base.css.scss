@@ -29,3 +29,34 @@ body {
 .almost-full-width {
   width: 91%;
 }
+
+.column-container {
+  overflow: hidden;
+
+  &.fixed-width {
+    width: 520px;
+ } 
+}
+
+.column {
+  float: left;
+
+  &.mini {
+    width: 260px;
+  }
+}
+
+.btn {
+  background-color: #d77a5c;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: Arial;
+  display: block;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 84%;
+}

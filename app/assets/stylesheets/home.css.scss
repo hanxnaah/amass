@@ -1,18 +1,70 @@
 .home {
-  width: 60%;
-  margin-top: 30px;
+  width: 80%;
+
+  .post-project, .new-videographer {
+    margin-top: 15px;
+  }
+
+  .post-project {
+    width: 140px;
+  }
+
+  .new-videographer {
+    width: 230px;
+  }
 
   .section {
-    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: 1px solid #5d5d5d;
+
+    &:last-child {
+      border: none;
+    }
   }
 
   .text-section {
     margin-top: 20px;
     margin-bottom: 20px;
+    line-height: 175%;
 
     &.large-spacing {
       margin-top: 30px;
-      margin-bottom: 30px;
+    }
+  }
+
+  .image {
+    height: 120px;
+    width: 130px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.airplane {
+      background-image: image-url("plane_vector.png");
+    }
+
+    &.notepad {
+      background-image: image-url("notes_vector.png");
+    }
+  }
+
+  .text-blurb-container {
+    width: 160px;
+
+    &.mini {
+      width: 120px;
+    }
+
+    .text-heading {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .text-blurb {
+      line-height: 175%;
     }
   }
 }
