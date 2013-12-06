@@ -1,8 +1,9 @@
 <div class="charities">
+  <div ng-hide="created">
   <h1>Make a free project posting</h1>
   <p class="intro">We will promote your project to our network of filmmakers.</p>
 
-  <form novalidate name="form" ng-submit="create()" ng-hide="created">
+  <form novalidate name="form" ng-submit="create()">
     <div class="form-error" ng-show="formError">{{formError}}</div>
     <div class="input-block">
       <label for="organization-name" class="input-label small-emphasis">Organization Name</label>
@@ -68,5 +69,10 @@
 
     <input class="btn submit" ng-disabled="saving" type="submit" value="SUBMIT">
   </form>
-  <div ng-show="created">Thanks for your interest! We hope to find you a filmmaker soon.</div>
+</div>
+  <div ng-show="created">
+    <h1>Thanks for signing up!</h1>
+    <p>We hope to find you a filmmaker soon.</p>
+    <button class="btn add-another" ng-click="clear()">ADD ANOTHER PROJECT</button>
+  </div>
 </div>

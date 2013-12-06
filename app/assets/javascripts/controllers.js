@@ -14,6 +14,11 @@ amassControllers.controller('VideographerNewCtrl', ['$scope', '$anchorScroll', '
                               $scope.invalidField = function(param) {
                                 return $scope.submitted && param;
                               };
+                              $scope.clear = function() {
+                                $scope.videographer = new Videographer();
+                                $scope.created = false;
+                                $scope.submitted = false;
+                              };
                               $scope.create = function() {
                                 $scope.submitted = true;
                                 $scope.formError = false;
@@ -39,6 +44,11 @@ amassControllers.controller('CharityNewCtrl', ['$scope', '$anchorScroll', 'Chari
                               $scope.charity = new Charity();
                               $scope.invalidField = function(param) {
                                 return $scope.submitted && param;
+                              };
+                              $scope.clear = function() {
+                                $scope.charity = new Charity();
+                                $scope.created = false;
+                                $scope.submitted = false;
                               };
                               $scope.create = function() {
                                 $scope.submitted = true;
