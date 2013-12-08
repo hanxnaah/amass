@@ -29,6 +29,10 @@ $navbar-height: 70px;
       &.selected {
         background-color: transparent;
       }
+
+      &.selected:hover {
+        background-color: #e6e7e8;
+      }
     }
   }
 }
@@ -43,6 +47,5 @@ $navbar-height: 70px;
 }
 
 .sign-up {
-  width: 80px;
   margin-top: ($navbar-height - 35) / 2;
 }

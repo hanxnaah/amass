@@ -6,18 +6,15 @@
   }
 
   .post-project {
-    width: 140px;
+    width: 120px;
   }
 
   .new-videographer {
-    width: 230px;
+    width: 210px;
   }
 
   .section {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 20px 10% 30px 10%;
     border-bottom: 1px solid #5d5d5d;
 
     &:last-child {
@@ -32,6 +29,10 @@
 
     &.large-spacing {
       margin-top: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
     }
   }
 

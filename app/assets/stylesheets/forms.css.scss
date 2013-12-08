@@ -3,6 +3,7 @@ $errorColor: #e42828;
 .input-block {
   margin-bottom: 14px; 
 
+
   .input-label {
     display: block;
     margin-bottom: 2px;
@@ -23,11 +24,15 @@ $errorColor: #e42828;
     height: 30px;
     border-radius: 3px;
     border: 1px solid grey;
+
+    &.large-centered {
+      width: 70%;
+      margin-left: 15%;
+    }
   }
 }
 
 .submit {
-  width: 75px;
   margin-top: 20px;
 }
 
@@ -37,4 +42,5 @@ $errorColor: #e42828;
   color: white;
   margin-bottom: 20px;
   padding: 5px;
+  text-align: center;
 }

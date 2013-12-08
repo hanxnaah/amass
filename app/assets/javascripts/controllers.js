@@ -68,3 +68,33 @@ amassControllers.controller('CharityNewCtrl', ['$scope', '$anchorScroll', 'Chari
                                 }
                               };
                             }]);
+
+amassControllers.controller('FollowCtrl', ['$scope', 'Follower',
+                            function ($scope, Follower) {
+                              $scope.follower = new Follower();
+                              $scope.invalidField = function(param) {
+                                return $scope.submitted && param;
+                              };
+                              $scope.clear = function() {
+                                $scope.follower = new Follower();
+                                $scope.created = false;
+                                $scope.submitted = false;
+                              };
+                              $scope.create = function() {
+                                $scope.submitted = true;
+                                $scope.formError = false;
+                                if ($scope.form.$valid) {
+                                  $scope.saving = true;
+                                  $scope.follower.$save(
+                                    function() { 
+                                      $scope.saving = false; 
+                                      $scope.created = true;
+                                    },
+                                    function() {
+                                      $scope.saving = false;
+                                      $scope.formError = "There was a problem with your request. Please try again later.";
+                                    }
+                                  );
+                                }
+                              };
+                            }]);
