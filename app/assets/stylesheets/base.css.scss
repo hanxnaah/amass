@@ -30,19 +30,17 @@ body {
   width: 91%;
 }
 
-.column-container {
+.column-layout {
   overflow: hidden;
 
-  &.fixed-width {
-    width: 520px;
- } 
-}
+  .column {
+    float: left;
+    width: 45%;
+    margin-right: 10%;
 
-.column {
-  float: left;
-
-  &.mini {
-    width: 260px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 

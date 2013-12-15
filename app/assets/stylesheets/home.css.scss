@@ -37,35 +37,44 @@
   }
 
   .image {
-    height: 120px;
-    width: 130px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
 
-    &.airplane {
-      background-image: image-url("plane_vector.png");
+    &.filmmaker {
+      height: 55px;
+      width: 90px;
+      background-image: image-url("filmmaker.png");
     }
 
-    &.notepad {
-      background-image: image-url("notes_vector.png");
+    &.amass {
+      height: 55px;
+      width: 70px;
+      background-image: image-url("amass_icon.png");
+    }
+
+    &.video-grows {
+      height: 65px;
+      width: 70px;
+      background-image: image-url("socialimpact_icon.png");
+    }
+
+    &.org {
+      height: 55px;
+      width: 60px;
+      background-image: image-url("org_icon.png");
     }
   }
 
   .text-blurb-container {
-    width: 160px;
-
-    &.mini {
-      width: 120px;
-    }
-
     .text-heading {
-      margin-top: 10px;
       margin-bottom: 10px;
+      font-size: 125%;
     }
 
     .text-blurb {
-      line-height: 175%;
+      line-height: 145%;
+      margin-top: 5px;
     }
   }
 }
