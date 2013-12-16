@@ -50,5 +50,6 @@ var amassControllers = angular.module("amassControllers", []);
   amassControllers.controller('FollowCtrl', ['$scope', 'Follower',
                               function ($scope, Follower) {
                                 registerSharedControllerMethods($scope, 'follower', Follower);
+                                $scope.follower.type = "filmmaker";
                               }]);
 })();

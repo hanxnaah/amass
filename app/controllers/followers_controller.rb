@@ -7,6 +7,6 @@ class FollowersController < ApplicationController
   end
 
   def follower_params
-    params.permit(:email)
+    params.permit(:email, :type)
   end
 end

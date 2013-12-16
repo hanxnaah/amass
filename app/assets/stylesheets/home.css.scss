@@ -69,4 +69,16 @@
       margin-top: 5px;
     }
   }
+
+  .follower-choices {
+    width: 320px;
+
+    .follower-choice {
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
 }

@@ -67,6 +67,20 @@
           <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
           <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
         </div>
+        <div class="follower-choices center">
+          <span class="follower-choice">
+            <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
+            <label for="filmmaker-type">Filmmaker</label>
+          </span>
+          <span class="follower-choice">
+            <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
+            <label for="organization-type">Organization</label>
+          </span>
+          <span class="follower-choice">
+            <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
+            <label for="other-type">Other</label>
+          </span>
+        </div>
         <input class="btn center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
       </form>
     </div>
