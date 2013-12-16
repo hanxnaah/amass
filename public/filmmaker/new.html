@@ -1,4 +1,4 @@
-<div class="videographer">
+<div class="filmmaker">
   <div ng-hide="created">
     <h1>Join our filmmaker network!</h1>
     <p class="intro text-content">Sign up to be a filmmaker and we will notify you about new project opportunities that you can apply for.</p>
@@ -6,26 +6,26 @@
       <div class="form-error" ng-show="formError">{{formError}}</div>
       <div class="input-block">
         <label for="name" class="input-label small-emphasis">Name</label>
-        <input type="text" name="name" id="name" ng-model="videographer.name" ng-class="{error: invalidField(form.name.$invalid)}" required>
+        <input type="text" name="name" id="name" ng-model="filmmaker.name" ng-class="{error: invalidField(form.name.$invalid)}" required>
         <span class="error-message" ng-show="invalidField(form.name.$error.required)">required</span>
       </div>
 
       <div class="input-block">
         <label for="email" class="input-label small-emphasis">Email</label>
-        <input type="email" name="email" id="email" ng-model="videographer.email" ng-class="{error: invalidField(form.email.$invalid)}" required>
+        <input type="email" name="email" id="email" ng-model="filmmaker.email" ng-class="{error: invalidField(form.email.$invalid)}" required>
         <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
         <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
       </div>
 
       <div class="input-block">
         <label for="skills" class="input-label small-emphasis">Brief Overview of Skills/Experience</label>
-        <textarea name="skills" id="skills" ng-model="videographer.skills" ng-class="{error: invalidField(form.skills.$invalid)}" required></textarea>
+        <textarea name="skills" id="skills" ng-model="filmmaker.skills" ng-class="{error: invalidField(form.skills.$invalid)}" required></textarea>
         <span class="error-message" ng-show="invalidField(form.skills.$error.required)">required</span>
       </div>
 
       <div class="input-block">
         <label for="portfolio-url" class="input-label small-emphasis">OPTIONAL Link to portfolio</label>
-        <input type="url" name="portfolio_url" id="portfolio-url" ng-model="videographer.portfolio_url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
+        <input type="url" name="portfolio_url" id="portfolio-url" ng-model="filmmaker.portfolio_url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
         <span class="error-message" ng-show="invalidField(form.portfolio_url.$error.url)">invalid link</span>
       </div>
 

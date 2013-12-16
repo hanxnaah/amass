@@ -1,8 +1,8 @@
 var amassServices = angular.module('amassServices', ['ngResource']);
 
-amassServices.factory('Videographer', ['$resource',
+amassServices.factory('Filmmaker', ['$resource',
                       function($resource) {
-                        return $resource('videographers', {}, {});
+                        return $resource('filmmakers', {}, {});
                       }]);
 
 amassServices.factory('Charity', ['$resource',

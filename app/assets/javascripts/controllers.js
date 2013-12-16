@@ -37,10 +37,10 @@ var amassControllers = angular.module("amassControllers", []);
     }
   }
 
-  amassControllers.controller('VideographerNewCtrl', ['$scope', '$anchorScroll', 'Videographer',
-                              function ($scope, $anchorScroll, Videographer) {
+  amassControllers.controller('FilmmakerNewCtrl', ['$scope', '$anchorScroll', 'Filmmaker',
+                              function ($scope, $anchorScroll, Filmmaker) {
                                 $anchorScroll();
-                                registerSharedControllerMethods($scope, 'videographer', Videographer);
+                                registerSharedControllerMethods($scope, 'filmmaker', Filmmaker);
                               }]);
 
   amassControllers.controller('CharityNewCtrl', ['$scope', '$anchorScroll', 'Charity',

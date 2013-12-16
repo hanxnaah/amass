@@ -1,4 +1,4 @@
-class Videographer
+class Filmmaker
   include Mongoid::Document
 
   field :name, type: String

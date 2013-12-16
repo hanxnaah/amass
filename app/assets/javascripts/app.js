@@ -10,9 +10,9 @@ amassApp.config(['$routeProvider',
                     templateUrl: "../home.html"
                   }).when("/about", {
                     templateUrl: "../about.html"
-                  }).when("/videographer/new", {
-                    templateUrl: "../videographer/new.html",
-                    controller: 'VideographerNewCtrl'
+                  }).when("/filmmaker/new", {
+                    templateUrl: "../filmmaker/new.html",
+                    controller: 'FilmmakerNewCtrl'
                   }).when("/charity/new", {
                     templateUrl: "../charity/new.html",
                     controller: 'CharityNewCtrl'
