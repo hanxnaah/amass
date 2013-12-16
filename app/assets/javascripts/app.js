@@ -21,3 +21,10 @@ amassApp.config(['$routeProvider',
                   });
                 }]);
 
+amassApp.run(['$rootScope', '$location', '$anchorScroll', '$routeParams',
+             function($rootScope, $location, $anchorScroll, $routeParams) {
+               $rootScope.$on("$routeChangeSuccess", function() {
+                 $location.hash($routeParams.scrollTo);
+                 $anchorScroll();
+               });
+             }]);

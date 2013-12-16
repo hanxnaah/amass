@@ -39,13 +39,11 @@ var amassControllers = angular.module("amassControllers", []);
 
   amassControllers.controller('FilmmakerNewCtrl', ['$scope', '$anchorScroll', 'Filmmaker',
                               function ($scope, $anchorScroll, Filmmaker) {
-                                $anchorScroll();
                                 registerSharedControllerMethods($scope, 'filmmaker', Filmmaker);
                               }]);
 
   amassControllers.controller('OrganizationNewCtrl', ['$scope', '$anchorScroll', 'Organization',
                               function ($scope, $anchorScroll, Organization) {
-                                $anchorScroll();
                                 registerSharedControllerMethods($scope, 'organization', Organization);
                               }]);
 
