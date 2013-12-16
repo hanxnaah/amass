@@ -5,9 +5,9 @@ amassServices.factory('Filmmaker', ['$resource',
                         return $resource('filmmakers', {}, {});
                       }]);
 
-amassServices.factory('Charity', ['$resource',
+amassServices.factory('Organization', ['$resource',
                       function($resource) {
-                        return $resource('charities', {}, {});
+                        return $resource('organizations', {}, {});
                       }]);
 
 amassServices.factory('Follower', ['$resource',

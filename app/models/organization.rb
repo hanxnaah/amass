@@ -1,4 +1,4 @@
-class Charity
+class Organization
   include Mongoid::Document
 
   field :budget, type: Integer
