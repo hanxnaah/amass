@@ -14,6 +14,8 @@ amassApp.config(['$routeProvider',
                   }).when("/organization/new", {
                     templateUrl: "../organization/new.html",
                     controller: 'OrganizationNewCtrl'
+                  }).when("/contact", {
+                    templateUrl: "../contact.html"
                   }).otherwise({
                     redirectTo: "/#/"
                   });
