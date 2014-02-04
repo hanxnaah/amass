@@ -51,7 +51,7 @@
 
       <div class="input-block">
         <label for="description" class="input-label small-emphasis">Video Project Description (the more detailed the better!)</label>
-        <textarea name="description" id="description" ng-model="organization.description" ng-class="{error: invalidField(form.description.$invalid)}" required></textarea>
+        <textarea name="description" id="description" class="large-area" ng-model="organization.description" ng-class="{error: invalidField(form.description.$invalid)}" required></textarea>
         <span class="error-message" ng-show="invalidField(form.description.$error.required)">required</span>
       </div>
 
