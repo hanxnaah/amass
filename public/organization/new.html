@@ -56,10 +56,10 @@
       </div>
 
       <div class="input-block">
-        <label for="length" class="input-label small-emphasis">Budget for Video</label>
-        <input type="number" name="length" id="length" ng-model="organization.length" ng-class="{error: invalidField(form.length.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.length.$error.required)">required</span>
-        <span class="error-message" ng-show="invalidField(form.length.$error.number)">invalid number</span>
+        <label for="video-length" class="input-label small-emphasis">Approximate Video Length</label>
+        <input type="number" name="video_length" id="video-length" ng-model="organization.video_length" ng-class="{error: invalidField(form.video_length.$invalid)}" required>
+        <span class="error-message" ng-show="invalidField(form.video_length.$error.required)">required</span>
+        <span class="error-message" ng-show="invalidField(form.video_length.$error.number)">invalid number</span>
       </div>
 
       <div class="input-block">
