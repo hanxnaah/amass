@@ -9,7 +9,7 @@ class OrganizationsController < ApplicationController
   private
 
   def organization_params
-    params.permit(:budget, :contact_email, :contact_name, :deadline, :description, :extra_resources, :video_length, :location, :organization_name, :project_name)
+    params.permit(:budget, :contact_email, :contact_name, :deadline, :description, :extra_resources, :video_length, :location, :organization_name, :organization_description, :project_name, :project_blurb, :inspiration_links, :payment_includes_expenses)
   end
 end
 

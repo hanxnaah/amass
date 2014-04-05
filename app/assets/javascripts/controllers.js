@@ -45,6 +45,7 @@ var amassControllers = angular.module("amassControllers", []);
   amassControllers.controller('OrganizationNewCtrl', ['$scope', '$anchorScroll', 'Organization',
                               function ($scope, $anchorScroll, Organization) {
                                 registerSharedControllerMethods($scope, 'organization', Organization);
+                                $scope.organization.payment_includes_expenses = true;
                               }]);
 
   amassControllers.controller('FollowCtrl', ['$scope', 'Follower',
