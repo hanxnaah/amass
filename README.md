@@ -1,3 +1,3 @@
-Temporary website for amassmedia.org
+Temporary website for www.amassmedia.org
 
 Learning angular and mongodb basics through this app
