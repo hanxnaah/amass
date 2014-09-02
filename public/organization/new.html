@@ -13,8 +13,7 @@
 
       <div class="input-block">
         <label for="organization-description" class="input-label small-emphasis">Organization Description</label>
-        <input type="text" name="organization_description" id="organization-description" ng-model="organization.organization_description" ng-class="{error: invalidField(form.organization_description.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.organization_description.$error.required)">required</span>
+        <input type="text" name="organization_description" id="organization-description" ng-model="organization.organization_description" ng-class="{error: invalidField(form.organization_description.$invalid)}">
       </div>
 
       <div class="input-block">
@@ -31,39 +30,14 @@
       </div>
 
       <div class="input-block">
-        <label for="project-name" class="input-label small-emphasis">Project Title (ex: Kickstarter Video for EthiCal Apparel)</label>
-        <input type="text" name="project_name" id="project-name" ng-model="organization.project_name" ng-class="{error: invalidField(form.project_name.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.project_name.$error.required)">required</span>
-      </div>
-
-      <div class="input-block">
-        <label for="project-blurb" class="input-label small-emphasis">Project Blurb (110 Character Preview of Your Project)</label>
-        <textarea name="project_blurb" id="project-blurb" ng-model="organization.project_blurb" ng-class="{error: invalidField(form.project_blurb.$invalid)}" class="medium-area"></textarea>
-      </div>
-
-      <div class="input-block">
-        <label for="description" class="input-label small-emphasis">Detailed Project Description</label>
+        <label for="description" class="input-label small-emphasis">Project Description </label>
         <textarea name="description" id="description" class="large-area" ng-model="organization.description" ng-class="{error: invalidField(form.description.$invalid)}" required></textarea>
         <span class="error-message" ng-show="invalidField(form.description.$error.required)">required</span>
       </div>
 
       <div class="input-block">
-        <label for="video-length" class="input-label small-emphasis">Approximate Length of Video</label>
-        <input type="number" name="video_length" id="video-length" ng-model="organization.video_length" ng-class="{error: invalidField(form.video_length.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.video_length.$error.required)">required</span>
-        <span class="error-message" ng-show="invalidField(form.video_length.$error.number)">invalid number</span>
-      </div>
-
-      <div class="input-block">
-        <label for="location" class="input-label small-emphasis">Filming Location(s)</label>
-        <input type="text" name="location" id="location" ng-model="organization.location" ng-class="{error: invalidField(form.location.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.location.$error.required)">required</span>
-      </div>
-
-      <div class="input-block">
-        <label for="deadline" class="input-label small-emphasis">Deadline to Apply for Project</label>
-        <input type="date" name="deadline" id="deadline" ng-model="organization.deadline" ng-class="{error: invalidField(form.deadline.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.deadline.$error.required)">required</span>
+        <label for="deadline" class="input-label small-emphasis">Project Completion Date</label>
+        <input type="date" name="deadline" id="deadline" ng-model="organization.deadline" ng-class="{error: invalidField(form.deadline.$invalid)}">
       </div>
 
       <div class="input-block">
@@ -74,22 +48,12 @@
       </div>
 
       <div class="input-block">
-        <label for="payment-includes-expenses" class="input-label small-emphasis">Does the payment include expenses (e.g. food, transportation)?</label>
-        <label>
-          <input type="radio" name="payment-includes-expenses" ng-value="true" ng-model="organization.payment_includes_expenses" class="small-radio-input"><span class="small-font small-input-label">Yes</span>
-        </label>
-        <label>
-          <input type="radio" name="payment-includes-expenses" ng-value="false" ng-model="organization.payment_includes_expenses" class="small-radio-input"><span class="small-font small-input-label">No</span>
-        </label>
-      </div>
-
-      <div class="input-block">
-        <label for="inspiration-links" class="input-label small-emphasis">OPTIONAL Inspiration Links (links to examples of videos that you'd like your video to look like)</label>
+        <label for="inspiration-links" class="input-label small-emphasis">OPTIONAL Inspiration Links (Links to videos that you'd like your video to look like) </label>
         <textarea name="inspiration_links" id="inspiration-links" ng-model="organization.inspiration_links" ng-class="{error: invalidField(form.inspiration_links.$invalid)}"></textarea>
       </div>
 
       <div class="input-block">
-        <label for="extra-resources" class="input-label small-emphasis">OPTIONAL Extra resources that your organization can offer (e.g. food, transportation, filming equipment, crew, etc.)</label>
+        <label for="extra-resources" class="input-label small-emphasis">OPTIONAL Additional Comments </label>
         <textarea name="extra_resources" id="extra-resources" ng-model="organization.extra_resources" ng-class="{error: invalidField(form.extra_resources.$invalid)}"></textarea>
       </div>
 
