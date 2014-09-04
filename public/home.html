@@ -63,42 +63,50 @@
   <div class="section">
     <h1 class="centered-text">Success Stories</h1>
     <br />
-    <iframe src="//player.vimeo.com/video/101770406?title=0&amp;byline=0&amp;portrait=0" width="372" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    <iframe src="//player.vimeo.com/video/99172312?title=0&amp;byline=0&amp;portrait=0" width="372" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div style="text-align: center;">
+      <iframe src="//player.vimeo.com/video/101770406?title=0&amp;byline=0&amp;portrait=0" width="372" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div style="text-align: center;">
+      <iframe src="//player.vimeo.com/video/99172312?title=0&amp;byline=0&amp;portrait=0" width="372" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div style="text-align: center;">
+      <iframe width="372" height="210" src="//www.youtube.com/embed/7P0V0cfoe6Y?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 
-<div class="section">
-  <div id="following-ctrl" class="section" ng-controller="FollowCtrl">
-    <div ng-hide="created">
-      <h1 class="centered-text">We'll be launching our platform soon. Be the first to know</h1>
-      <form novalidate name="form" ng-submit="create()">
-        <div class="form-error" ng-show="formError">{{formError}}</div>
-        <div class="input-block large-centered">
-          <input type="email" name="email" id="email" ng-model="follower.email" class="large-centered" ng-class="{error: invalidField(form.email.$invalid)}" required>
-          <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
-          <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
-        </div>
-        <div class="follower-choices center">
-          <span class="follower-choice">
-            <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
-            <label for="filmmaker-type">Filmmaker</label>
-          </span>
-          <span class="follower-choice">
-            <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
-            <label for="organization-type">Organization</label>
-          </span>
-          <span class="follower-choice">
-            <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
-            <label for="other-type">Other</label>
-          </span>
-        </div>
-        <input class="btn center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
-      </form>
-    </div>
-    <div class="centered-text" ng-show="created">
-      <h1>Thanks for signing up!</h1>
-      <p>We'll send you periodic email updates about Amass Media.</p>
-      <button class="btn center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
+  <div class="section">
+    <div id="following-ctrl" class="section" ng-controller="FollowCtrl">
+      <div ng-hide="created">
+        <h1 class="centered-text">We'll be launching our platform soon. Be the first to know</h1>
+        <form novalidate name="form" ng-submit="create()">
+          <div class="form-error" ng-show="formError">{{formError}}</div>
+          <div class="input-block large-centered">
+            <input type="email" name="email" id="email" ng-model="follower.email" class="large-centered" ng-class="{error: invalidField(form.email.$invalid)}" required>
+            <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
+            <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
+          </div>
+          <div class="follower-choices center">
+            <span class="follower-choice">
+              <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
+              <label for="filmmaker-type">Filmmaker</label>
+            </span>
+            <span class="follower-choice">
+              <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
+              <label for="organization-type">Organization</label>
+            </span>
+            <span class="follower-choice">
+              <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
+              <label for="other-type">Other</label>
+            </span>
+          </div>
+          <input class="btn center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
+        </form>
+      </div>
+      <div class="centered-text" ng-show="created">
+        <h1>Thanks for signing up!</h1>
+        <p>We'll send you periodic email updates about Amass Media.</p>
+        <button class="btn center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
+      </div>
     </div>
   </div>
 </div>
