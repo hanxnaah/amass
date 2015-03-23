@@ -6,3 +6,10 @@ cache:
   bundler: true
 script:
 - bundle exec travis lint --skip-completion-check
+deploy:
+  provider: heroku
+  strategy: git
+  app:
+    secure: Pto2M33BA4jPMkVKeUWfTv2+xtBowGVWI37pTtwsbLieB0xqLaojdGugJ2IDBIR20QoBcwwqQWDamJkI+XqoCfZxykC+dEwA7Nj04/XWL25oXPR6l96gaHpUv7vJS45lrArCYM+B8s7i5YQ4wuKz13ouYssD3lbVr/+d7i9WgEo=
+  api_key:
+    secure: D8z7dRPMVAqjUdhVKMYbyFHT4Ey5g8/Cw5SALqR0oRAv8QPe/sb9lqSal+7pf0P8wvnjSXD05k0sHjnGUEu7SFXNDEi2k0FOV0/LgIkWS0dxT7w80cMFnxS59aXYV4raSpAj74mBClKxwBOAH8O+YpvTthYJSQeSpp7KG60XBDo=
