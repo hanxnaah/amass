@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.5'
 gem 'rails', '4.0.0'
 
 gem "mongoid", "~> 4.0.0.alpha1"
