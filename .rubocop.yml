@@ -5,6 +5,8 @@ AllCops:
     - config.ru
     - Rakefile
     - !ruby/regexp /.*\.rake/
+  Exclude:
+    - node_modules/**/*
   RunRailsCops: true
 
 Documentation:

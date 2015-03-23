@@ -1,0 +1,21 @@
+{
+  "preset": "google",
+  "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**", "spec/assets/support/phantomjs_shims.js"],
+  "fileExtensions": [".js", ".jsx"],
+
+  "disallowTrailingComma": true,
+
+  "disallowMultipleVarDecl": "exceptUndefined",
+
+  "disallowSpacesInAnonymousFunctionExpression": null,
+
+  "disallowSpacesInsideObjectBrackets": null,
+
+  "requireCamelCaseOrUpperCaseIdentifiers": null,
+
+  "requireSpacesInsideObjectBrackets": "allButNested",
+
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true
+  }
+}

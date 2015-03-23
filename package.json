@@ -1,0 +1,16 @@
+{
+  "name": "amass",
+  "author": "Holman Gao <holman@golmansax.com>",
+  "engines": {
+    "npm": "2.1.x",
+    "node": "0.10.x"
+  },
+  "devDependencies": {
+    "jshint": "latest",
+    "jscs": "latest"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/hanxnaah/amass.git"
+  }
+}
