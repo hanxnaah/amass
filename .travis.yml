@@ -11,7 +11,7 @@ before_script:
 script:
 - bundle exec travis lint --skip-completion-check
 - bundle exec rubocop -D
-- bundle exec spring rake jscs
+- bundle exec rake jscs
 deploy:
   provider: heroku
   strategy: git
