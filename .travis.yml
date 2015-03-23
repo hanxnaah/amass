@@ -6,6 +6,7 @@ cache:
   bundler: true
 script:
 - bundle exec travis lint --skip-completion-check
+- bundle exec rubocop -D
 deploy:
   provider: heroku
   strategy: git

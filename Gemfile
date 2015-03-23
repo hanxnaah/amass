@@ -22,5 +22,6 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'rubocop'
   gem 'travis'
 end

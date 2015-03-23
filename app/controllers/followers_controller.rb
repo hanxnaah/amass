@@ -1,5 +1,4 @@
 class FollowersController < ApplicationController
-
   def create
     follower = Follower.new(follower_params)
     status = follower.save ? 201 : 400

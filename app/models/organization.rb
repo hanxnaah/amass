@@ -16,4 +16,3 @@ class Organization
   field :project_blurb, type: String
   field :inspiration_links, type: String
 end
-

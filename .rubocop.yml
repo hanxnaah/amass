@@ -1,0 +1,16 @@
+AllCops:
+  Include:
+    - Guardfile
+    - config.ru
+    - Rakefile
+    - !ruby/regexp /.*\.rake/
+  RunRailsCops: true
+
+Documentation:
+  Enabled: false
+
+TrailingComma:
+  EnforcedStyleForMultiline: comma
+
+HasAndBelongsToMany:
+  Enabled: false
