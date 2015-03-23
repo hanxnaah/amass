@@ -1,3 +1,4 @@
-Temporary website for www.amassmedia.org
+Amass Media
+==
 
-Learning angular and mongodb basics through this application
+[![Build Status](https://travis-ci.org/hanxnaah/amass.svg?branch=master)](https://travis-ci.org/hanxnaah/amass)
