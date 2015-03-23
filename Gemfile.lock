@@ -169,7 +169,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.0.0)
   high_voltage
   jbuilder (~> 1.2)
   jquery-rails
