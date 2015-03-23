@@ -1,5 +1,6 @@
 AllCops:
   Include:
+    - Gemfile
     - Guardfile
     - config.ru
     - Rakefile

@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.1.5'
-gem 'rails', '4.0.0'
+gem 'rails', '~> 4.1.0'
 
-gem "mongoid", "~> 4.0.0.alpha1"
-gem "rails_serve_static_assets"
+gem 'mongoid'
+gem 'rails_serve_static_assets'
 gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 4.0.0'
