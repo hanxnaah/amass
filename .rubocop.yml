@@ -7,6 +7,7 @@ AllCops:
     - !ruby/regexp /.*\.rake/
   Exclude:
     - node_modules/**/*
+    - vendor/**/*
   RunRailsCops: true
 
 Documentation:
