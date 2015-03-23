@@ -4,7 +4,6 @@ ruby '2.1.5'
 gem 'rails', '~> 4.1.0'
 
 gem 'mongoid'
-gem 'rails_serve_static_assets'
 gem 'newrelic_rpm'
 
 gem 'sass-rails', '~> 4.0.0'
@@ -25,3 +24,5 @@ group :development, :test do
   gem 'rubocop'
   gem 'travis'
 end
+
+gem 'rails_12factor', group: :production
