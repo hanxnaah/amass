@@ -13,6 +13,7 @@ script:
 - bundle exec rubocop -D
 - bundle exec rake jscs
 - bundle exec rake jshint
+- bundle exec scss-lint app/assets/stylesheets
 deploy:
   provider: heroku
   strategy: git

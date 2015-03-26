@@ -22,6 +22,7 @@ end
 
 group :development, :test do
   gem 'rubocop'
+  gem 'scss-lint'
   gem 'travis'
 end
 

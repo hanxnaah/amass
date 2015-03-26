@@ -1,7 +1,7 @@
-$errorColor: #e42828;
+$error-color: #e42828;
 
 .input-block {
-  margin-bottom: 14px; 
+  margin-bottom: 14px;
 
   .large-area {
     height: 300px;
@@ -16,31 +16,33 @@ $errorColor: #e42828;
     margin-bottom: 2px;
   }
 
-  input.error, textarea.error {
-    border: 1px $errorColor solid;
+  input.error,
+  textarea.error {
+    border: 1px $error-color solid;
   }
 
   .error-message {
-    color: $errorColor;
+    color: $error-color;
     font-size: 83%;
     margin-left: 4px;
   }
 
-  input, textarea {
-    width: 300px;
-    height: 30px;
-    border-radius: 3px;
+  input,
+  textarea {
     border: 1px solid grey;
+    border-radius: 3px;
+    height: 30px;
+    width: 300px;
 
     &.large-centered {
-      width: 70%;
       margin-left: 15%;
+      width: 70%;
     }
   }
 
   .small-radio-input {
-    width: 20px;
     vertical-align: middle;
+    width: 20px;
   }
 
   .small-input-label {
@@ -53,8 +55,8 @@ $errorColor: #e42828;
 }
 
 .form-error {
-  border: 2px solid $errorColor;
-  background-color: #ef8383; 
+  background-color: #ef8383;
+  border: 2px solid $error-color;
   color: white;
   margin-bottom: 20px;
   padding: 5px;
