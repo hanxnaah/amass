@@ -1,6 +1,8 @@
-var amassControllers = angular.module('amassControllers', []);
-
 (function () {
+  'use strict';
+
+  var amassControllers = angular.module('amassControllers', []);
+
   amassControllers.controller('NavBarCtrl', ['$scope', '$location',
                               function ($scope, $location) {
                                 $scope.isSelected = function (viewLocation) {
@@ -35,7 +37,7 @@ var amassControllers = angular.module('amassControllers', []);
           }
         );
       }
-    }
+    };
   }
 
   amassControllers.controller('FilmmakerNewCtrl', [

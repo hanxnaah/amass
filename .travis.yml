@@ -12,6 +12,7 @@ script:
 - bundle exec travis lint --skip-completion-check
 - bundle exec rubocop -D
 - bundle exec rake jscs
+- bundle exec rake jshint
 deploy:
   provider: heroku
   strategy: git
