@@ -5,6 +5,10 @@
     "npm": "2.1.x",
     "node": "0.10.x"
   },
+  "dependencies": {
+    "browserify": "~> 6.3",
+    "browserify-incremental": "^1.4.0"
+  },
   "devDependencies": {
     "jshint": "latest",
     "jscs": "latest"
