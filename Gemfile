@@ -21,6 +21,9 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'travis'
