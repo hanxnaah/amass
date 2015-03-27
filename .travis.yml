@@ -10,6 +10,8 @@ services:
 - mongodb
 before_install:
 - npm install
+- export DISPLAY=:99.0 # This and following line are for Selenium
+- sh -e /etc/init.d/xvfb start
 before_script:
 - bundle exec rake assets:precompile
 script:
