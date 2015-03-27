@@ -3,7 +3,7 @@
 require('angular');
 require('angular-resource');
 
-var amassServices = window.angular.module('amassServices', ['ngResource']);
+var amassServices = angular.module('amassServices', ['ngResource']);
 
 amassServices.factory('Filmmaker', [
   '$resource',

@@ -37,7 +37,7 @@
   "expr": false,
   "funcscope": false,
   "gcl": false,
-  "globalstrict": false,
+  "globalstrict": true,
   "iterator": false,
   "lastsemic": false,
   "laxbreak": false,
@@ -72,6 +72,7 @@
   "yui": false,
 
   "globals": {
-    "angular": true
+    "angular": true,
+    "require": true
   }
 }
