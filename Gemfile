@@ -22,12 +22,17 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'travis'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'selenium-webdriver'
 end
 
 gem 'rails_12factor', group: :production
