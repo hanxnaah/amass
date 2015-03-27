@@ -1,20 +1,27 @@
-(function () {
-  'use strict';
+'use strict';
 
-  var amassServices = angular.module('amassServices', ['ngResource']);
+require('angular');
+require('angular-resource');
 
-  amassServices.factory('Filmmaker', ['$resource',
-                        function ($resource) {
-                          return $resource('filmmakers', {}, {});
-                        }]);
+var amassServices = window.angular.module('amassServices', ['ngResource']);
 
-  amassServices.factory('Organization', ['$resource',
-                        function ($resource) {
-                          return $resource('organizations', {}, {});
-                        }]);
+amassServices.factory('Filmmaker', [
+  '$resource',
+  function ($resource) {
+    return $resource('filmmakers', {}, {});
+  }
+]);
 
-  amassServices.factory('Follower', ['$resource',
-                        function ($resource) {
-                          return $resource('followers', {}, {});
-                        }]);
-})();
+amassServices.factory('Organization', [
+  '$resource',
+  function ($resource) {
+    return $resource('organizations', {}, {});
+  }
+]);
+
+amassServices.factory('Follower', [
+  '$resource',
+  function ($resource) {
+    return $resource('followers', {}, {});
+  }
+]);

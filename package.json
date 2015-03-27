@@ -6,6 +6,9 @@
     "node": "0.10.x"
   },
   "dependencies": {
+    "angular": "1.2.2",
+    "angular-resource": "~> 1.2.2",
+    "angular-route": "~> 1.2.2",
     "browserify": "~> 6.3",
     "browserify-incremental": "^1.4.0"
   },

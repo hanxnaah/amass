@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 gem 'rails', '~> 4.1.0'
 
+gem 'high_voltage'
+gem 'jbuilder', '~> 1.2'
 gem 'mongoid'
 gem 'newrelic_rpm'
 gem 'passenger'
@@ -10,11 +12,6 @@ gem 'passenger'
 gem 'browserify-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
-
-gem 'high_voltage'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
