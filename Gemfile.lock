@@ -33,6 +33,8 @@ GEM
     astrolabe (1.3.0)
       parser (>= 2.2.0.pre.3, < 3.0)
     backports (3.6.4)
+    browserify-rails (0.7.4)
+      sprockets (~> 2.0)
     bson (2.3.0)
     builder (3.2.2)
     coderay (1.1.0)
@@ -212,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  browserify-rails
   database_cleaner
   factory_girl_rails
   high_voltage

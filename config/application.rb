@@ -30,5 +30,7 @@ module Amass
     # config.i18n.default_locale = :de
 
     config.serve_static_assets = true
+
+    config.browserify_rails.paths << /spec\/javascripts/
   end
 end
