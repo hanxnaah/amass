@@ -1,4 +1,10 @@
-//= require_self
-//= require reset
-//
-//= require_tree .
+@import 'reset';
+
+@import 'base';
+@import 'contact';
+@import 'flow_chart';
+@import 'fonts';
+@import 'forms';
+@import 'home';
+@import 'navbar';
+@import 'sign-ups';
