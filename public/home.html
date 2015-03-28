@@ -1,70 +1,72 @@
 <div class="home center">
-  <div class="section">
+  <div class="row">
     <br />
     <br />
-    <h1 class="centered-text">Tell stories that matter</h1>
-    <p class="centered-text center almost-full-width text-section">
+    <h1 class="text-center">Tell stories that matter</h1>
+    <p class="text-center center almost-full-width text-section">
       Amass Media aims to empower organizations to tell their social impact stories by creating an online platform that connects nonprofits, social ventures, and small businesses with talented filmmakers looking for interesting projects to work on.
     </p>
-    <p class="centered-text center almost-full-width text-section">
+    <p class="text-center center almost-full-width text-section">
       Last year, Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a> to launch the idea. We are currently matching projects informally before the official site launches soon.
     </p>
     <br />
     <br />
   </div>
 
-  <div class="section home-how-it-works">
-    <h1 class="centered-text">How it works</h1>
-    <div class= "flow-chart-container">
-      <div class="flow-item center">
-        <h2 class="flow-content-header">STEP 1</h2>
-        <div class="flow-content">
-          <div class="column-layout">
-            <div class="column text-blurb-container">
-              <div class="text-heading centered-text"><b>Filmmakers</b></div>
-              <div class="image filmmaker center"></div>
-              <p class="text-blurb centered-text">Sign up to get notified about relevant projects</p>
+  <div class="home-how-it-works">
+    <div class="row">
+      <h1 class="text-center">How it works</h1>
+      <div class= "flow-chart-container">
+        <div class="flow-item center">
+          <h2 class="flow-content-header">STEP 1</h2>
+          <div class="flow-content">
+            <div class="column-layout">
+              <div class="column text-blurb-container">
+                <div class="text-heading text-center"><b>Filmmakers</b></div>
+                <div class="image filmmaker center"></div>
+                <p class="text-blurb text-center">Sign up to get notified about relevant projects</p>
 
-              <div class="text-center">
-                <a class="btn center new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
+                <div class="text-center">
+                  <a class="btn center new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
+                </div>
               </div>
-            </div>
-            <div class="column text-blurb-container">
-              <div class="text-heading centered-text"><b>Organizations</b></div>
-              <div class="image org center"></div>
-              <p class="text-blurb centered-text">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
-              <div class="text-center">
-                <a class="btn center post-project" href="#/organization/new">POST A PROJECT</a>
+              <div class="column text-blurb-container">
+                <div class="text-heading text-center"><b>Organizations</b></div>
+                <div class="image org center"></div>
+                <p class="text-blurb text-center">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
+                <div class="text-center">
+                  <a class="btn center post-project" href="#/organization/new">POST A PROJECT</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="flow-item mini center">
-        <h2 class="flow-content-header">STEP 2</h2>
-        <div class="flow-content">
-          <div class="text-blurb-container">
-            <div class="text-heading centered-text"><b>Amass Media</b></div>
-            <div class="image amass center"></div>
-            <p class="text-blurb centered-text">Amass Media matches filmmakers with organizations</p>
+        <div class="flow-item mini center">
+          <h2 class="flow-content-header">STEP 2</h2>
+          <div class="flow-content">
+            <div class="text-blurb-container">
+              <div class="text-heading text-center"><b>Amass Media</b></div>
+              <div class="image amass center"></div>
+              <p class="text-blurb text-center">Amass Media matches filmmakers with organizations</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="flow-item mini center">
-        <h2 class="flow-content-header">STEP 3</h2>
-        <div class="flow-content">
-          <div class="text-blurb-container">
-            <div class="text-heading centered-text"><b>Social Impact Video Projects</b></div>
-            <div class="image video-grows center"></div>
-            <p class="text-blurb centered-text">Filmmakers work with organizations to make awesome video projects!</p>
+        <div class="flow-item mini center">
+          <h2 class="flow-content-header">STEP 3</h2>
+          <div class="flow-content">
+            <div class="text-blurb-container">
+              <div class="text-heading text-center"><b>Social Impact Video Projects</b></div>
+              <div class="image video-grows center"></div>
+              <p class="text-blurb text-center">Filmmakers work with organizations to make awesome video projects!</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section">
-    <h1 class="centered-text">Success Stories</h1>
+  <div class="row">
+    <h1 class="text-center">Success Stories</h1>
     <br />
     <div style="text-align: center;">
       <iframe src="//player.vimeo.com/video/101770406?title=0&amp;byline=0&amp;portrait=0" width="372" height="210" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -79,10 +81,10 @@
 
   <hr />
 
-  <div class="section">
+  <div class="row">
     <div id="following-ctrl" ng-controller="FollowCtrl">
       <div ng-hide="created">
-        <h1 class="centered-text">We'll be launching our platform soon. Be the first to know</h1>
+        <h1 class="text-center">We'll be launching our platform soon. Be the first to know</h1>
         <form novalidate name="form" ng-submit="create()">
           <div class="form-error" ng-show="formError">{{formError}}</div>
           <div class="input-block large-centered">
@@ -107,7 +109,7 @@
           <input class="btn center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
         </form>
       </div>
-      <div class="centered-text" ng-show="created">
+      <div class="text-center" ng-show="created">
         <h1>Thanks for signing up!</h1>
         <p>We'll send you periodic email updates about Amass Media.</p>
         <button class="btn center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
