@@ -1,12 +1,12 @@
-<div class="home center">
+<div class="home">
   <div class="row">
     <br />
     <br />
     <h1 class="text-center">Tell stories that matter</h1>
-    <p class="text-center center almost-full-width text-section">
+    <p class="text-center text-section">
       Amass Media aims to empower organizations to tell their social impact stories by creating an online platform that connects nonprofits, social ventures, and small businesses with talented filmmakers looking for interesting projects to work on.
     </p>
-    <p class="text-center center almost-full-width text-section">
+    <p class="text-center text-section">
       Last year, Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a> to launch the idea. We are currently matching projects informally before the official site launches soon.
     </p>
     <br />
@@ -17,25 +17,25 @@
     <div class="row">
       <h1 class="text-center">How it works</h1>
       <div class= "flow-chart-container">
-        <div class="flow-item center">
+        <div class="flow-item">
           <h2 class="flow-content-header">STEP 1</h2>
           <div class="flow-content">
-            <div class="column-layout">
-              <div class="column text-blurb-container">
+            <div class="row">
+              <div class="large-6 columns text-blurb-container">
                 <div class="text-heading text-center"><b>Filmmakers</b></div>
                 <div class="image filmmaker center"></div>
                 <p class="text-blurb text-center">Sign up to get notified about relevant projects</p>
 
                 <div class="text-center">
-                  <a class="btn center new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
+                  <a class="button radius new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
                 </div>
               </div>
-              <div class="column text-blurb-container">
+              <div class="large-6 columns text-blurb-container">
                 <div class="text-heading text-center"><b>Organizations</b></div>
                 <div class="image org center"></div>
                 <p class="text-blurb text-center">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
                 <div class="text-center">
-                  <a class="btn center post-project" href="#/organization/new">POST A PROJECT</a>
+                  <a class="button radius post-project" href="#/organization/new">POST A PROJECT</a>
                 </div>
               </div>
             </div>
@@ -106,13 +106,15 @@
               <label for="other-type">Other</label>
             </span>
           </div>
-          <input class="btn center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
+          <div class="text-center">
+            <input class="button radius center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
+          </div>
         </form>
       </div>
       <div class="text-center" ng-show="created">
         <h1>Thanks for signing up!</h1>
         <p>We'll send you periodic email updates about Amass Media.</p>
-        <button class="btn center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
+        <button class="button radius center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
       </div>
     </div>
   </div>

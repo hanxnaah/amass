@@ -29,12 +29,12 @@
         <span class="error-message" ng-show="invalidField(form.portfolio_url.$error.url)">invalid link</span>
       </div>
 
-      <input class="btn submit" ng-disabled="saving" type="submit" value="SUBMIT">
+      <input class="button radius submit" ng-disabled="saving" type="submit" value="SUBMIT">
     </form>
   </div>
   <div ng-show="created">
     <h1>Thanks for signing up!</h1>
     <p>We hope to find you a project soon.</p>
-    <button class="btn add-another" ng-click="clear()">ADD ANOTHER FILMMAKER</button>
+    <button class="button radius add-another" ng-click="clear()">ADD ANOTHER FILMMAKER</button>
   </div>
 </div>

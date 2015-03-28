@@ -59,12 +59,12 @@
         <textarea name="extra_resources" id="extra-resources" ng-model="organization.extra_resources" ng-class="{error: invalidField(form.extra_resources.$invalid)}"></textarea>
       </div>
 
-      <input class="btn submit" ng-disabled="saving" type="submit" value="SUBMIT">
+      <input class="button radius submit" ng-disabled="saving" type="submit" value="SUBMIT">
     </form>
   </div>
   <div ng-show="created">
     <h1>Thanks for signing up!</h1>
     <p>We hope to find you a filmmaker soon.</p>
-    <button class="btn add-another" ng-click="clear()">ADD ANOTHER PROJECT</button>
+    <button class="button radius add-another" ng-click="clear()">ADD ANOTHER PROJECT</button>
   </div>
 </div>
