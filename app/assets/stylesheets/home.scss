@@ -5,15 +5,19 @@
   }
 }
 
+.home-how-it-works {
+  background: $amass-green;
+
+  h1,
+  h2 {
+    color: $white;
+  }
+}
+
 .home {
   .post-project,
   .new-filmmaker {
     margin-top: 15px;
-  }
-
-  .home-how-it-works {
-    background: $amass-green;
-    color: $white;
   }
 
   .text-section {
