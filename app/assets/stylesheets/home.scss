@@ -1,3 +1,10 @@
+.home,
+.home-how-it-works {
+  & > .row {
+    margin: 1em auto;
+  }
+}
+
 .home {
   .post-project,
   .new-filmmaker {
