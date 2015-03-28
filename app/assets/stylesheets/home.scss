@@ -9,14 +9,6 @@
     color: $white;
   }
 
-  .post-project {
-    width: 120px;
-  }
-
-  .new-filmmaker {
-    width: 130px;
-  }
-
   .section {
     padding: 20px 15% 30px;
 
@@ -37,25 +29,25 @@
     background-size: 100%;
 
     &.filmmaker {
-      background-image: image-url("filmmaker.png");
+      background-image: image-url('filmmaker.png');
       height: 55px;
       width: 90px;
     }
 
     &.amass {
-      background-image: image-url("amass_icon.png");
+      background-image: image-url('amass_icon.png');
       height: 55px;
       width: 70px;
     }
 
     &.video-grows {
-      background-image: image-url("socialimpact_icon.png");
+      background-image: image-url('socialimpact_icon.png');
       height: 65px;
       width: 70px;
     }
 
     &.org {
-      background-image: image-url("org_icon.png");
+      background-image: image-url('org_icon.png');
       height: 55px;
       width: 60px;
     }
@@ -74,8 +66,6 @@
   }
 
   .follower-choices {
-    width: 350px;
-
     .follower-choice {
       margin-right: 20px;
 

@@ -24,19 +24,18 @@
               <div class="text-heading centered-text"><b>Filmmakers</b></div>
               <div class="image filmmaker center"></div>
               <p class="text-blurb centered-text">Sign up to get notified about relevant projects</p>
+
+              <div class="text-center">
+                <a class="btn center new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
+              </div>
             </div>
             <div class="column text-blurb-container">
               <div class="text-heading centered-text"><b>Organizations</b></div>
               <div class="image org center"></div>
               <p class="text-blurb centered-text">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
-            </div>
-          </div>
-          <div class="column-layout">
-            <div class="column">
-              <a class="btn center new-filmmaker" href="#/filmmaker/new">BE A FILMMAKER</a>
-            </div>
-            <div class="column">
-              <a class="btn center post-project" href="#/organization/new">POST A PROJECT</a>
+              <div class="text-center">
+                <a class="btn center post-project" href="#/organization/new">POST A PROJECT</a>
+              </div>
             </div>
           </div>
         </div>
@@ -81,7 +80,7 @@
   <hr />
 
   <div class="section">
-    <div id="following-ctrl" class="section" ng-controller="FollowCtrl">
+    <div id="following-ctrl" ng-controller="FollowCtrl">
       <div ng-hide="created">
         <h1 class="centered-text">We'll be launching our platform soon. Be the first to know</h1>
         <form novalidate name="form" ng-submit="create()">
@@ -91,7 +90,7 @@
             <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
             <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
           </div>
-          <div class="follower-choices center">
+          <div class="follower-choices text-center">
             <span class="follower-choice">
               <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
               <label for="filmmaker-type">Filmmaker</label>

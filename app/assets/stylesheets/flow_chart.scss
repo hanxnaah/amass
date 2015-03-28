@@ -15,11 +15,11 @@
     }
 
     &:after {
-      background-image: image-url("arrow_icon.png");
+      background-image: image-url('arrow_icon.png');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 100%;
-      content: "";
+      content: '';
       height: 64px;
       left: calc(50% - 60px);
       position: absolute;

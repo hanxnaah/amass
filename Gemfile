@@ -11,7 +11,7 @@ gem 'passenger'
 
 gem 'browserify-rails'
 gem 'foundation-rails'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 
 group :doc do

@@ -1,14 +1,14 @@
 $navbar-height: 70px;
 
 .navbar {
-  background-color: white;
+  background-color: #fff;
   border-bottom: 1px solid #5d5d5d;
   overflow: hidden;
   padding-left: 35px;
   padding-right: 100px;
 
   .navbar-item {
-    color: black;
+    color: #000;
     cursor: pointer;
     float: left;
     font-size: 83%;
@@ -39,7 +39,7 @@ $navbar-height: 70px;
 }
 
 .amass-logo {
-  background-image: image-url("amass_logo.png");
+  background-image: image-url('amass_logo.png');
   background-position: 0 3px;
   background-repeat: no-repeat;
   background-size: 100%;
