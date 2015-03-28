@@ -10,6 +10,7 @@ gem 'newrelic_rpm'
 gem 'passenger'
 
 gem 'browserify-rails'
+gem 'foundation-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
