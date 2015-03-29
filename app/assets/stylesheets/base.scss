@@ -16,3 +16,13 @@ body {
 .center {
   margin: 0 auto;
 }
+
+.break-topbar {
+  line-height: $topbar-height;
+}
+
+.amass-logo {
+  background-image: image-url('amass_logo.png');
+  height: $topbar-height;
+  width: 280px;
+}
