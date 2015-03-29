@@ -4,10 +4,14 @@
   <title>Amass Media — Tell stories that matter</title>
   <%= javascript_include_tag 'vendor/modernizr' %>
   <%= stylesheet_link_tag "application", media: "all" %>
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-2.1.3.min.js' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body><%= yield %></body>
+<body>
+  <%= yield %>
+  <%= javascript_include_tag 'foundation_and_overrides' %>
+</body>
 </html>
