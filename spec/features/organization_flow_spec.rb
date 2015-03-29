@@ -3,7 +3,7 @@ feature 'organization flow' do
     visit '/'
     expect(page).to have_content('Tell stories that matter')
 
-    within '.navbar' do
+    within '.top-bar' do
       click_link 'POST A PROJECT'
     end
     expect(page).to have_content('Make a free project posting')

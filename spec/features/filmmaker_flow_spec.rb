@@ -3,7 +3,7 @@ feature 'filmmaker flow' do
     visit '/'
     expect(page).to have_content('Tell stories that matter')
 
-    within '.navbar' do
+    within '.top-bar' do
       click_link 'BE A FILMMAKER'
     end
     expect(page).to have_content('Join our filmmaker network!')
