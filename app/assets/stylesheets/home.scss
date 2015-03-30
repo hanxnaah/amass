@@ -21,7 +21,7 @@
 }
 
 .home-main-image {
-  background: url(asset-path('home-main-image.jpg')) center top;
+  background: url(asset-path('home-main-image.jpg')) center top no-repeat;
   height: 550px;
 
   .row {
