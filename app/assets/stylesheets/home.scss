@@ -5,23 +5,8 @@
   }
 }
 
-.home-success-video {
-  height: 0;
-  padding-bottom: 56.25%; // 16:9 ratio
-  padding-top: 25px;
-  position: relative;
-
-  iframe {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
 .home-main-image {
-  background: url(asset-path('home-main-image.jpg')) center top no-repeat;
+  background: $black url(asset-path('home-main-image.jpg')) center top no-repeat;
   height: 550px;
 
   .row {
