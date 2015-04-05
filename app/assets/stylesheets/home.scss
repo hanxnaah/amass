@@ -77,14 +77,14 @@
       margin-top: 5px;
     }
   }
+}
 
-  .follower-choices {
-    .follower-choice {
-      margin-right: 20px;
+.follower-choices {
+  .follower-choice {
+    margin-right: 20px;
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

@@ -1,5 +1,3 @@
-$error-color: #e42828;
-
 .input-block {
   margin-bottom: 14px;
 
@@ -16,23 +14,22 @@ $error-color: #e42828;
     margin-bottom: 2px;
   }
 
-  input.error,
-  textarea.error {
-    border: 1px $error-color solid;
-  }
-
   .error-message {
-    color: $error-color;
+    color: $error-red;
     font-size: 83%;
     margin-left: 4px;
   }
 
   input,
   textarea {
-    border: 1px solid #808080;
+    border: 1px solid $input-border;
     border-radius: 3px;
     height: 30px;
     width: 300px;
+
+    &.error {
+      border: 1px $error-red solid;
+    }
 
     &.large-centered {
       margin-left: 25%;
@@ -55,9 +52,9 @@ $error-color: #e42828;
 }
 
 .form-error {
-  background-color: #ef8383;
-  border: 2px solid $error-color;
-  color: #fff;
+  background-color: $form-bg;
+  border: 2px solid $error-red;
+  color: $white;
   margin-bottom: 20px;
   padding: 5px;
   text-align: center;
