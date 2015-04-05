@@ -8,22 +8,11 @@
 .home-main-image {
   background: $black url(asset-path('home-main-image.jpg')) center top no-repeat;
   height: rem-calc(550px);
-  position: relative;
 
   .row {
     max-width: 100%;
     width: rem-calc(550px);
   }
-}
-
-.home-main-image-blur {
-  @include radial-gradient(ellipse rem-calc(800px) rem-calc(1600px), $transparent, $transparent, $transparent, $black);
-
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .home-how-it-works {
