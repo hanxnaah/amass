@@ -1,5 +1,8 @@
+//= require jquery
 //= require angular
 //= require angular-route
+//= require ./foundation_and_overrides
+//
 //= require ./controllers
 //= require ./services
 //= require_self

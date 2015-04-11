@@ -12,6 +12,7 @@ gem 'passenger'
 gem 'angularjs-rails', '~> 1.2.0'
 gem 'bourbon'
 gem 'foundation-rails'
+gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 
