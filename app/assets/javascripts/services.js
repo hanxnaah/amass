@@ -1,27 +1,28 @@
-'use strict';
+//= require angular-resource
 
-require('angular');
-require('angular-resource');
+(function () {
+  'use strict';
 
-var amassServices = angular.module('amassServices', ['ngResource']);
+  var amassServices = angular.module('amassServices', ['ngResource']);
 
-amassServices.factory('Filmmaker', [
-  '$resource',
-  function ($resource) {
-    return $resource('filmmakers', {}, {});
-  }
-]);
+  amassServices.factory('Filmmaker', [
+    '$resource',
+    function ($resource) {
+      return $resource('filmmakers', {}, {});
+    }
+  ]);
 
-amassServices.factory('Organization', [
-  '$resource',
-  function ($resource) {
-    return $resource('organizations', {}, {});
-  }
-]);
+  amassServices.factory('Organization', [
+    '$resource',
+    function ($resource) {
+      return $resource('organizations', {}, {});
+    }
+  ]);
 
-amassServices.factory('Follower', [
-  '$resource',
-  function ($resource) {
-    return $resource('followers', {}, {});
-  }
-]);
+  amassServices.factory('Follower', [
+    '$resource',
+    function ($resource) {
+      return $resource('followers', {}, {});
+    }
+  ]);
+})();

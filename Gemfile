@@ -9,7 +9,7 @@ gem 'mongoid'
 gem 'newrelic_rpm'
 gem 'passenger'
 
-gem 'browserify-rails'
+gem 'angularjs-rails', '~> 1.2.0'
 gem 'bourbon'
 gem 'foundation-rails'
 gem 'sass-rails'
