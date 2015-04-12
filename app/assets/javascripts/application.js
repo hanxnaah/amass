@@ -6,8 +6,9 @@
 //= require angular-slick
 //= require angular-rails-templates
 //
-//= require ./directives
 //= require ./controllers
+//= require ./directives
+//= require ./filters
 //= require ./services
 //= require_tree ./templates
 //= require_self
@@ -17,8 +18,9 @@
 
   var amassApp = angular.module('amassApp', [
     'ngRoute',
-    'amassDirectives',
     'amassControllers',
+    'amassDirectives',
+    'amassFilters',
     'amassServices',
     'templates',
     'slick'
