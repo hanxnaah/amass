@@ -15,17 +15,26 @@
     </div>
   </div>
 
-  <div class="row" ng-controller="SuccessStoriesCtrl">
+  <div class="row"
+    ng-controller="SuccessStoriesCtrl"
+    ng-init="vimeo_video_ids = ['99172312', '101770406', '98571250']"
+    >
     <br />
     <h1 class="text-center">Success Stories</h1>
     <br />
-    <!--<slick dots="true" amass-before-change="pauseVideo(currentSlide)">-->
-      <div ng-repeat="vimeo_video_id in ['99172312', '101770406', '98571250']">
+    <slick dots="true" amass-before-change="pauseVideo(currentSlide)">
+      <div ng-repeat="vimeo_video_id in vimeo_video_ids">
         <div class="flex-video">
-          <iframe ng-src="{{ '//player.vimeo.com/video/' + vimeo_video_id + '?title=0&amp;byline=0&amp;portrait=0' | trustUrl }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <embed-video
+            iframe-id="{{ 'vimeo-' + vimeo_video_id }}"
+            api="1"
+            player_id="{{ 'vimeo-' + vimeo_video_id }}"
+            ng-href="{{ '//vimeo.com/' + vimeo_video_id }}"
+            >
+          </embed-video>
         </div>
       </div>
-    <!--</slick>-->
+    </slick>
     <br />
   </div>
 

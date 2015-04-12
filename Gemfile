@@ -17,6 +17,7 @@ gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'rails-assets-angular-slick'
+gem 'rails-assets-ng-videosharing-embed'
 gem 'uglifier', '>= 1.3.0'
 
 group :doc do

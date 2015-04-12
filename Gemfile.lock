@@ -163,6 +163,8 @@ GEM
       rails-assets-angular (~> 1.3.0)
       rails-assets-slick-carousel (~> 1.4.1)
     rails-assets-jquery (2.1.3)
+    rails-assets-ng-videosharing-embed (0.3.2)
+      rails-assets-angular (>= 1.2.0)
     rails-assets-slick-carousel (1.4.1)
       rails-assets-jquery (>= 1.7)
     rails-deprecated_sanitizer (1.0.3)
@@ -283,6 +285,7 @@ DEPENDENCIES
   passenger
   rails (~> 4.2.0)
   rails-assets-angular-slick
+  rails-assets-ng-videosharing-embed
   rails_12factor
   rspec-rails (~> 3.0.0)
   rubocop

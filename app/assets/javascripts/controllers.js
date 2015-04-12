@@ -68,7 +68,8 @@
   amassControllers.controller('SuccessStoriesCtrl', [
     '$scope',
     function ($scope) {
-      $scope.pauseVideo = function () { //function (currentSlide) {
+      $scope.pauseVideo = function (currentSlide) {
+        $f($('.slick-active iframe')[0]).api('pause');
       };
     }
   ]);

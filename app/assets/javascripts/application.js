@@ -5,6 +5,7 @@
 //= require slick-carousel
 //= require angular-slick
 //= require angular-rails-templates
+//= require ng-videosharing-embed
 //
 //= require ./controllers
 //= require ./directives
@@ -18,6 +19,7 @@
 
   var amassApp = angular.module('amassApp', [
     'ngRoute',
+    'videosharing-embed',
     'amassControllers',
     'amassDirectives',
     'amassFilters',
