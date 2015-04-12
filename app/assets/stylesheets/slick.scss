@@ -1,5 +1,4 @@
-@import 'foundation/functions';
-@import 'variables';
+@import 'variables/index';
 
 @function image-url($path) {
   @return asset-url('slick-carousel/slick/' + $path);
@@ -10,18 +9,25 @@
 }
 
 $slick-arrow-color: $amass-orange;
+$slick-arrow-size: rem-calc(50px);
+$slick-dot-color: $amass-orange;
 $slick-dot-size: rem-calc(15px);
+$slick-opacity-default: 1;
 
 @import 'slick-carousel';
-
-$slick-arrow-size: rem-calc(50px);
 
 .slick-prev,
 .slick-next {
   height: $slick-arrow-size;
   width: $slick-arrow-size;
 
+  &:hover:before {
+    color: scale-color($slick-arrow-color, $lightness: -14%);
+  }
+
   &:before {
+    @include single-transition(all);
+
     font-size: rem-calc(50px);
   }
 }
@@ -36,6 +42,16 @@ $slick-arrow-size: rem-calc(50px);
 
 .slick-dots {
   margin-left: 0;
+
+  li button {
+    &:before {
+      @include single-transition(all);
+    }
+
+    &:hover:before {
+      color: scale-color($slick-dot-color, $lightness: -14%);
+    }
+  }
 }
 
 .slick-slider {
