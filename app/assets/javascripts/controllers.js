@@ -69,7 +69,6 @@
     '$scope',
     function ($scope) {
       $scope.pauseVideo = function (currentSlide) {
-        console.log('here', currentSlide);
       };
     }
   ]);
