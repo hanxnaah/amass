@@ -26,7 +26,7 @@ $slick-opacity-default: 1;
   }
 
   &:before {
-    @include single-transition(all);
+    @include transition(color 300ms ease-out, opacity 300ms ease-out);
 
     font-size: rem-calc(50px);
   }
@@ -45,7 +45,7 @@ $slick-opacity-default: 1;
 
   li button {
     &:before {
-      @include single-transition(all);
+      @include transition(color 300ms ease-out, opacity 300ms ease-out);
     }
 
     &:hover:before {
