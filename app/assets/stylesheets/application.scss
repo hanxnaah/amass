@@ -7,6 +7,7 @@
 @import 'home';
 @import 'sign-ups';
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+[ng-cloak] {
+  // scss-lint:disable ImportantRule
   display: none !important;
 }
