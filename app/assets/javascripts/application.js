@@ -30,13 +30,13 @@
       $routeProvider.when('/', {
         templateUrl: 'home.html'
       }).when('/filmmaker/new', {
-        templateUrl: '../filmmaker/new.html',
+        templateUrl: 'filmmaker/new.html',
         controller: 'FilmmakerNewCtrl'
       }).when('/organization/new', {
-        templateUrl: '../organization/new.html',
+        templateUrl: 'organization/new.html',
         controller: 'OrganizationNewCtrl'
       }).when('/contact', {
-        templateUrl: '../contact.html'
+        templateUrl: 'contact.html'
       }).otherwise({
         redirectTo: '/#/'
       });
