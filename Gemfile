@@ -11,6 +11,7 @@ gem 'newrelic_rpm'
 gem 'passenger'
 
 gem 'angularjs-rails', '~> 1.2.0'
+gem 'angular-rails-templates'
 gem 'bourbon'
 gem 'foundation-rails'
 gem 'jquery-rails'

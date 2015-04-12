@@ -4,10 +4,12 @@
 //= require ./foundation_and_overrides
 //= require slick-carousel
 //= require angular-slick
+//= require angular-rails-templates
 //
 //= require ./directives
 //= require ./controllers
 //= require ./services
+//= require_tree ./templates
 //= require_self
 
 (function () {
@@ -18,6 +20,7 @@
     'amassDirectives',
     'amassControllers',
     'amassServices',
+    'templates',
     'slick'
   ]);
 
@@ -25,7 +28,7 @@
     '$routeProvider',
     function ($routeProvider) {
       $routeProvider.when('/', {
-        templateUrl: '../home.html'
+        templateUrl: 'home.html'
       }).when('/filmmaker/new', {
         templateUrl: '../filmmaker/new.html',
         controller: 'FilmmakerNewCtrl'
