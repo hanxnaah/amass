@@ -68,7 +68,7 @@
   amassControllers.controller('SuccessStoriesCtrl', [
     '$scope',
     function ($scope) {
-      $scope.pauseVideo = function (currentSlide) {
+      $scope.pauseVideo = function () { //function (currentSlide) {
       };
     }
   ]);
