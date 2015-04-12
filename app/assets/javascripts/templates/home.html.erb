@@ -20,21 +20,13 @@
     <h1 class="text-center">Success Stories</h1>
     <br />
     <!--<slick dots="true" amass-before-change="pauseVideo(currentSlide)">-->
-      <div>
-        <div class="flex-video">
-          <iframe src="//player.vimeo.com/video/101770406?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <% ['99172312', '101770406', '98571250'].each do |vimeo_video_id| %>
+        <div>
+          <div class="flex-video">
+            <iframe src="//player.vimeo.com/video/<%= vimeo_video_id %>?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
         </div>
-      </div>
-      <div>
-        <div class="flex-video">
-          <iframe src="//player.vimeo.com/video/99172312?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
-      <div>
-        <div class="flex-video">
-          <iframe src="//player.vimeo.com/video/98571250?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
+      <% end %>
     <!--</slick>-->
     <br />
   </div>
