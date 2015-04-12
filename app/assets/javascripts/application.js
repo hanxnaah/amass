@@ -2,7 +2,10 @@
 //= require angular
 //= require angular-route
 //= require ./foundation_and_overrides
+//= require slick-carousel
+//= require angular-slick
 //
+//= require ./directives
 //= require ./controllers
 //= require ./services
 //= require_self
@@ -12,8 +15,10 @@
 
   var amassApp = angular.module('amassApp', [
     'ngRoute',
+    'amassDirectives',
     'amassControllers',
-    'amassServices'
+    'amassServices',
+    'slick'
   ]);
 
   amassApp.config([

@@ -6,7 +6,7 @@
 }
 
 .home-main-image {
-  background: $black url(asset-path('home-main-image.jpg')) center top no-repeat;
+  background: $black image-url('home-main-image.jpg') center top no-repeat;
   height: rem-calc(550px);
 
   .row {

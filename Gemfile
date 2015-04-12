@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 ruby '2.1.5'
 gem 'rails', '~> 4.2.0'
@@ -14,6 +15,7 @@ gem 'bourbon'
 gem 'foundation-rails'
 gem 'jquery-rails'
 gem 'sass-rails'
+gem 'rails-assets-angular-slick'
 gem 'uglifier', '>= 1.3.0'
 
 group :doc do

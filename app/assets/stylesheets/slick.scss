@@ -1,0 +1,44 @@
+@import 'foundation/functions';
+@import 'variables';
+
+@function image-url($path) {
+  @return asset-url('slick-carousel/slick/' + $path);
+}
+
+@function font-url($path) {
+  @return asset-url('slick-carousel/slick/fonts/' + $path);
+}
+
+$slick-arrow-color: $amass-orange;
+$slick-dot-size: rem-calc(15px);
+
+@import 'slick-carousel';
+
+$slick-arrow-size: rem-calc(50px);
+
+.slick-prev,
+.slick-next {
+  height: $slick-arrow-size;
+  width: $slick-arrow-size;
+
+  &:before {
+    font-size: rem-calc(50px);
+  }
+}
+
+.slick-next {
+  right: -1 * ($slick-arrow-size + rem-calc(5px));
+}
+
+.slick-prev {
+  left: -1 * ($slick-arrow-size + rem-calc(5px));
+}
+
+.slick-dots {
+  margin-left: 0;
+}
+
+.slick-slider {
+  margin-left: 60px;
+  margin-right: 60px;
+}
