@@ -284,7 +284,7 @@ DEPENDENCIES
   factory_girl_rails
   foundation-rails
   gon
-  jbuilder (~> 1.2)
+  jbuilder
   jquery-rails
   mongoid
   newrelic_rpm
@@ -301,4 +301,4 @@ DEPENDENCIES
   sdoc
   selenium-webdriver
   travis
-  uglifier (>= 1.3.0)
+  uglifier

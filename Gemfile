@@ -4,7 +4,7 @@ source 'https://rails-assets.org'
 ruby '2.1.5'
 gem 'rails', '~> 4.2.0'
 
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder'
 gem 'mongoid'
 gem 'newrelic_rpm'
 gem 'passenger'
@@ -19,7 +19,7 @@ gem 'sass-rails'
 gem 'rails-assets-angular-slick'
 gem 'rails-assets-froogaloop'
 gem 'rails-assets-ng-videosharing-embed'
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
