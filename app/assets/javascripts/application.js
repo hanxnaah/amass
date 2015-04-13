@@ -6,12 +6,13 @@
 //= require angular-slick
 //= require angular-rails-templates
 //= require ng-videosharing-embed
+//= require froogaloop
 //
 //= require ./controllers
 //= require ./directives
 //= require ./filters
 //= require ./services
-//= require_tree ./templates
+//= require_tree ../templates
 //= require_self
 
 (function () {
