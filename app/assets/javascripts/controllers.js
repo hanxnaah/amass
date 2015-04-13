@@ -66,8 +66,10 @@
   ]);
 
   amassControllers.controller('SuccessStoriesCtrl', [
-    '$scope',
-    function ($scope) {
+    '$scope', 'gon',
+    function ($scope, gon) {
+      $scope.successStories = gon.successStories;
+
       $scope.pauseVideo = function () {
         /* globals $f, $ */
         $f($('.slick-active iframe')[0]).api('pause');

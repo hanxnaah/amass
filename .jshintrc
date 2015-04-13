@@ -72,7 +72,6 @@
   "yui": false,
 
   "globals": {
-    "angular": true,
-    "require": true
+    "angular": true
   }
 }

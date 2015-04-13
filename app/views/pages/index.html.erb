@@ -36,6 +36,7 @@
   <br class="break-topbar" />
   <div ng-view ng-cloak></div>
   <br class="break-topbar" />
+  <%= include_gon(camel_case: true, camel_depth: :recursive) %>
   <%= javascript_include_tag "application" %>
 </body>
 </html>
