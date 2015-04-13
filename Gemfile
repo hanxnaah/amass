@@ -4,7 +4,6 @@ source 'https://rails-assets.org'
 ruby '2.1.5'
 gem 'rails', '~> 4.2.0'
 
-gem 'high_voltage'
 gem 'jbuilder', '~> 1.2'
 gem 'mongoid'
 gem 'newrelic_rpm'

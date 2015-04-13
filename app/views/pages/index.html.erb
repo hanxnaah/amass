@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="amassApp">
+<head>
+  <title>Amass Media — Tell stories that matter</title>
+  <link rel="subresource" href="<%= asset_path('home-main-image.jpg') %>" />
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag "slick" %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="fixed contain-to-grid">
+    <nav class="top-bar" role="navigation" ng-controller="NavBarCtrl">
+      <ul class="title-area">
+        <li class="name" ng-class="{active: isSelected('/')}">
+          <a href="#/"><div class="amass-logo"></div></a>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li ng-class="{active: isSelected('/organization/new')}">
+            <a class="show-for-medium-up" href="#/organization/new">POST A PROJECT</a>
+          </li>
+          <li ng-class="{active: isSelected('/filmmaker/new')}">
+            <a class="show-for-medium-up" href="#/filmmaker/new">BE A FILMMAKER</a>
+          </li>
+          <li ng-class="{active: isSelected('/contact')}">
+            <a class="show-for-large-up" href="#/contact">CONTACT US</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <br class="break-topbar" />
+  <div ng-view ng-cloak></div>
+  <br class="break-topbar" />
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
