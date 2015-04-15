@@ -290,7 +290,7 @@ DEPENDENCIES
   rails-assets-froogaloop!
   rails-assets-ng-videosharing-embed!
   rails_12factor
-  rspec-rails (~> 3.0.0)
+  rspec-rails
   rubocop
   sass-rails
   scss-lint
