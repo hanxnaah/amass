@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 ruby '2.1.5'
 gem 'rails', '~> 4.2.0'
@@ -16,10 +15,13 @@ gem 'foundation-rails'
 gem 'gon'
 gem 'jquery-rails'
 gem 'sass-rails'
-gem 'rails-assets-angular-slick'
-gem 'rails-assets-froogaloop'
-gem 'rails-assets-ng-videosharing-embed'
 gem 'uglifier'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular-slick'
+  gem 'rails-assets-froogaloop'
+  gem 'rails-assets-ng-videosharing-embed'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

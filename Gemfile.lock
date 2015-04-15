@@ -290,9 +290,9 @@ DEPENDENCIES
   newrelic_rpm
   passenger
   rails (~> 4.2.0)
-  rails-assets-angular-slick
-  rails-assets-froogaloop
-  rails-assets-ng-videosharing-embed
+  rails-assets-angular-slick!
+  rails-assets-froogaloop!
+  rails-assets-ng-videosharing-embed!
   rails_12factor
   rspec-rails (~> 3.0.0)
   rubocop
