@@ -33,7 +33,7 @@
       $routeProvider.when('/', {
         templateUrl: 'home.html'
       }).when('/filmmaker/new', {
-        templateUrl: '/assets/filmmaker/new.html',
+        templateUrl: 'filmmaker/new.html',
         controller: 'FilmmakerNewCtrl'
       }).when('/organization/new', {
         templateUrl: 'organization/new.html',
