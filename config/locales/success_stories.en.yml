@@ -12,10 +12,10 @@ en:
       filmmaker:
         name: Greg Armstrong
         info: >
-          Greg Armstrong produces, directs, and edits short films of many
-          varieties including narrative, documentary, promotional,
-          movement-based, and music videos.  He has worked with nonprofits, for
-          profits, music artists, etc.
+          <strong>Greg Armstrong</strong> produces, directs, and edits short
+          films of many varieties including narrative, documentary,
+          promotional, movement-based, and music videos.  He has worked with
+          nonprofits, for profits, music artists, etc.
     -
       vimeo_video_id: '116570432'
       video_for:
@@ -34,22 +34,6 @@ en:
           sustainability, religious rituals, and music. His work has been
           featured in the Oakland International Film Festival
     -
-      vimeo_video_id: '98571250'
-      video_for:
-        name: Bernadette Hobson
-        info: >
-          Bernadette is a graduate student studying Latin American Studies at
-          Georgetown University. Her research is focused on how the World
-          Bank’s clean energy programs are negatively impacting indigenous
-          communities in Chiapas, Mexico
-      filmmaker:
-        name: Christine Beggs
-        info: >
-          Christine Beggs is the founder of Ripples Edge Media, a digital media
-          firm in the San Francisco Bay area that helps social entrepreneurs
-          and non-profits harness the power of video & social media to maximize
-          their impacts online
-    -
       vimeo_video_id: '101770406'
       video_for:
         website: http://induz.org/
@@ -65,3 +49,19 @@ en:
           varieties including narrative, documentary, promotional,
           movement-based, and music videos.  He has worked with nonprofits, for
           profits, music artists, etc.
+    -
+      vimeo_video_id: '98571250'
+      video_for:
+        name: Bernadette Hobson
+        info: >
+          Bernadette is a graduate student studying Latin American Studies at
+          Georgetown University. Her research is focused on how the World
+          Bank’s clean energy programs are negatively impacting indigenous
+          communities in Chiapas, Mexico
+      filmmaker:
+        name: Christine Beggs
+        info: >
+          Christine Beggs is the founder of Ripples Edge Media, a digital media
+          firm in the San Francisco Bay area that helps social entrepreneurs
+          and non-profits harness the power of video & social media to maximize
+          their impacts online
