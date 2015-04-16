@@ -22,7 +22,7 @@
     <slick dots="true" amass-before-change="pauseVideo()" draggable="false">
       <div ng-repeat="successStory in successStories">
         <div class="row">
-          <div class="large-6 columns">
+          <div class="medium-6 columns">
             <div class="flex-video">
               <embed-video
                 iframe-id="{{'vimeo-' + successStory.vimeoVideoId}}"
@@ -33,7 +33,7 @@
               </embed-video>
             </div>
           </div>
-          <div class="large-6 columns">
+          <div class="medium-6 columns">
             <div class="row">
               <div class="small-6 columns text-center">
                 <h4>
@@ -64,8 +64,10 @@
           </div>
         </div>
         <br />
-        <p ng-bind-html="successStory.videoFor.info|safeHtml"></p>
-        <p ng-bind-html="successStory.filmmaker.info|safeHtml"></p>
+        <div class="show-for-medium-up">
+          <p ng-bind-html="successStory.videoFor.info|safeHtml"></p>
+          <p ng-bind-html="successStory.filmmaker.info|safeHtml"></p>
+        </div>
       </div>
     </slick>
     <br />
