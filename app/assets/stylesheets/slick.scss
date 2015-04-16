@@ -55,6 +55,8 @@ $slick-opacity-default: 1;
 }
 
 .slick-slider {
+  @include user-select(text);
+
   margin-left: 60px;
   margin-right: 60px;
 }

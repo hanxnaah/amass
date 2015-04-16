@@ -10,6 +10,7 @@
 //
 //= require ./controllers
 //= require ./directives
+//= require ./filters
 //= require ./services
 //= require_tree ../templates
 //= require_self
@@ -22,6 +23,7 @@
     'videosharing-embed',
     'amassControllers',
     'amassDirectives',
+    'amassFilters',
     'amassServices',
     'templates',
     'slick'
