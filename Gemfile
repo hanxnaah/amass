@@ -7,6 +7,7 @@ gem 'jbuilder'
 gem 'mongoid'
 gem 'newrelic_rpm'
 gem 'passenger'
+gem 'sprockets', '< 3'
 
 gem 'angularjs-rails', '~> 1.2.0'
 gem 'angular-rails-templates'

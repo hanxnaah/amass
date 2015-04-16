@@ -31,15 +31,15 @@
     '$routeProvider',
     function ($routeProvider) {
       $routeProvider.when('/', {
-        templateUrl: '/assets/home.html'
+        templateUrl: 'home.html'
       }).when('/filmmaker/new', {
         templateUrl: '/assets/filmmaker/new.html',
         controller: 'FilmmakerNewCtrl'
       }).when('/organization/new', {
-        templateUrl: '/assets/organization/new.html',
+        templateUrl: 'organization/new.html',
         controller: 'OrganizationNewCtrl'
       }).when('/contact', {
-        templateUrl: '/assets/contact.html'
+        templateUrl: 'contact.html'
       }).otherwise({
         redirectTo: '/#/'
       });
