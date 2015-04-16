@@ -38,5 +38,12 @@
   <br class="break-topbar" />
   <%= include_gon(camel_case: true, camel_depth: :recursive) %>
   <%= javascript_include_tag "application" %>
+  <script>
+    angular.module('amassApp').config(function (assetPathProvider) {
+      assetPathProvider.setAssets(
+        <%= File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}" %>
+      )
+    });
+  </script>
 </body>
 </html>

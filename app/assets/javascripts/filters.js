@@ -3,17 +3,19 @@
 
   var amassFilters = angular.module('amassFilters', []);
 
-  amassFilters.filter('imageForVideoFor', function () {
+  amassFilters.filter('imageForVideoFor', ['$filter', function ($filter) {
     return function (videoFor) {
-      return '/assets/video-for/' + dashify(videoFor.name) + '.jpg';
+      var rawImageUrl = 'video-for/' + dashify(videoFor.name) + '.jpg';
+      return $filter('assetPath')(rawImageUrl);
     };
-  });
+  }]);
 
-  amassFilters.filter('imageForFilmmaker', function () {
+  amassFilters.filter('imageForFilmmaker', ['$filter', function ($filter) {
     return function (filmmaker) {
-      return '/assets/filmmakers/' + dashify(filmmaker.name) + '.jpg';
+      var rawImageUrl = 'filmmakers/' + dashify(filmmaker.name) + '.jpg';
+      return $filter('assetPath')(rawImageUrl);
     };
-  });
+  }]);
 
   amassFilters.filter('safeHtml', ['$sce', function ($sce) {
     return function (html) {

@@ -3,8 +3,9 @@
 //= require angular-route
 //= require ./foundation_and_overrides
 //= require slick-carousel
-//= require angular-slick
+//= require angular-asset-path
 //= require angular-rails-templates
+//= require angular-slick
 //= require ng-videosharing-embed
 //= require froogaloop
 //
@@ -25,6 +26,7 @@
     'amassDirectives',
     'amassFilters',
     'amassServices',
+    'asset-path',
     'templates',
     'slick'
   ]);

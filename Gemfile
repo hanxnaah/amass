@@ -20,6 +20,7 @@ gem 'uglifier'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular-slick'
+  gem 'rails-assets-angular-asset-path'
   gem 'rails-assets-froogaloop'
   gem 'rails-assets-ng-videosharing-embed'
 end
