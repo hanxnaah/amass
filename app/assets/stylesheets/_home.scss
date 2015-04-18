@@ -88,3 +88,17 @@
     }
   }
 }
+
+.success-story {
+  margin: auto 1em;
+}
+
+.success-story-image {
+  $success-image-width: rem-calc(175px);
+
+  border-radius: $success-image-width / 2;
+  margin: .5em auto;
+  max-width: 100%;
+  overflow: hidden;
+  width: $success-image-width;
+}

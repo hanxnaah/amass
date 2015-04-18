@@ -20,7 +20,7 @@
     <h1 class="text-center">Success Stories</h1>
     <br />
     <slick dots="true" amass-before-change="pauseVideo()" draggable="false">
-      <div ng-repeat="successStory in successStories">
+      <div class="success-story" ng-repeat="successStory in successStories">
         <div class="row">
           <div class="medium-6 columns">
             <div class="flex-video">
@@ -29,6 +29,9 @@
                 api="1"
                 player_id="{{'vimeo-' + successStory.vimeoVideoId}}"
                 ng-href="{{'//vimeo.com/' + successStory.vimeoVideoId}}"
+                portrait="0"
+                title="0"
+                byline="0"
                 >
               </embed-video>
             </div>
@@ -36,10 +39,12 @@
           <div class="medium-6 columns">
             <div class="row">
               <div class="small-6 columns text-center">
-                <h4>
+                <h5>
                   <strong>Video for:</strong>
                   <br />
-                  <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
+                  <div class="success-story-image">
+                    <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
+                  </div>
                   <span ng-switch="!!successStory.videoFor.website">
                     <span ng-switch-when="false">
                       {{successStory.videoFor.name}}
@@ -50,15 +55,17 @@
                       </a>
                     </span>
                   </span>
-                </h4>
+                </h5>
               </div>
               <div class="small-6 columns text-center">
-                <h4>
+                <h5>
                   <strong>Filmmaker:</strong>
                   <br />
-                  <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
+                  <div class="success-story-image">
+                    <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
+                  </div>
                   {{successStory.filmmaker.name}}
-                </h4>
+                </h5>
               </div>
             </div>
           </div>
