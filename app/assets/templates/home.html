@@ -36,13 +36,14 @@
               </embed-video>
             </div>
           </div>
-          <div class="medium-6 columns">
-            <div class="row">
+          <div class="medium-6 columns success-story-profiles">
+            <div class="success-story-profile-linker"></div>
+            <div class="row success-story-profiles-content">
               <div class="small-6 columns text-center">
                 <h5>
                   <strong>Video for:</strong>
                   <br />
-                  <div class="success-story-image">
+                  <div class="success-story-profile-image">
                     <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
                   </div>
                   <span ng-switch="!!successStory.videoFor.website">
@@ -61,7 +62,7 @@
                 <h5>
                   <strong>Filmmaker:</strong>
                   <br />
-                  <div class="success-story-image">
+                  <div class="success-story-profile-image">
                     <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
                   </div>
                   {{successStory.filmmaker.name}}

@@ -1,0 +1,43 @@
+.success-story {
+  margin: auto 1em;
+}
+
+/*
+.success-story-profiles {
+  @include clearfix();
+
+  position: relative;
+}
+
+.success-story-profiles-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+
+.success-story-profile-linker {
+  $linker-width: rem-calc(50px);
+
+  position: absolute;
+  background: $amass-green asset-url('amass_icon.png') no-repeat 6px 5px;
+  background-size: 85%;
+  border-radius: $linker-width / 2;
+  display: none;
+  height: $linker-width;
+  width: $linker-width;
+  top: 100px;
+  left: 50%;
+  margin-left: -$linker-width / 2;
+  z-index: 1;
+}
+
+.success-story-profile-image {
+  $success-image-width: rem-calc(185px);
+
+  border-radius: $success-image-width / 2;
+  margin: .5em auto;
+  max-width: 100%;
+  overflow: hidden;
+  width: $success-image-width;
+}
