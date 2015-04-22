@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="amassApp">
 <head>
+  <base href="/">
   <title>Amass Media — Tell stories that matter</title>
   <link rel="subresource" href="<%= asset_path('home-main-image.jpg') %>" />
   <%= javascript_include_tag 'vendor/modernizr' %>
@@ -14,20 +15,20 @@
   <div class="fixed contain-to-grid">
     <nav class="top-bar" role="navigation" ng-controller="NavBarCtrl">
       <ul class="title-area">
-        <li class="name" ng-class="{active: isSelected('/')}">
-          <a href="#/"><div class="amass-logo"></div></a>
+        <li class="name">
+          <a href="/"><div class="amass-logo"></div></a>
         </li>
       </ul>
       <section class="top-bar-section">
         <ul class="right">
           <li ng-class="{active: isSelected('/organization/new')}">
-            <a class="show-for-medium-up" href="#/organization/new">POST A PROJECT</a>
+            <a class="show-for-medium-up" href="/organization/new">POST A PROJECT</a>
           </li>
           <li ng-class="{active: isSelected('/filmmaker/new')}">
-            <a class="show-for-medium-up" href="#/filmmaker/new">BE A FILMMAKER</a>
+            <a class="show-for-medium-up" href="/filmmaker/new">BE A FILMMAKER</a>
           </li>
           <li ng-class="{active: isSelected('/contact')}">
-            <a class="show-for-large-up" href="#/contact">CONTACT US</a>
+            <a class="show-for-large-up" href="/contact">CONTACT US</a>
           </li>
         </ul>
       </section>

@@ -31,24 +31,25 @@
     'slick'
   ]);
 
-  amassApp.config([
-    '$routeProvider',
-    function ($routeProvider) {
-      $routeProvider.when('/', {
-        templateUrl: 'home.html'
-      }).when('/filmmaker/new', {
-        templateUrl: 'filmmaker/new.html',
-        controller: 'FilmmakerNewCtrl'
-      }).when('/organization/new', {
-        templateUrl: 'organization/new.html',
-        controller: 'OrganizationNewCtrl'
-      }).when('/contact', {
-        templateUrl: 'contact.html'
-      }).otherwise({
-        redirectTo: '/#/'
-      });
-    }
-  ]);
+  amassApp.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when('/', {
+      templateUrl: 'home.html'
+    }).when('/filmmaker/new', {
+      templateUrl: 'filmmaker/new.html',
+      controller: 'FilmmakerNewCtrl'
+    }).when('/organization/new', {
+      templateUrl: 'organization/new.html',
+      controller: 'OrganizationNewCtrl'
+    }).when('/contact', {
+      templateUrl: 'contact.html'
+    }).otherwise({
+      redirectTo: '/#/'
+    });
+  }]);
+
+  amassApp.config(['$locationProvider', function ($locationProvider) {
+    $locationProvider.html5Mode(true);
+  }]);
 
   amassApp.run([
     '$rootScope', '$location', '$anchorScroll', '$routeParams',
