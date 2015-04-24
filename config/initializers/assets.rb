@@ -4,5 +4,5 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(
-  *.png *.svg *.eot *.woff *.woff2 *.ttf *.jpg *.gif slick.css
+  *.ico *.png *.svg *.eot *.woff *.woff2 *.ttf *.jpg *.gif slick.css
 )
