@@ -4,14 +4,19 @@
       <br />
       <br />
       <h1 class="text-center">Tell stories that matter</h1>
-      <p class="text-center text-section">
+      <p class="text-center text-section hide-for-small-only">
         Amass Media empowers organizations to tell their social impact stories by creating an online platform that connects nonprofits, social ventures, and small businesses with talented filmmakers looking for interesting projects to work on.
       </p>
+      <p class="text-center text-section show-for-small-only">
+        Amass Media empowers organizations to tell their social impact stories
+        by connecting them with talented filmmakers looking for interesting
+        projects.
+      </p>
       <br />
-      <div class="text-center">
-        <a class="button radius new-filmmaker" href="/filmmaker/new">BE A FILMMAKER</a>
-        <a class="button radius post-project" href="/organization/new">POST A PROJECT</a>
-      </div>
+      <ul class="button-group radius text-center">
+        <li><a class="button radius new-filmmaker" href="/filmmaker/new">BE A FILMMAKER</a></li>
+        <li><a class="button radius post-project" href="/organization/new">POST A PROJECT</a></li>
+      </ul>
     </div>
   </div>
 
@@ -40,33 +45,29 @@
             <div class="success-story-profile-linker"></div>
             <div class="row success-story-profiles-content">
               <div class="small-6 columns text-center">
-                <h5>
-                  <strong>Video for:</strong>
-                  <br />
-                  <div class="success-story-profile-image">
-                    <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
-                  </div>
-                  <span ng-switch="!!successStory.videoFor.website">
-                    <span ng-switch-when="false">
-                      {{successStory.videoFor.name}}
-                    </span>
-                    <span ng-switch-default>
-                      <a ng-href="{{successStory.videoFor.website}}" target="_blank">
-                        {{successStory.videoFor.name}}
-                      </a>
-                    </span>
+                <strong>Video for:</strong>
+                <br />
+                <div class="success-story-profile-image">
+                  <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
+                </div>
+                <span ng-switch="!!successStory.videoFor.website">
+                  <span ng-switch-when="false">
+                    {{successStory.videoFor.name}}
                   </span>
-                </h5>
+                  <span ng-switch-default>
+                    <a ng-href="{{successStory.videoFor.website}}" target="_blank">
+                      {{successStory.videoFor.name}}
+                    </a>
+                  </span>
+                </span>
               </div>
               <div class="small-6 columns text-center">
-                <h5>
-                  <strong>Filmmaker:</strong>
-                  <br />
-                  <div class="success-story-profile-image">
-                    <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
-                  </div>
-                  {{successStory.filmmaker.name}}
-                </h5>
+                <strong>Filmmaker:</strong>
+                <br />
+                <div class="success-story-profile-image">
+                  <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
+                </div>
+                {{successStory.filmmaker.name}}
               </div>
             </div>
           </div>
