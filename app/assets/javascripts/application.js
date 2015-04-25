@@ -43,7 +43,7 @@
     }).when('/contact', {
       templateUrl: 'contact.html'
     }).otherwise({
-      redirectTo: '/#/'
+      templateUrl: '404.html'
     });
   }]);
 
