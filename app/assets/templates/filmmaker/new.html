@@ -1,33 +1,36 @@
+<br />
 <div class="row row-content">
   <div ng-hide="created">
     <h1>Join our filmmaker network!</h1>
-    <p class="intro">We'll be launching our platform soon. Sign up to be a filmmaker now to get notified about project opportunities</p>
+    <p class="intro">
+      Sign up to be a filmmaker now to get notified about project opportunities
+    </p>
     <form novalidate name="form" ng-submit="create()">
       <div class="form-error" ng-show="formError">{{formError}}</div>
-      <div class="input-block">
-        <label for="name" class="input-label small-emphasis">Name</label>
-        <input type="text" name="name" id="name" ng-model="filmmaker.name" ng-class="{error: invalidField(form.name.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.name.$error.required)">required</span>
-      </div>
+      <label for="name" ng-class="{error: invalidField(form.name.$invalid)}">
+        Name
+        <input type="text" name="name" ng-model="filmmaker.name" ng-class="{error: invalidField(form.name.$invalid)}" required>
+      </label>
+      <small class="error" ng-show="invalidField(form.name.$error.required)">required</small>
 
-      <div class="input-block">
-        <label for="email" class="input-label small-emphasis">Email</label>
+      <label for="email" ng-class="{error: invalidField(form.email.$invalid)}">
+        Email
         <input type="email" name="email" id="email" ng-model="filmmaker.email" ng-class="{error: invalidField(form.email.$invalid)}" required>
-        <span class="error-message" ng-show="invalidField(form.email.$error.required)">required</span>
-        <span class="error-message" ng-show="invalidField(form.email.$error.email)">invalid email</span>
-      </div>
+      </label>
+      <small class="error" ng-show="invalidField(form.email.$error.required)">required</small>
+      <small class="error" ng-show="invalidField(form.email.$error.email)">invalid email</small>
 
-      <div class="input-block">
-        <label for="skills" class="input-label small-emphasis">Brief Overview of Skills/Experience</label>
-        <textarea name="skills" id="skills" ng-model="filmmaker.skills" ng-class="{error: invalidField(form.skills.$invalid)}" required></textarea>
-        <span class="error-message" ng-show="invalidField(form.skills.$error.required)">required</span>
-      </div>
+      <label for="skills" ng-class="{error: invalidField(form.skills.$invalid)}">
+        Brief Overview of Skills/Experience
+        <textarea rows="4" name="skills" id="skills" ng-model="filmmaker.skills" required></textarea>
+      </label>
+      <span class="error" ng-show="invalidField(form.skills.$error.required)">required</span>
 
-      <div class="input-block">
-        <label for="portfolio-url" class="input-label small-emphasis">OPTIONAL Link to portfolio</label>
+      <label for="portfolio-url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
+        OPTIONAL Link to portfolio</label>
         <input type="url" name="portfolio_url" id="portfolio-url" ng-model="filmmaker.portfolio_url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
-        <span class="error-message" ng-show="invalidField(form.portfolio_url.$error.url)">invalid link</span>
-      </div>
+      </label>
+      <span class="error" ng-show="invalidField(form.portfolio_url.$error.url)">invalid link</span>
 
       <input class="button radius submit" ng-disabled="saving" type="submit" value="SUBMIT">
     </form>

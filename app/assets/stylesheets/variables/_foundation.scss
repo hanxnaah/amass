@@ -98,7 +98,7 @@ $font-family-serif: 'aleoregular', Georgia, Cambria, "Times New Roman", Times, s
 
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
-// $font-weight-bold: bold !default;
+$font-weight-bold: bold !default;
 
 // $white       : #FFFFFF;
 // $ghost       : #FAFAFA;
@@ -123,13 +123,13 @@ $font-family-serif: 'aleoregular', Georgia, Cambria, "Times New Roman", Times, s
 // We use these as default colors throughout
 $primary-color: $amass-orange;
 // $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
+$alert-color: $amass-red;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: $white;
+$body-bg: $bg-gray;
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -622,7 +622,7 @@ $flex-video-padding-bottom: 56.25%; // 16:9 ratio
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
 // $form-label-font-size: rem-calc(14);
-// $form-label-font-weight: $font-weight-normal;
+$form-label-font-weight: $font-weight-bold;
 // $form-label-line-height: 1.5;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
 // $form-label-small-transform: capitalize;
@@ -667,13 +667,13 @@ $flex-video-padding-bottom: 56.25%; // 16:9 ratio
 
 // We use these to style the error states for inputs and labels
 // $input-error-message-padding: rem-calc(6 9 9);
-// $input-error-message-top: -1px;
+$input-error-message-top: 0;
 // $input-error-message-font-size: rem-calc(12);
 // $input-error-message-font-weight: $font-weight-normal;
 // $input-error-message-font-style: italic;
 // $input-error-message-font-color: $white;
-// $input-error-message-bg-color: $alert-color;
-// $input-error-message-font-color-alt: $oil;
+$input-error-message-bg-color: $body-bg;
+$input-error-message-font-color-alt: $alert-color;
 
 // We use this to style the glowing effect of inputs when focused
 // $input-include-glowing-effect: true;
