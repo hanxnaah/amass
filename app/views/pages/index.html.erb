@@ -5,9 +5,13 @@
   <title>Amass Media — Tell stories that matter</title>
   <link rel="subresource" href="<%= asset_path('home-main-image.jpg') %>" />
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,700,400italic" %>
-  <%= javascript_include_tag 'vendor/modernizr' %>
   <%= stylesheet_link_tag "application" %>
   <%= stylesheet_link_tag "slick" %>
+
+  <%= include_gon(camel_case: true, camel_depth: :recursive) %>
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= javascript_include_tag 'mixpanel_and_overrides' %>
+
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +42,6 @@
   <br class="break-topbar" />
   <div ng-view ng-cloak></div>
   <br class="break-topbar" />
-  <%= include_gon(camel_case: true, camel_depth: :recursive) %>
   <%= javascript_include_tag "application" %>
   <script>
     angular.module('amassApp').config(function (assetPathProvider) {
