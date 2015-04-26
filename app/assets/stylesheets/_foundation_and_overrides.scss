@@ -8,6 +8,7 @@ $include-html-global-classes: true;
 @import 'normalize';
 @import 'foundation';
 
+// scss-lint:disable QualifyingElement
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   font-weight: normal;
