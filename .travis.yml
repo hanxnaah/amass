@@ -16,6 +16,7 @@ before_script:
 - bundle exec rake assets:precompile
 script:
 - bundle exec travis lint --skip-completion-check
+- bundle exec haml-lint app/views
 - bundle exec rubocop -D
 - bundle exec rake jscs
 - bundle exec rake jshint

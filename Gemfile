@@ -14,6 +14,7 @@ gem 'angular-rails-templates'
 gem 'bourbon'
 gem 'foundation-rails'
 gem 'gon'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
@@ -32,6 +33,7 @@ group :doc do
 end
 
 group :development, :test do
+  gem 'haml-rails'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'travis'

@@ -1,0 +1,47 @@
+!!! 5
+%html{ ng: { app: 'amassApp' }}
+  %head
+    %base{ href: '/' }
+    %title Amass Media — Tell stories that matter
+
+    %link{ rel: 'subresource', href: asset_path('home-main-image.jpg') }
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,700,400italic"
+    = stylesheet_link_tag "application"
+    = stylesheet_link_tag "slick"
+
+    = include_gon(camel_case: true, camel_depth: :recursive)
+    = javascript_include_tag 'vendor/modernizr'
+    = javascript_include_tag 'mixpanel_and_overrides'
+
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico'
+    %meta{ name: "viewport", content: "width=device-width, initial-scale=1.0" }
+
+  %body
+    .fixed.contain-to-grid
+      %nav.top-bar{ role: "navigation", ng: { controller: "NavBarCtrl" }}
+        %ul.title-area
+          %li.name
+            = link_to '/' do
+              .amass-logo
+
+        %section.top-bar-section
+          %ul.right
+            %li{ ng: { class: "{active: isSelected('/organization/new')}" }}
+              = link_to 'POST A PROJECT', '/organization/new', class: "show-for-medium-up"
+            %li{ ng: { class: "{active: isSelected('/filmmaker/new')}" }}
+              = link_to 'BE A FILMMAKER', '/filmmaker/new', class: "show-for-medium-up"
+            %li{ ng: { class: "{active: isSelected('/contact')}" }}
+              = link_to 'CONTACT US', '/contact', class: "show-for-large-up"
+
+    %br.break-topbar
+    %div{ ng: { view: true, ng: true }}
+    %br.break-topbar
+    = javascript_include_tag "application"
+
+    :javascript
+      angular.module('amassApp').config(function (assetPathProvider) {
+        assetPathProvider.setAssets(
+          #{File.read(Dir.glob('public/assets/manifest-*.json').last).html_safe rescue "{}"}
+        )
+      });
