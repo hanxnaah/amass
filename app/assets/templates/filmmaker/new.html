@@ -26,8 +26,13 @@
       </label>
       <span class="error" ng-show="invalidField(form.skills.$error.required)">required</span>
 
+      <label for="city" ng-class="{error: invalidField(form.city.$invalid)}">
+        City
+        <input type="text" name="city" id="portfolio-url" ng-model="filmmaker.city" ng-class="{error: invalidField(form.city.$invalid)}" placeholder="e.g. San Francisco, CA">
+      </label>
+
       <label for="portfolio-url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
-        OPTIONAL Link to portfolio</label>
+        OPTIONAL Link to portfolio
         <input type="url" name="portfolio_url" id="portfolio-url" ng-model="filmmaker.portfolio_url" ng-class="{error: invalidField(form.portfolio_url.$invalid)}">
       </label>
       <span class="error" ng-show="invalidField(form.portfolio_url.$error.url)">invalid link</span>
