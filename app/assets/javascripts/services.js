@@ -28,8 +28,6 @@
 
   amassServices.factory('gon', function () {
     /* global window */
-    var gon = window.gon;
-    window.gon = 'Access gon through angular service!';
-    return gon;
+    return window.gon;
   });
 })();
