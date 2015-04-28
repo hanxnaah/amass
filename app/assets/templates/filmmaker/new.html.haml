@@ -1,0 +1,49 @@
+.row.row-content
+  %br
+
+  %div{ ng: { hide: 'created' } }
+    %h1 Join our filmmaker network!
+    %p.intro
+      Sign up to be a filmmaker now to get notified about project opportunities
+
+    %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
+      .form-error{ ng: { show: 'formError' } } {{formError}}
+
+      %label{ for: 'name', ng: { class: '{error: invalidField(form.name.$invalid)}' } }
+        Name
+        - ng_data = { model: 'filmmaker.name', class: '{error: invalidField(form.name.$invalid)}' }
+        %input{ type: 'text', name: 'name', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.name.$error.required)' } } required
+
+      %label{ for: 'email', ng: { class: '{error: invalidField(form.email.$invalid)}' } }
+        Email
+        - ng_data = { model: 'filmmaker.email',
+            class: '{error: invalidField(form.email.$invalid)}' }
+        %input{ type: 'email', name: 'email', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.email.$error.required)' } } required
+      %small.error{ ng: { show: 'invalidField(form.email.$error.email)' } } invalid email
+
+      %label{ for: 'skills', ng: { class: '{error: invalidField(form.skills.$invalid)}' } }
+        Brief Overview of Skills/Experience
+        %textarea{ rows: '4', name: 'skills', ng: { model: 'filmmaker.skills' }, required: true }
+      %small.error{ ng: { show: 'invalidField(form.skills.$error.required)' } } required
+
+      %label{ for: 'city', ng: { class: '{error: invalidField(form.city.$invalid)}' } }
+        City
+        - ng_data = { model: 'filmmaker.city', class: '{error: invalidField(form.city.$invalid)}' }
+        %input{ type: 'text', name: 'city', ng: ng_data, placeholder: 'e.g. San Francisco, CA' }
+
+      %label{ for: 'portfolio_url',
+          ng: { class: '{error: invalidField(form.portfolio_url.$invalid)}' } }
+        OPTIONAL Link to portfolio
+        - ng_data = { model: 'filmmaker.portfolio_url',
+            class: '{error: invalidField(form.portfolio_url.$invalid)}' }
+        %input{ type: 'url', name: 'portfolio_url', ng: ng_data }
+      %small.error{ ng: { show: 'invalidField(form.portfolio_url.$error.url)' } } invalid link
+
+      %input.button.radius.submit{ ng: { disabled: 'saving' }, type: 'submit', value: 'SUBMIT' }
+
+  %div{ ng: { show: 'created' } }
+    %h1 Thanks for signing up!
+    %p We hope to find you a project soon.
+    %button.button.radius.add-another{ ng: { click: 'clear()' } } ADD ANOTHER FILMMAKER
