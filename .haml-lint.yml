@@ -1,7 +1,3 @@
-exclude:
-  - 'node_modules/**'
-  - 'vendor/**'
-
 linters:
   LineLength:
     max: 100
