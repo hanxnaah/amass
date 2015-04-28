@@ -5,13 +5,3 @@
 require File.expand_path('../config/application', __FILE__)
 
 Amass::Application.load_tasks
-
-require 'haml_lint/rake_task'
-HamlLint::RakeTask.new do |t|
-  t.files = ['app/']
-end
-
-require 'scss_lint/rake_task'
-SCSSLint::RakeTask.new do |t|
-  t.files = ['app/']
-end
