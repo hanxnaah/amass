@@ -15,7 +15,6 @@ gem 'bourbon'
 gem 'foundation-rails'
 gem 'gon'
 gem 'haml-rails'
-gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 
