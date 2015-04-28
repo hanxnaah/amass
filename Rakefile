@@ -8,3 +8,6 @@ Amass::Application.load_tasks
 
 require 'haml_lint/rake_task'
 HamlLint::RakeTask.new
+
+require 'scss_lint/rake_task'
+SCSSLint::RakeTask.new
