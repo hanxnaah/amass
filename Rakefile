@@ -5,3 +5,6 @@
 require File.expand_path('../config/application', __FILE__)
 
 Amass::Application.load_tasks
+
+require 'haml_lint/rake_task'
+HamlLint::RakeTask.new

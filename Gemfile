@@ -33,7 +33,7 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'haml-rails'
+  gem 'haml-lint'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'travis'
