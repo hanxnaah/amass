@@ -3,7 +3,7 @@
 
   var amassDirectives = angular.module('amassDirectives', []);
 
-  amassDirectives.directive('amassBeforeChange', [
+  amassDirectives.directive('amsBeforeChange', [
     '$parse', '$rootScope',
     function ($parse, $rootScope) {
       return {
