@@ -1,195 +1,193 @@
-<div class="home">
-  <div class="home-main-image">
-    <div class="row row-content">
-      <br />
-      <br />
-      <h1 class="text-center">Tell stories that matter</h1>
-      <p class="text-center text-section hide-for-small-only">
-        Amass Media empowers organizations to tell their social impact stories by creating an online platform that connects nonprofits, social ventures, and small businesses with talented filmmakers looking for interesting projects to work on.
-      </p>
-      <p class="text-center text-section show-for-small-only">
-        Amass Media empowers organizations to tell their social impact stories
-        by connecting them with talented filmmakers looking for interesting
-        projects.
-      </p>
-      <br />
-      <ul class="button-group radius text-center">
-        <li>
-          <a class="button radius new-filmmaker" href="/filmmaker/new" analytics-on analytics-event="Be a filmmaker" analytics-location="Home page image">
-            BE A FILMMAKER
-          </a>
-        </li>
-        <li>
-          <a class="button radius post-project" href="/organization/new" analytics-on analytics-event="Post a project" analytics-location="Home page image">
-            POST A PROJECT
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row" ng-controller="SuccessStoriesCtrl">
-    <br />
-    <h1 class="text-center">Success Stories</h1>
-    <br />
-    <slick dots="true" amass-before-change="pauseVideo()" draggable="false">
-      <div class="success-story" ng-repeat="successStory in successStories">
-        <div class="row">
-          <div class="medium-6 columns">
-            <div class="flex-video">
-              <embed-video
-                iframe-id="{{'vimeo-' + successStory.vimeoVideoId}}"
-                api="1"
-                player_id="{{'vimeo-' + successStory.vimeoVideoId}}"
-                ng-href="{{'//vimeo.com/' + successStory.vimeoVideoId}}"
-                portrait="0"
-                title="0"
-                byline="0"
-                >
-              </embed-video>
-            </div>
-          </div>
-          <div class="medium-6 columns success-story-profiles">
-            <div class="success-story-profile-linker"></div>
-            <div class="row success-story-profiles-content">
-              <div class="small-6 columns text-center">
-                <strong>Video for:</strong>
-                <br />
-                <div class="success-story-profile-image">
-                  <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
-                </div>
-                <span ng-switch="!!successStory.videoFor.website">
-                  <span ng-switch-when="false">
-                    {{successStory.videoFor.name}}
-                  </span>
-                  <span ng-switch-default>
-                    <a ng-href="{{successStory.videoFor.website}}" target="_blank">
-                      {{successStory.videoFor.name}}
-                    </a>
-                  </span>
-                </span>
-              </div>
-              <div class="small-6 columns text-center">
-                <strong>Filmmaker:</strong>
-                <br />
-                <div class="success-story-profile-image">
-                  <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
-                </div>
-                {{successStory.filmmaker.name}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="show-for-medium-up">
-          <p ng-bind-html="successStory.videoFor.info|safeHtml"></p>
-          <p ng-bind-html="successStory.filmmaker.info|safeHtml"></p>
-        </div>
-      </div>
-    </slick>
-    <br />
-  </div>
-
-  <div class="home-how-it-works">
-    <br />
-    <div class="row">
-      <h1 class="text-center">How it works</h1>
-      <div class= "flow-chart-container">
-        <div class="flow-item">
-          <h2 class="flow-content-header">STEP 1</h2>
-          <div class="flow-content">
-            <div class="row">
-              <div class="large-6 columns text-blurb-container">
-                <div class="text-heading text-center"><b>Filmmakers</b></div>
-                <div class="image filmmaker center"></div>
-                <p class="text-blurb text-center">Sign up to get notified about relevant projects</p>
-
-                <div class="text-center">
-                  <a class="button radius new-filmmaker" href="/filmmaker/new" analytics-on analytics-event="Be a filmmaker" analytics-location="How it works">
-                    BE A FILMMAKER
-                  </a>
-                </div>
-              </div>
-              <div class="large-6 columns text-blurb-container">
-                <div class="text-heading text-center"><b>Organizations</b></div>
-                <div class="image org center"></div>
-                <p class="text-blurb text-center">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
-                <div class="text-center">
-                  <a class="button radius post-project" href="/organization/new" analytics-on analytics-event="Post a project" analytics-location="How it works">
-                    POST A PROJECT
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flow-item mini center">
-          <h2 class="flow-content-header">STEP 2</h2>
-          <div class="flow-content">
-            <div class="text-blurb-container">
-              <div class="text-heading text-center"><b>Amass Media</b></div>
-              <div class="image amass center"></div>
-              <p class="text-blurb text-center">Amass Media matches filmmakers with organizations</p>
-            </div>
-          </div>
-        </div>
-        <div class="flow-item mini center">
-          <h2 class="flow-content-header">STEP 3</h2>
-          <div class="flow-content">
-            <div class="text-blurb-container">
-              <div class="text-heading text-center"><b>Social Impact Video Projects</b></div>
-              <div class="image video-grows center"></div>
-              <p class="text-blurb text-center">Filmmakers work with organizations to make awesome video projects!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br />
-  </div>
-
+<div class="home-main-image">
   <div class="row row-content">
     <br />
     <br />
-    <div id="following-ctrl" ng-controller="FollowCtrl">
-      <div class="text-center" ng-hide="created">
-        <h1 class="text-section hide-for-small-only">
-          Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a> to launch the idea.
-        </h1>
-        <h1 class="text-section show-for-small-only">
-          Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a>.
-        </h1>
-        <br />
-        <br />
-        <p>Be the first to hear about what's coming up!</p>
-        <form novalidate name="form" ng-submit="create()">
-          <div class="form-error" ng-show="formError">{{formError}}</div>
+    <h1 class="text-center">Tell stories that matter</h1>
+    <p class="text-center text-section hide-for-small-only">
+      Amass Media empowers organizations to tell their social impact stories by creating an online platform that connects nonprofits, social ventures, and small businesses with talented filmmakers looking for interesting projects to work on.
+    </p>
+    <p class="text-center text-section show-for-small-only">
+      Amass Media empowers organizations to tell their social impact stories
+      by connecting them with talented filmmakers looking for interesting
+      projects.
+    </p>
+    <br />
+    <ul class="button-group radius text-center">
+      <li>
+        <a class="button radius new-filmmaker" href="/filmmaker/new" analytics-on analytics-event="Be a filmmaker" analytics-location="Home page image">
+          BE A FILMMAKER
+        </a>
+      </li>
+      <li>
+        <a class="button radius post-project" href="/organization/new" analytics-on analytics-event="Post a project" analytics-location="Home page image">
+          POST A PROJECT
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-          <input type="email" name="email" id="email" ng-model="follower.email" class="large-centered" ng-class="{error: invalidField(form.email.$invalid)}" placeholder="Enter your email" required>
-          <small class="error" ng-show="invalidField(form.email.$error.required)">required</small>
-          <small class="error" ng-show="invalidField(form.email.$error.email)">invalid email</small>
-
-          <div>
-            <label>I am a:</label>
-            <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
-            <label for="filmmaker-type">Filmmaker</label>
-            <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
-            <label for="organization-type">Organization</label>
-            <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
-            <label for="other-type">Other</label>
+<div class="row success-stories" ng-controller="SuccessStoriesCtrl">
+  <br />
+  <h1 class="text-center">Success Stories</h1>
+  <br />
+  <slick dots="true" amass-before-change="pauseVideo()" draggable="false">
+    <div class="success-story" ng-repeat="successStory in successStories">
+      <div class="row">
+        <div class="medium-6 columns">
+          <div class="flex-video">
+            <embed-video
+              iframe-id="{{'vimeo-' + successStory.vimeoVideoId}}"
+              api="1"
+              player_id="{{'vimeo-' + successStory.vimeoVideoId}}"
+              ng-href="{{'//vimeo.com/' + successStory.vimeoVideoId}}"
+              portrait="0"
+              title="0"
+              byline="0"
+              >
+            </embed-video>
           </div>
-          <br />
-
-          <div class="text-center">
-            <input class="button radius center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
+        </div>
+        <div class="medium-6 columns success-story-profiles">
+          <div class="success-story-profile-linker"></div>
+          <div class="row success-story-profiles-content">
+            <div class="small-6 columns text-center">
+              <strong>Video for:</strong>
+              <br />
+              <div class="success-story-profile-image">
+                <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
+              </div>
+              <span ng-switch="!!successStory.videoFor.website">
+                <span ng-switch-when="false">
+                  {{successStory.videoFor.name}}
+                </span>
+                <span ng-switch-default>
+                  <a ng-href="{{successStory.videoFor.website}}" target="_blank">
+                    {{successStory.videoFor.name}}
+                  </a>
+                </span>
+              </span>
+            </div>
+            <div class="small-6 columns text-center">
+              <strong>Filmmaker:</strong>
+              <br />
+              <div class="success-story-profile-image">
+                <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
+              </div>
+              {{successStory.filmmaker.name}}
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-      <div class="text-center" ng-show="created">
-        <h1>Thanks for signing up!</h1>
-        <p>We'll send you periodic email updates about Amass Media.</p>
-        <button class="button radius center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
+      <br />
+      <div class="show-for-medium-up">
+        <p ng-bind-html="successStory.videoFor.info|safeHtml"></p>
+        <p ng-bind-html="successStory.filmmaker.info|safeHtml"></p>
       </div>
+    </div>
+  </slick>
+  <br />
+</div>
+
+<div class="home-how-it-works">
+  <br />
+  <div class="row">
+    <h1 class="text-center">How it works</h1>
+    <div class= "flow-chart-container">
+      <div class="flow-item">
+        <h2 class="flow-content-header">STEP 1</h2>
+        <div class="flow-content">
+          <div class="row">
+            <div class="large-6 columns text-blurb-container">
+              <div class="text-heading text-center"><b>Filmmakers</b></div>
+              <div class="image filmmaker center"></div>
+              <p class="text-blurb text-center">Sign up to get notified about relevant projects</p>
+
+              <div class="text-center">
+                <a class="button radius new-filmmaker" href="/filmmaker/new" analytics-on analytics-event="Be a filmmaker" analytics-location="How it works">
+                  BE A FILMMAKER
+                </a>
+              </div>
+            </div>
+            <div class="large-6 columns text-blurb-container">
+              <div class="text-heading text-center"><b>Organizations</b></div>
+              <div class="image org center"></div>
+              <p class="text-blurb text-center">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
+              <div class="text-center">
+                <a class="button radius post-project" href="/organization/new" analytics-on analytics-event="Post a project" analytics-location="How it works">
+                  POST A PROJECT
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flow-item mini center">
+        <h2 class="flow-content-header">STEP 2</h2>
+        <div class="flow-content">
+          <div class="text-blurb-container">
+            <div class="text-heading text-center"><b>Amass Media</b></div>
+            <div class="image amass center"></div>
+            <p class="text-blurb text-center">Amass Media matches filmmakers with organizations</p>
+          </div>
+        </div>
+      </div>
+      <div class="flow-item mini center">
+        <h2 class="flow-content-header">STEP 3</h2>
+        <div class="flow-content">
+          <div class="text-blurb-container">
+            <div class="text-heading text-center"><b>Social Impact Video Projects</b></div>
+            <div class="image video-grows center"></div>
+            <p class="text-blurb text-center">Filmmakers work with organizations to make awesome video projects!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+
+<div class="row row-content">
+  <br />
+  <br />
+  <div id="following-ctrl" ng-controller="FollowCtrl">
+    <div class="text-center" ng-hide="created">
+      <h1 class="text-section hide-for-small-only">
+        Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a> to launch the idea.
+      </h1>
+      <h1 class="text-section show-for-small-only">
+        Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a>.
+      </h1>
+      <br />
+      <br />
+      <p>Be the first to hear about what's coming up!</p>
+      <form novalidate name="form" ng-submit="create()">
+        <div class="form-error" ng-show="formError">{{formError}}</div>
+
+        <input type="email" name="email" id="email" ng-model="follower.email" class="large-centered" ng-class="{error: invalidField(form.email.$invalid)}" placeholder="Enter your email" required>
+        <small class="error" ng-show="invalidField(form.email.$error.required)">required</small>
+        <small class="error" ng-show="invalidField(form.email.$error.email)">invalid email</small>
+
+        <div>
+          <label>I am a:</label>
+          <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
+          <label for="filmmaker-type">Filmmaker</label>
+          <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
+          <label for="organization-type">Organization</label>
+          <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
+          <label for="other-type">Other</label>
+        </div>
+        <br />
+
+        <div class="text-center">
+          <input class="button radius center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
+        </div>
+      </form>
+    </div>
+    <div class="text-center" ng-show="created">
+      <h1>Thanks for signing up!</h1>
+      <p>We'll send you periodic email updates about Amass Media.</p>
+      <button class="button radius center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
     </div>
   </div>
 </div>

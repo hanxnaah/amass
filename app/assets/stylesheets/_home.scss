@@ -1,8 +1,5 @@
-.home,
-.home-how-it-works {
-  > .row {
-    margin: 1em auto;
-  }
+.home-how-it-works > .row {
+  margin: 1em auto;
 }
 
 .home-main-image {
@@ -22,9 +19,7 @@
   h2 {
     color: $white;
   }
-}
 
-.home {
   .post-project,
   .new-filmmaker {
     margin-top: 15px;
