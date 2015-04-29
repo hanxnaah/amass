@@ -3,12 +3,12 @@
   %div{ ng: { hide: 'created' } }
     %h1 Make a free project posting
     %p.intro
-      We'll be launching our platform soon but are currently matching projects
+      We'll be launching our platform soon but are currently matching projects&nbsp;
       informally to our network of filmmakers
     %p.intro
-      Fill out a form below or contact
+      Fill out a form below or email&nbsp;
       = link_to 'contact@amassmedia.org', 'mailto:contact@amassmedia.org'
-      for any questions
+      &nbsp;for any questions
 
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
       .form-error{ ng: { show: 'formError' } } {{formError}}
@@ -45,7 +45,7 @@
 
       %label{ for: 'description',
           ng: { class: '{error: invalidField(form.description.$invalid)}' } }
-        Project Description (e.g. video purpose, audience, distribution,
+        Project Description (e.g. video purpose, audience, distribution,&nbsp;
         length, filming locations, and impact)
         - ng_data = { model: 'organization.description',
             class: '{error: invalidField(form.description.$invalid)}' }

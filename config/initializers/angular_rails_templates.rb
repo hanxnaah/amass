@@ -1,5 +1,10 @@
 module CustomHamlEngine
   class HamlTemplate < Tilt::HamlTemplate
+    def initialize(file = nil, line = 1, options = {}, &block)
+      options[:remove_whitespace] ||= true
+      super(file, line, options, &block)
+    end
+
     def evaluate(scope, locals, &block)
       scope.class_eval do
         include Rails.application.routes.url_helpers
@@ -7,7 +12,7 @@ module CustomHamlEngine
         include ActionView::Helpers
       end
 
-      super
+      super.gsub(/\n/, '')
     end
   end
 end
