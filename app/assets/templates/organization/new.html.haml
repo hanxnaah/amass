@@ -1,0 +1,87 @@
+.row.row-content
+  %br
+  %div{ ng: { hide: 'created' } }
+    %h1 Make a free project posting
+    %p.intro
+      We'll be launching our platform soon but are currently matching projects
+      informally to our network of filmmakers
+    %p.intro
+      Fill out a form below or contact
+      = link_to 'contact@amassmedia.org', 'mailto:contact@amassmedia.org'
+      for any questions
+
+    %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
+      .form-error{ ng: { show: 'formError' } } {{formError}}
+      %label{ for: 'organization-name',
+          ng: { class: '{error: invalidField(form.organization_name.$invalid)}' } }
+        Organization Name
+        - ng_data = { model: 'organization.organization_name',
+            class: '{error: invalidField(form.organization_name.$invalid)}' }
+        %input{ type: 'text', name: 'organization_name', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.organization_name.$error.required)' } } required
+
+      %label{ for: 'organization-description' }
+        Organization Description (Optional)
+        - ng_data = { model: 'organization.organization_description',
+            class: '{error: invalidField(form.organization_description.$invalid)}' }
+        %input{ type: 'text', name: 'organization_description', ng: ng_data }
+
+      %label{ for: 'contact-name',
+          ng: { class: '{error: invalidField(form.contact_name.$invalid)}' } }
+        Contact Name
+        - ng_data = { model: 'organization.contact_name',
+            class: '{error: invalidField(form.contact_name.$invalid)}' }
+        %input{ type: 'text', name: 'contact_name', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.contact_name.$error.required)' } } required
+
+      %label{ for: 'contact-email',
+          ng: { class: '{error: invalidField(form.contact_email.$invalid)}' } }
+        Contact Email
+        - ng_data = { model: 'organization.contact_email',
+            class: '{error: invalidField(form.contact_email.$invalid)}' }
+        %input{ type: 'email', name: 'contact_email', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.contact_email.$error.required)' } } required
+      %small.error{ ng: { show: 'invalidField(form.contact_email.$error.email)' } } invalid email
+
+      %label{ for: 'description',
+          ng: { class: '{error: invalidField(form.description.$invalid)}' } }
+        Project Description (e.g. video purpose, audience, distribution,
+        length, filming locations, and impact)
+        - ng_data = { model: 'organization.description',
+            class: '{error: invalidField(form.description.$invalid)}' }
+        %textarea{ rows: '4', name: 'description', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.description.$error.required)' } } required
+
+      %label{ for: 'payment', ng: { class: '{error: invalidField(form.payment.$invalid)}' } }
+        Payment
+        - ng_data = { model: 'organization.payment',
+            class: '{error: invalidField(form.payment.$invalid)}' }
+        %input{ type: 'number', name: 'payment', ng: ng_data, required: true }
+      %small.error{ ng: { show: 'invalidField(form.payment.$error.required)' } } required
+      %small.error{ ng: { show: 'invalidField(form.payment.$error.number)' } }
+        Payment must be a number.
+
+      %label{ for: 'deadline' }
+        Project Completion Date (Optional)
+        - ng_data = { model: 'organization.deadline',
+            class: '{error: invalidField(form.deadline.$invalid)}' }
+        %input{ type: 'date', name: 'deadline', ng: ng_data }
+
+      %label{ for: 'inspiration-links' }
+        Inspiration Links (Links to videos that you'd like your video to look like; Optional)
+        - ng_data = { model: 'organization.inspiration_links',
+            class: '{error: invalidField(form.inspiration_links.$invalid)}' }
+        %textarea{ rows: '4', name: 'inspiration_links', ng: ng_data }
+
+      %label{ for: 'extra-resources' }
+        Additional Comments (Optional)
+        - ng_data = { model: 'organization.extra_resources',
+            class: '{error: invalidField(form.extra_resources.$invalid)}' }
+        %textarea{ rows: '4', name: 'extra_resources', ng: ng_data } }
+
+      %input.button.radius.submit{ ng: { disabled: 'saving' }, type: 'submit', value: 'SUBMIT' }
+
+  %div{ ng: { show: 'created' } }
+    %h1 Thanks for signing up!
+    %p We hope to find you a filmmaker soon.
+    %button.button.radius.add-another{ ng: { click: 'clear()' } } ADD ANOTHER PROJECT
