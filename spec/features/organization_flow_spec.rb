@@ -8,9 +8,9 @@ feature 'organization flow' do
     end
     expect(page).to have_content('Make a free project posting')
 
-    fill_in 'organization-name', with: 'Washington Capitals'
-    fill_in 'contact-name', with: 'Alex'
-    fill_in 'contact-email', with: 'ovie@capitals.com'
+    fill_in 'organization_name', with: 'Washington Capitals'
+    fill_in 'contact_name', with: 'Alex'
+    fill_in 'contact_email', with: 'ovie@capitals.com'
     fill_in 'description', with: 'We play hockey but lose in the playoffs :('
     fill_in 'payment', with: '888'
 
