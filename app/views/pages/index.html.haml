@@ -28,11 +28,17 @@
         %section.top-bar-section
           %ul.right
             %li{ ng: { class: "{active: isSelected('/organization/new')}" } }
-              = link_to 'POST A PROJECT', '/organization/new', class: 'show-for-medium-up'
+              - analytics_data = { on: true, event: 'Post a project', location: 'topbar' }
+              %a.show-for-medium-up{ href: '/organization/new', analytics: analytics_data }
+                Post a Project
             %li{ ng: { class: "{active: isSelected('/filmmaker/new')}" } }
-              = link_to 'BE A FILMMAKER', '/filmmaker/new', class: 'show-for-medium-up'
+              - analytics_data = { on: true, event: 'Be a filmmaker', location: 'topbar' }
+              %a.show-for-medium-up{ href: '/filmmaker/new', analytics: analytics_data }
+                Be a Filmmaker
             %li{ ng: { class: "{active: isSelected('/contact')}" } }
-              = link_to 'CONTACT US', '/contact', class: 'show-for-large-up'
+              - analytics_data = { on: true, event: 'Contact us', location: 'topbar' }
+              %a.show-for-large-up{ href: '/contact', analytics: analytics_data }
+                Contact Us
 
     %br.break-topbar
     %div{ ng: { view: true, ng: true } }

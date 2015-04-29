@@ -6,6 +6,9 @@
 //= require angular-asset-path
 //= require angular-rails-templates
 //= require angular-slick
+//= require angulartics/angulartics
+//= require angulartics/angulartics-mixpanel
+//= require angulartics/angulartics-debug
 //= require ng-videosharing-embed
 //= require froogaloop
 //
@@ -22,13 +25,15 @@
   var amassApp = angular.module('amassApp', [
     'ngRoute',
     'videosharing-embed',
+    'angulartics.mixpanel',
+    'angulartics.debug',
+    'asset-path',
+    'templates',
+    'slick',
     'amassControllers',
     'amassDirectives',
     'amassFilters',
-    'amassServices',
-    'asset-path',
-    'templates',
-    'slick'
+    'amassServices'
   ]);
 
   amassApp.config(['$routeProvider', function ($routeProvider) {
