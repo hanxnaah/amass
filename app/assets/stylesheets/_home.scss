@@ -4,10 +4,6 @@
   margin-top: 20px;
 }
 
-.home-how-it-works > .row {
-  margin: 1em auto;
-}
-
 .home-main-image {
   background: image-url('home-main-image.jpg') center top no-repeat;
   height: rem-calc(550px);
@@ -20,6 +16,7 @@
 
 .home-how-it-works {
   background: $amass-green;
+  padding: 2em 0;
 
   h1,
   h2 {

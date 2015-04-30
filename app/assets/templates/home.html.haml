@@ -65,64 +65,54 @@
         %p{ ng: { 'bind-html' => 'successStory.filmmaker.info|safeHtml' } }
   %br
 
-:plain
-  <div class="home-how-it-works">
-    <br />
-    <div class="row">
-      <h1 class="text-center">How it works</h1>
-      <div class= "flow-chart-container">
-        <div class="flow-item">
-          <h2 class="flow-content-header">STEP 1</h2>
-          <div class="flow-content">
-            <div class="row">
-              <div class="large-6 columns text-blurb-container">
-                <div class="text-heading text-center"><b>Filmmakers</b></div>
-                <div class="image filmmaker center"></div>
-                <p class="text-blurb text-center">Sign up to get notified about relevant projects</p>
+.home-how-it-works
+  .row
+    %h1.text-center How it works
 
-                <div class="text-center">
-                  <a class="button radius new-filmmaker" href="/filmmaker/new" analytics-on analytics-event="Be a filmmaker" analytics-location="How it works">
-                    BE A FILMMAKER
-                  </a>
-                </div>
-              </div>
-              <div class="large-6 columns text-blurb-container">
-                <div class="text-heading text-center"><b>Organizations</b></div>
-                <div class="image org center"></div>
-                <p class="text-blurb text-center">Submit a project listing for Amass Media to advertise to our network of filmmakers</p>
-                <div class="text-center">
-                  <a class="button radius post-project" href="/organization/new" analytics-on analytics-event="Post a project" analytics-location="How it works">
-                    POST A PROJECT
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="flow-item mini center">
-          <h2 class="flow-content-header">STEP 2</h2>
-          <div class="flow-content">
-            <div class="text-blurb-container">
-              <div class="text-heading text-center"><b>Amass Media</b></div>
-              <div class="image amass center"></div>
-              <p class="text-blurb text-center">Amass Media matches filmmakers with organizations</p>
-            </div>
-          </div>
-        </div>
-        <div class="flow-item mini center">
-          <h2 class="flow-content-header">STEP 3</h2>
-          <div class="flow-content">
-            <div class="text-blurb-container">
-              <div class="text-heading text-center"><b>Social Impact Video Projects</b></div>
-              <div class="image video-grows center"></div>
-              <p class="text-blurb text-center">Filmmakers work with organizations to make awesome video projects!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br />
-  </div>
+    .flow-chart-container
+      .flow-item
+        %h2.flow-content-header STEP 1
+        .flow-content
+          .row
+            .large-6.columns.text-blurb-container
+              .text-heading.text-center
+                %strong Filmmakers
+              .image.filmmaker.center
+              %p.text-blurb.text-center Sign up to get notified about relevant projects
+
+              .text-center
+                - analytics_data = { on: true, event: 'Be a filmmaker', location: 'How it works' }
+                %a.button.radius.new-filmmaker{ href: '/filmmaker/new',
+                    analytics: analytics_data }
+                  BE A FILMMAKER
+            .large-6.columns.text-blurb-container
+              .text-heading.text-center
+                %strong Organizations
+              .image.org.center
+              %p.text-blurb.text-center
+                Submit a project listing for Amass Media to advertise to our network of filmmakers
+              .text-center
+                - analytics_data = { on: true, event: 'Post a project', location: 'How it works' }
+                %a.button.radius.post-project{ href: '/organization/new',
+                    analytics: analytics_data }
+                  POST A PROJECT
+      .flow-item.mini.center
+        %h2.flow-content-header STEP 2
+        .flow-content
+          .text-blurb-container
+            .text-heading.text-center
+              %strong Amass Media
+            .image.amass.center
+            %p.text-blurb.text-center Amass Media matches filmmakers with organizations
+      .flow-item.mini.center
+        %h2.flow-content-header STEP 3
+        .flow-content
+          .text-blurb-container
+            .text-heading.text-center
+              %strong Social Impact Video Projects
+            .image.video-grows.center
+            %p.text-blurb.text-center
+              Filmmakers work with organizations to make awesome video projects!
 
 .row.row-content{ ng: { controller: 'FollowCtrl' } }
   %br
@@ -145,7 +135,11 @@
       .form-error{ ng: { show: 'formError' } } {{formError}}
 
       - ng_data = { model: 'follower.email', class: '{error: invalidField(form.email.$invalid)}' }
-      %input{ type: 'email', name: 'email', ng: ng_data, placeholder: 'Enter your email', required: true }
+      %input{ type: 'email',
+        name: 'email',
+        ng: ng_data,
+        placeholder: 'Enter your email',
+        required: true }
       %small.error{ ng: { show: 'invalidField(form.email.$error.required)' } } required
       %small.error{ ng: { show: 'invalidField(form.email.$error.email)' } } invalid email
 
@@ -160,7 +154,9 @@
       %br
 
       .text-center
-        %input.button.radius.center{ ng: { disabled: 'saving' }, type: 'submit', value: 'KEEP ME POSTED!' }
+        %input.button.radius.center{ ng: { disabled: 'saving' },
+          type: 'submit',
+          value: 'KEEP ME POSTED!' }
 
   .text-center{ ng: { show: 'created' } }
     %h1 Thanks for signing up!
