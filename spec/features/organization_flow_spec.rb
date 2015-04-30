@@ -4,7 +4,7 @@ feature 'organization flow' do
     expect(page).to have_content('Tell stories that matter')
 
     within '.top-bar' do
-      click_link 'POST A PROJECT'
+      click_link 'Post a Project'
     end
     expect(page).to have_content('Make a free project posting')
 

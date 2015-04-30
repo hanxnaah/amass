@@ -3,7 +3,7 @@ feature 'follower flow' do
     visit '/'
     expect(page).to have_content('Tell stories that matter')
 
-    within '#following-ctrl' do
+    within '[ng-controller=FollowCtrl]' do
       fill_in 'email', with: 'skywalker@ra.net'
       choose 'Other'
       click_button 'KEEP ME POSTED'

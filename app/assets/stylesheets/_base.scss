@@ -20,3 +20,16 @@
     padding: 0 1em;
   }
 }
+
+.label-radio {
+  display: inline-block;
+  font-weight: normal;
+
+  > span {
+    // Following is copied from foundation/forms 'input[type=checkbox] + label'
+    margin-#{$default-float}: $form-spacing * .5;
+    margin-#{$opposite-direction}: $form-spacing;
+    margin-bottom: 0;
+    vertical-align: baseline;
+  }
+}

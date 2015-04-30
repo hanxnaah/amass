@@ -12,30 +12,27 @@
 
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
       .form-error{ ng: { show: 'formError' } } {{formError}}
-      %label{ for: 'organization-name',
-          ng: { class: '{error: invalidField(form.organization_name.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.organization_name.$invalid)}' } }
         Organization Name
         - ng_data = { model: 'organization.organization_name',
             class: '{error: invalidField(form.organization_name.$invalid)}' }
         %input{ type: 'text', name: 'organization_name', ng: ng_data, required: true }
       %small.error{ ng: { show: 'invalidField(form.organization_name.$error.required)' } } required
 
-      %label{ for: 'organization-description' }
+      %label
         Organization Description (Optional)
         - ng_data = { model: 'organization.organization_description',
             class: '{error: invalidField(form.organization_description.$invalid)}' }
         %input{ type: 'text', name: 'organization_description', ng: ng_data }
 
-      %label{ for: 'contact-name',
-          ng: { class: '{error: invalidField(form.contact_name.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.contact_name.$invalid)}' } }
         Contact Name
         - ng_data = { model: 'organization.contact_name',
             class: '{error: invalidField(form.contact_name.$invalid)}' }
         %input{ type: 'text', name: 'contact_name', ng: ng_data, required: true }
       %small.error{ ng: { show: 'invalidField(form.contact_name.$error.required)' } } required
 
-      %label{ for: 'contact-email',
-          ng: { class: '{error: invalidField(form.contact_email.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.contact_email.$invalid)}' } }
         Contact Email
         - ng_data = { model: 'organization.contact_email',
             class: '{error: invalidField(form.contact_email.$invalid)}' }
@@ -43,8 +40,7 @@
       %small.error{ ng: { show: 'invalidField(form.contact_email.$error.required)' } } required
       %small.error{ ng: { show: 'invalidField(form.contact_email.$error.email)' } } invalid email
 
-      %label{ for: 'description',
-          ng: { class: '{error: invalidField(form.description.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.description.$invalid)}' } }
         Project Description (e.g. video purpose, audience, distribution,&nbsp;
         length, filming locations, and impact)
         - ng_data = { model: 'organization.description',
@@ -52,7 +48,7 @@
         %textarea{ rows: '4', name: 'description', ng: ng_data, required: true }
       %small.error{ ng: { show: 'invalidField(form.description.$error.required)' } } required
 
-      %label{ for: 'payment', ng: { class: '{error: invalidField(form.payment.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.payment.$invalid)}' } }
         Payment
         - ng_data = { model: 'organization.payment',
             class: '{error: invalidField(form.payment.$invalid)}' }
@@ -61,19 +57,19 @@
       %small.error{ ng: { show: 'invalidField(form.payment.$error.number)' } }
         Payment must be a number.
 
-      %label{ for: 'deadline' }
+      %label
         Project Completion Date (Optional)
         - ng_data = { model: 'organization.deadline',
             class: '{error: invalidField(form.deadline.$invalid)}' }
         %input{ type: 'date', name: 'deadline', ng: ng_data }
 
-      %label{ for: 'inspiration-links' }
+      %label
         Inspiration Links (Links to videos that you'd like your video to look like; Optional)
         - ng_data = { model: 'organization.inspiration_links',
             class: '{error: invalidField(form.inspiration_links.$invalid)}' }
         %textarea{ rows: '4', name: 'inspiration_links', ng: ng_data }
 
-      %label{ for: 'extra-resources' }
+      %label
         Additional Comments (Optional)
         - ng_data = { model: 'organization.extra_resources',
             class: '{error: invalidField(form.extra_resources.$invalid)}' }

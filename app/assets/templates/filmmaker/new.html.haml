@@ -9,13 +9,13 @@
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
       .form-error{ ng: { show: 'formError' } } {{formError}}
 
-      %label{ for: 'name', ng: { class: '{error: invalidField(form.name.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.name.$invalid)}' } }
         Name
         - ng_data = { model: 'filmmaker.name', class: '{error: invalidField(form.name.$invalid)}' }
-        %input{ type: 'text', name: 'name', ng: ng_data, required: true }
+        %input{ type: :text, name: 'name', ng: ng_data, required: true }
       %small.error{ ng: { show: 'invalidField(form.name.$error.required)' } } required
 
-      %label{ for: 'email', ng: { class: '{error: invalidField(form.email.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.email.$invalid)}' } }
         Email
         - ng_data = { model: 'filmmaker.email',
             class: '{error: invalidField(form.email.$invalid)}' }
@@ -23,18 +23,17 @@
       %small.error{ ng: { show: 'invalidField(form.email.$error.required)' } } required
       %small.error{ ng: { show: 'invalidField(form.email.$error.email)' } } invalid email
 
-      %label{ for: 'skills', ng: { class: '{error: invalidField(form.skills.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.skills.$invalid)}' } }
         Brief Overview of Skills/Experience
         %textarea{ rows: '4', name: 'skills', ng: { model: 'filmmaker.skills' }, required: true }
       %small.error{ ng: { show: 'invalidField(form.skills.$error.required)' } } required
 
-      %label{ for: 'city', ng: { class: '{error: invalidField(form.city.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.city.$invalid)}' } }
         City
         - ng_data = { model: 'filmmaker.city', class: '{error: invalidField(form.city.$invalid)}' }
         %input{ type: 'text', name: 'city', ng: ng_data, placeholder: 'e.g. San Francisco, CA' }
 
-      %label{ for: 'portfolio_url',
-          ng: { class: '{error: invalidField(form.portfolio_url.$invalid)}' } }
+      %label{ ng: { class: '{error: invalidField(form.portfolio_url.$invalid)}' } }
         OPTIONAL Link to portfolio
         - ng_data = { model: 'filmmaker.portfolio_url',
             class: '{error: invalidField(form.portfolio_url.$invalid)}' }
