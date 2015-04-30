@@ -41,7 +41,7 @@
         %input{ type: 'url', name: 'portfolio_url', ng: ng_data }
       %small.error{ ng: { show: 'invalidField(form.portfolio_url.$error.url)' } } invalid link
 
-      %input.button.radius.submit{ ng: { disabled: 'saving' }, type: 'submit', value: 'SUBMIT' }
+      %input.button.radius{ ng: { disabled: 'saving' }, type: 'submit', value: 'SUBMIT' }
 
   %div{ ng: { show: 'created' } }
     %h1 Thanks for signing up!
