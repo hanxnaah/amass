@@ -12,7 +12,9 @@
     }
   ]);
 
-  function registerSharedControllerMethods($scope, resourceName, Resource) {
+  function registerSharedControllerMethods($scope, resourceName, Resource,
+      $analytics, eventName, eventData) {
+
     $scope[resourceName] = new Resource();
     $scope.invalidField = function (param) {
       return $scope.submitted && param;
@@ -31,6 +33,9 @@
           function () {
             $scope.saving = false;
             $scope.created = true;
+
+            eventData = eventData || {};
+            $analytics.eventTrack(eventName, eventData);
           },
           function () {
             $scope.saving = false;
@@ -43,24 +48,44 @@
   }
 
   amassControllers.controller('FilmmakerNewCtrl', [
-    '$scope', '$anchorScroll', 'Filmmaker',
-    function ($scope, $anchorScroll, Filmmaker) {
-      registerSharedControllerMethods($scope, 'filmmaker', Filmmaker);
+    '$scope', '$anchorScroll', 'Filmmaker', '$analytics',
+    function ($scope, $anchorScroll, Filmmaker, $analytics) {
+      registerSharedControllerMethods(
+        $scope,
+        'filmmaker',
+        Filmmaker,
+        $analytics,
+        'Submit form',
+        { form: 'Be a filmmaker' }
+      );
     }
   ]);
 
   amassControllers.controller('OrganizationNewCtrl', [
-    '$scope', '$anchorScroll', 'Organization',
-    function ($scope, $anchorScroll, Organization) {
-      registerSharedControllerMethods($scope, 'organization', Organization);
+    '$scope', '$anchorScroll', 'Organization', '$analytics',
+    function ($scope, $anchorScroll, Organization, $analytics) {
+      registerSharedControllerMethods(
+        $scope,
+        'organization',
+        Organization,
+        $analytics,
+        'Submit form',
+        { form: 'Post a project' }
+      );
       $scope.organization.payment_includes_expenses = true;
     }
   ]);
 
   amassControllers.controller('FollowCtrl', [
-    '$scope', 'Follower',
-    function ($scope, Follower) {
-      registerSharedControllerMethods($scope, 'follower', Follower);
+    '$scope', 'Follower', '$analytics',
+    function ($scope, Follower, $analytics) {
+      registerSharedControllerMethods(
+        $scope,
+        'follower',
+        Follower,
+        $analytics,
+        'Keep me posted'
+      );
       $scope.follower.type = 'filmmaker';
     }
   ]);
