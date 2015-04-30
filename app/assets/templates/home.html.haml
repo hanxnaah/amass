@@ -23,69 +23,49 @@
         %a.button.post-project{ href: '/organization/new', analytics: analytics_data }
           POST A PROJECT
 
-:plain
-  <div class="row success-stories" ng-controller="SuccessStoriesCtrl">
-    <br />
-    <h1 class="text-center">Success Stories</h1>
-    <br />
-    <slick dots="true" amass-before-change="pauseVideo()" draggable="false">
-      <div class="success-story" ng-repeat="successStory in successStories">
-        <div class="row">
-          <div class="medium-6 columns">
-            <div class="flex-video">
-              <embed-video
-                iframe-id="{{'vimeo-' + successStory.vimeoVideoId}}"
-                api="1"
-                player_id="{{'vimeo-' + successStory.vimeoVideoId}}"
-                ng-href="{{'//vimeo.com/' + successStory.vimeoVideoId}}"
-                portrait="0"
-                title="0"
-                byline="0"
-                >
-              </embed-video>
-            </div>
-          </div>
-          <div class="medium-6 columns success-story-profiles">
-            <div class="success-story-profile-linker"></div>
-            <div class="row success-story-profiles-content">
-              <div class="small-6 columns text-center">
-                <strong>Video for:</strong>
-                <br />
-                <div class="success-story-profile-image">
-                  <img ng-src="{{successStory.videoFor|imageForVideoFor}}" />
-                </div>
-                <span ng-switch="!!successStory.videoFor.website">
-                  <span ng-switch-when="false">
+.row.success-stories{ ng: { controller: 'SuccessStoriesCtrl' } }
+  %br
+  %h1.text-center Success Stories
+  %br
+  %slick{ dots: 'true', amass: { 'before-change' => 'pauseVideo()' }, draggable: 'false' }
+    .success-story{ ng: { repeat: 'successStory in successStories' } }
+      .row
+        .medium-6.columns
+          .flex-video
+            %embed-video{ 'iframe-id' => "{{'vimeo-' + successStory.vimeoVideoId}}",
+                api: '1',
+                player_id: "{{'vimeo-' + successStory.vimeoVideoId}}",
+                ng: { href: "{{'//vimeo.com/' + successStory.vimeoVideoId}}" },
+                portrait: '0',
+                title: '0',
+                byline: '0' }
+        .medium-6.columns.success-story-profiles
+          .success-story-profile-linker
+          .row.success-story-profiles-content
+            .small-6.columns.text-center
+              %strong Video for:
+              %br
+              .success-story-profile-image
+                %img{ ng: { src: '{{successStory.videoFor|imageForVideoFor}}' } }
+              %span{ ng: { switch: '!!successStory.videoFor.website' } }
+                %span{ ng: { switch: { when: 'false' } } }
+                  {{successStory.videoFor.name}}
+                %span{ ng: { switch: { default: true } } }
+                  %a{ ng: { href: '{{successStory.videoFor.website}}' }, target: '_blank' }
                     {{successStory.videoFor.name}}
-                  </span>
-                  <span ng-switch-default>
-                    <a ng-href="{{successStory.videoFor.website}}" target="_blank">
-                      {{successStory.videoFor.name}}
-                    </a>
-                  </span>
-                </span>
-              </div>
-              <div class="small-6 columns text-center">
-                <strong>Filmmaker:</strong>
-                <br />
-                <div class="success-story-profile-image">
-                  <img ng-src="{{successStory.filmmaker|imageForFilmmaker}}" />
-                </div>
-                {{successStory.filmmaker.name}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="show-for-medium-up">
-          <p ng-bind-html="successStory.videoFor.info|safeHtml"></p>
-          <p ng-bind-html="successStory.filmmaker.info|safeHtml"></p>
-        </div>
-      </div>
-    </slick>
-    <br />
-  </div>
+            .small-6.columns.text-center
+              %strong Filmmaker:
+              %br
+              .success-story-profile-image
+                %img{ ng: { src: '{{successStory.filmmaker|imageForFilmmaker}}' } }
+              {{successStory.filmmaker.name}}
+      %br
+      .show-for-medium-up
+        %p{ ng: { 'bind-html' => 'successStory.videoFor.info|safeHtml' } }
+        %p{ ng: { 'bind-html' => 'successStory.filmmaker.info|safeHtml' } }
+  %br
 
+:plain
   <div class="home-how-it-works">
     <br />
     <div class="row">
