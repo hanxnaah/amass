@@ -124,47 +124,51 @@
     <br />
   </div>
 
-  <div class="row row-content">
-    <br />
-    <br />
-    <div id="following-ctrl" ng-controller="FollowCtrl">
-      <div class="text-center" ng-hide="created">
-        <h1 class="text-section hide-for-small-only">
-          Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a> to launch the idea.
-        </h1>
-        <h1 class="text-section show-for-small-only">
-          Amass Media won funding from the <a href="http://bigideas.berkeley.edu/contests/creative/" target="_blank">Big Ideas @ Berkeley Competition</a>.
-        </h1>
-        <br />
-        <br />
-        <p>Be the first to hear about what's coming up!</p>
-        <form novalidate name="form" ng-submit="create()">
-          <div class="form-error" ng-show="formError">{{formError}}</div>
+.row.row-content{ ng: { controller: "FollowCtrl" } }
+  %br
+  %br
+  .text-center{ ng: { hide: "created" } }
+    %h1.text-section.hide-for-small-only
+      Amass Media won funding from the&nbsp;
+      %a{ href: "http://bigideas.berkeley.edu/contests/creative/", target: "_blank" }
+        Big Ideas @ Berkeley Competition
+      &nbsp;to launch the idea.
+    %h1.text-section.show-for-small-only"
+      Amass Media won funding from the
+      %a{ href: "http://bigideas.berkeley.edu/contests/creative/", target: "_blank" }
+        Big Ideas @ Berkeley Competition
+      .
+    %br
+    %br
+    %p Be the first to hear about what's coming up!
+    %form{ novalidate: true, ng: { submit: "create()" } }
+      .form-error{ ng: { show: "formError" } } {{formError}}
 
-          <input type="email" name="email" id="email" ng-model="follower.email" class="large-centered" ng-class="{error: invalidField(form.email.$invalid)}" placeholder="Enter your email" required>
-          <small class="error" ng-show="invalidField(form.email.$error.required)">required</small>
-          <small class="error" ng-show="invalidField(form.email.$error.email)">invalid email</small>
+      - ng_data = { model: "follower.email", class: "{error: invalidField(form.email.$invalid)}" }
+      %input{ type: "email", name: "email", ng: { model: "follower.email", class: "{error: invalidField(form.email.$invalid)}" placeholder: "Enter your email" required>
+      <small class: "error" ng-show: "invalidField(form.email.$error.required)">required</small>
+      <small class: "error" ng-show: "invalidField(form.email.$error.email)">invalid email</small>
 
-          <div>
-            <label>I am a:</label>
-            <input type="radio" name="type" value="filmmaker" id="filmmaker-type" ng-model="follower.type">
-            <label for="filmmaker-type">Filmmaker</label>
-            <input type="radio" name="type" value="organization" id="organization-type" ng-model="follower.type">
-            <label for="organization-type">Organization</label>
-            <input type="radio" name="type" value="other" id="other-type" ng-model="follower.type">
-            <label for="other-type">Other</label>
-          </div>
-          <br />
-
-          <div class="text-center">
-            <input class="button radius center submit" ng-disabled="saving" type="submit" value="KEEP ME POSTED!">
-          </div>
-        </form>
+      <div>
+        <label>I am a:</label>
+        <input type: "radio" name: "type" value: "filmmaker" id: "filmmaker-type" ng-model: "follower.type">
+        <label for: "filmmaker-type">Filmmaker</label>
+        <input type: "radio" name: "type" value: "organization" id: "organization-type" ng-model: "follower.type">
+        <label for: "organization-type">Organization</label>
+        <input type: "radio" name: "type" value: "other" id: "other-type" ng-model: "follower.type">
+        <label for: "other-type">Other</label>
       </div>
-      <div class="text-center" ng-show="created">
-        <h1>Thanks for signing up!</h1>
-        <p>We'll send you periodic email updates about Amass Media.</p>
-        <button class="button radius center add-another" ng-click="clear()">ADD ANOTHER EMAIL</button>
+      <br />
+
+      <div class: "text-center">
+        <input class: "button radius center submit" ng-disabled: "saving" type: "submit" value: "KEEP ME POSTED!">
       </div>
-    </div>
+    </form>
   </div>
+  <div class: "text-center" ng-show: "created">
+    <h1>Thanks for signing up!</h1>
+    <p>We'll send you periodic email updates about Amass Media.</p>
+    <button class: "button radius center add-another" ng-click: "clear()">ADD ANOTHER EMAIL</button>
+  </div>
+</div>
+</div>
