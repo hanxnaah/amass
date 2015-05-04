@@ -27,7 +27,10 @@
   %br
   %h1.text-center Success Stories
   %br
-  %slick{ dots: 'true', amass: { 'before-change' => 'pauseVideo()' }, draggable: 'false' }
+  - slick_data = { init: 'initVideoTracking()',
+      'before-change' => 'trackSlickChange();pauseCurrentVideo()',
+      'after-change' => 'updateCurrentVideo(currentSlide)' }
+  %slick{ dots: 'true', slick: slick_data, draggable: 'false' }
     .success-story{ ng: { repeat: 'successStory in successStories' } }
       .row
         .medium-6.columns

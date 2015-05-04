@@ -10,7 +10,7 @@
 //= require angulartics/angulartics-mixpanel
 //= require angulartics/angulartics-debug
 //= require ng-videosharing-embed
-//= require froogaloop
+//= require vimeo-jquery-api
 //
 //= require ./controllers
 //= require ./directives

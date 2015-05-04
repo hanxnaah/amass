@@ -91,13 +91,43 @@
   ]);
 
   amassControllers.controller('SuccessStoriesCtrl', [
-    '$scope', 'gon',
-    function ($scope, gon) {
+    '$scope', 'gon', '$analytics',
+    function ($scope, gon, $analytics) {
       $scope.successStories = gon.successStories;
+      $scope.currentVideo = null;
+      $scope.currentIndex = null;
 
-      $scope.pauseVideo = function () {
-        /* globals $f, $ */
-        $f($('.slick-active iframe')[0]).api('pause');
+      $scope.initVideoTracking = function () {
+        /* globals $ */
+        $('iframe').on('play', function () {
+          if ($(this).closest('.slick-active').length === 0) {
+            return;
+          }
+
+          var successStory = $scope.successStories[$scope.currentIndex];
+
+          /* This needs to be fixed
+          $analytics.eventTrack('Play a success story video', {
+            videoFor: successStory.videoFor.name,
+            filmmaker: successStory.filmmaker.name
+          });
+          */
+        });
+
+        $scope.updateCurrentVideo(0);
+      };
+
+      $scope.updateCurrentVideo = function (currentSlide) {
+        $scope.currentIndex = currentSlide;
+      };
+
+      $scope.pauseCurrentVideo = function () {
+        /* globals $ */
+        $('.slick-active iframe').vimeo('pause');
+      };
+
+      $scope.trackSlickChange = function () {
+        $analytics.eventTrack('See another success story');
       };
     }
   ]);
