@@ -23,5 +23,10 @@ feature 'organization flow' do
     expect(org.organization_name).to eq('Washington Capitals')
     expect(org.contact_name).to eq('Alex')
     expect(org.description).to eq('We play hockey but lose in the playoffs :(')
+
+    expect(ActionMailer::Base.deliveries.length).to be 1
+    mail = ActionMailer::Base.deliveries.last
+    expect(mail.to).to eq(['admin@amassmedia.org'])
+    expect(mail.subject).to include('Post a project: Washington Capitals')
   end
 end

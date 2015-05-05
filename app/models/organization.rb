@@ -1,5 +1,6 @@
 class Organization
   include Mongoid::Document
+  include GlobalID::Identification
 
   field :payment, type: Integer
   field :payment_includes_expenses, type: Boolean

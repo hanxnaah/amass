@@ -1,7 +1,14 @@
 class OrganizationsController < ApplicationController
   def create
     organization = Organization.new(organization_params)
-    status = organization.save ? 201 : 400
+    status =
+      if organization.save
+        AdminMailer.new_organization(organization).deliver_later
+        201
+      else
+        400
+      end
+
     render json: organization, status: status
   end
 
