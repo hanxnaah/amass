@@ -91,8 +91,8 @@
   ]);
 
   amassControllers.controller('SuccessStoriesCtrl', [
-    '$scope', 'gon', '$analytics',
-    function ($scope, gon, $analytics) {
+    '$scope', 'gon', '$analytics', '$timeout',
+    function ($scope, gon, $analytics, $timeout) {
       $scope.successStories = gon.successStories;
 
       var currentIndex = null;
@@ -113,7 +113,7 @@
           'play',
           function () {
             playQueue.push(currentIndex);
-            window.setTimeout(function () {
+            $timeout(function () {
               var trackedIndexes = {};
 
               playQueue.forEach(function (index) {
