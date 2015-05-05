@@ -13,7 +13,7 @@
   ]);
 
   function registerSharedControllerMethods($scope, resourceName, Resource,
-      $analytics, eventName, eventData) {
+      $analytics) {
 
     $scope[resourceName] = new Resource();
     $scope.invalidField = function (param) {
@@ -35,7 +35,7 @@
             $scope.created = true;
 
             eventData = eventData || {};
-            $analytics.eventTrack(eventName, eventData);
+            $analytics.eventTrack('Sign-up', { type: resourceName });
           },
           function () {
             $scope.saving = false;
@@ -54,9 +54,7 @@
         $scope,
         'filmmaker',
         Filmmaker,
-        $analytics,
-        'Submit form',
-        { form: 'Be a filmmaker' }
+        $analytics
       );
     }
   ]);
@@ -68,9 +66,7 @@
         $scope,
         'organization',
         Organization,
-        $analytics,
-        'Submit form',
-        { form: 'Post a project' }
+        $analytics
       );
       $scope.organization.payment_includes_expenses = true;
     }
@@ -83,8 +79,7 @@
         $scope,
         'follower',
         Follower,
-        $analytics,
-        'Keep me posted'
+        $analytics
       );
       $scope.follower.type = 'filmmaker';
     }

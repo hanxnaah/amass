@@ -1,0 +1,25 @@
+%table.container
+  %tr
+    %td
+      %table.row
+        %tr
+          %td.wrapper
+            %table.twelve.columns
+              %tr
+                %td
+                  %h1= title
+                %td.expander
+      - data.each do |key, value|
+        %table.row
+          %tr
+            %td.wrapper
+              %table.three.columns
+                %tr
+                  %td
+                    %strong= key
+                  %td.expander
+            %td.wrapper.last
+              %table.nine.columns
+                %tr
+                  %td= value
+                  %td.expander

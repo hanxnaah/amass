@@ -59,6 +59,16 @@ Amass::Application.configure do
   # raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.smtp_settings = {
+    address: 'mail.amassmedia.org',
+    port: 587,
+    domain: 'amassmedia.org',
+    authentication: :login,
+    user_name: ENV.fetch('MAILER_USER_NAME'),
+    password: ENV.fetch('MAILER_PASSWORD'),
+    enable_starttls_auto: false,
+  }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true

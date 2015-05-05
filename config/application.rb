@@ -30,5 +30,9 @@ module Amass
     # config.i18n.default_locale = :de
 
     config.serve_static_files = true
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.perform_deliveries = true
   end
 end

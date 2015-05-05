@@ -1,5 +1,6 @@
 class Filmmaker
   include Mongoid::Document
+  include GlobalID::Identification
 
   field :name, type: String
   field :email, type: String

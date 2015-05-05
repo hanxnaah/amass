@@ -1,0 +1,5 @@
+- attributes = ['name', 'email', 'skills', 'city', 'portfolio_url']
+
+= render 'mailer_template',
+    title: 'A filmmaker has signed up!',
+    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '), @filmmaker.send(attribute)] }

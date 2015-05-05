@@ -15,8 +15,10 @@ gem 'bourbon'
 gem 'foundation-rails'
 gem 'gon'
 gem 'haml-rails'
+gem 'roadie-rails'
 gem 'sass-rails'
 gem 'uglifier'
+gem 'zurb-ink-rails'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular-slick'
@@ -34,9 +36,15 @@ end
 
 group :development, :test do
   gem 'haml-lint'
+  gem 'mailcatcher'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'travis'
+end
+
+group :development do
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :test do

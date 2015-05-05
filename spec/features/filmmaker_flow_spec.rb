@@ -19,5 +19,10 @@ feature 'filmmaker flow' do
     expect(filmmaker.name).to eq('Scooby Doo')
     expect(filmmaker.email).to eq('scooby@sd.org')
     expect(filmmaker.skills).to eq('Eating Scooby Snacks')
+
+    expect(ActionMailer::Base.deliveries.length).to be 1
+    mail = ActionMailer::Base.deliveries.last
+    expect(mail.to).to eq(['admin@amassmedia.org'])
+    expect(mail.subject).to include('Be a filmmaker: Scooby Doo')
   end
 end

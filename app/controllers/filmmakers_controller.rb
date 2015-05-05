@@ -1,7 +1,14 @@
 class FilmmakersController < ApplicationController
   def create
     filmmaker = Filmmaker.new(filmmaker_params)
-    status = filmmaker.save ? 201 : 400
+    status =
+      if filmmaker.save
+        AdminMailer.new_filmmaker(filmmaker).deliver_later
+        201
+      else
+        400
+      end
+
     render json: filmmaker, status: status
   end
 
