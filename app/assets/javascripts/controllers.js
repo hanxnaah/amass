@@ -94,31 +94,52 @@
     '$scope', 'gon', '$analytics',
     function ($scope, gon, $analytics) {
       $scope.successStories = gon.successStories;
-      $scope.currentVideo = null;
-      $scope.currentIndex = null;
+
+      var currentIndex = null;
+      var playQueue = [];
 
       $scope.initVideoTracking = function () {
         /* globals $ */
-        $('iframe').on('play', function () {
-          if ($(this).closest('.slick-active').length === 0) {
-            return;
-          }
+        $('.slick-slide.slick-cloned').find('iframe').each(function () {
+          var $this = $(this);
 
-          var successStory = $scope.successStories[$scope.currentIndex];
-
-          /* This needs to be fixed
-          $analytics.eventTrack('Play a success story video', {
-            videoFor: successStory.videoFor.name,
-            filmmaker: successStory.filmmaker.name
-          });
-          */
+          var src = $this.attr('src');
+          src = src.replace(/&api=1/, '');
+          src = src.replace(/&player_id=[^&]*/, '');
+          $this.attr('src', src);
         });
+
+        $('.slick-slide').not('.slick-cloned').find('iframe').on(
+          'play',
+          function () {
+            playQueue.push(currentIndex);
+            window.setTimeout(function () {
+              var trackedIndexes = {};
+
+              playQueue.forEach(function (index) {
+                if (index in trackedIndexes) {
+                  return;
+                }
+
+                trackedIndexes[index] = true;
+
+                var successStory = $scope.successStories[index];
+                $analytics.eventTrack('Play a success story video', {
+                  videoFor: successStory.videoFor.name,
+                  filmmaker: successStory.filmmaker.name
+                });
+              });
+
+              playQueue = [];
+            });
+          }
+        );
 
         $scope.updateCurrentVideo(0);
       };
 
       $scope.updateCurrentVideo = function (currentSlide) {
-        $scope.currentIndex = currentSlide;
+        currentIndex = currentSlide;
       };
 
       $scope.pauseCurrentVideo = function () {
