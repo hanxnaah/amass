@@ -14,8 +14,12 @@ feature 'organization flow' do
     fill_in 'description', with: 'We play hockey but lose in the playoffs :('
     fill_in 'payment', with: '888'
 
-    click_button 'SUBMIT'
-    expect(page).to have_content('Thanks for signing up!')
+    change_organization_count = change(Organization, :count).by(1)
+    change_mail_count = change(ActionMailer::Base.deliveries, :length).by(1)
+    expect do
+      click_button 'SUBMIT'
+      expect(page).to have_content('Thanks for signing up!')
+    end.to change_organization_count.and change_mail_count
 
     org = Organization.last
     expect(org.payment).to eq(888)
@@ -24,7 +28,6 @@ feature 'organization flow' do
     expect(org.contact_name).to eq('Alex')
     expect(org.description).to eq('We play hockey but lose in the playoffs :(')
 
-    expect(ActionMailer::Base.deliveries.length).to be 1
     mail = ActionMailer::Base.deliveries.last
     expect(mail.to).to eq(['admin@amassmedia.org'])
     expect(mail.subject).to include('Post a project: Washington Capitals')

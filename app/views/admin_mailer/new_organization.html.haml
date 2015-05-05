@@ -1,6 +1,8 @@
-- attributes = %w(organization_name organization_description contact_email)
-- attributes += %w(contact_name payment description deadline inspiration_links)
-- attributes += %w(extra_resources)
+:ruby
+  attributes = %w(
+    organization_name organization_description contact_email contact_name
+    payment description deadline inspiration_links extra_resources
+  )
 
 = render 'mailer_template',
     title: 'An organization has signed up!',
