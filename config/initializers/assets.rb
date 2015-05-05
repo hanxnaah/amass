@@ -5,5 +5,5 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(
   *.ico *.png *.svg *.eot *.woff *.woff2 *.ttf *.jpg *.gif slick.css
-  mixpanel_and_overrides.js
+  mixpanel_and_overrides.js zurb-ink.css
 )
