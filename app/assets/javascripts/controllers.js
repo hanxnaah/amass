@@ -34,7 +34,6 @@
             $scope.saving = false;
             $scope.created = true;
 
-            eventData = eventData || {};
             $analytics.eventTrack('Sign-up', { type: resourceName });
           },
           function () {
