@@ -72,50 +72,39 @@
   .row
     %h1.text-center How it works
 
-    .flow-chart-container
-      .flow-item
-        %h2.flow-content-header STEP 1
-        .flow-content
-          .row
-            .large-6.columns.text-blurb-container
-              .text-heading.text-center
-                %strong Filmmakers
-              .image.filmmaker.center
-              %p.text-blurb.text-center Sign up to get notified about relevant projects
+    .large-3.medium-6.columns
+      %h5.text-center Filmmakers
+      .image.filmmaker.center
+      %p.text-center
+        &nbsp;Sign up to get notified about relevant projects
+    .large-3.medium-6.columns
+      %h5.text-center Organizations
+      .image.org.center
+      %p.text-center
+        &nbsp;Submit a project listing for Amass Media to advertise to our filmmakers
 
-              .text-center
-                - analytics_data = { on: true, event: 'Be a filmmaker', location: 'How it works' }
-                %a.button.radius.new-filmmaker{ href: '/filmmaker/new',
-                    analytics: analytics_data }
-                  BE A FILMMAKER
-            .large-6.columns.text-blurb-container
-              .text-heading.text-center
-                %strong Organizations
-              .image.org.center
-              %p.text-blurb.text-center
-                Submit a project listing for Amass Media to advertise to our network of filmmakers
-              .text-center
-                - analytics_data = { on: true, event: 'Post a project', location: 'How it works' }
-                %a.button.radius.post-project{ href: '/organization/new',
-                    analytics: analytics_data }
-                  POST A PROJECT
-      .flow-item.mini.center
-        %h2.flow-content-header STEP 2
-        .flow-content
-          .text-blurb-container
-            .text-heading.text-center
-              %strong Amass Media
-            .image.amass.center
-            %p.text-blurb.text-center Amass Media matches filmmakers with organizations
-      .flow-item.mini.center
-        %h2.flow-content-header STEP 3
-        .flow-content
-          .text-blurb-container
-            .text-heading.text-center
-              %strong Social Impact Video Projects
-            .image.video-grows.center
-            %p.text-blurb.text-center
-              Filmmakers work with organizations to make awesome video projects!
+    .large-3.medium-6.columns
+      %h5.text-center Amass Media
+      .image.amass.center
+      %p.text-center Matches filmmakers with organizations
+
+    .large-3.medium-6.columns
+      %h5.text-center Video Projects
+      .image.video-grows.center
+      %p.text-center Filmmakers work with organizations to produce awesome video projects!
+
+  %br
+  %br
+  .row
+    %ul.button-group.radius.text-center
+      %li
+        - analytics_data = { on: true, event: 'Be a filmmaker', location: 'How it works' }
+        %a.button.new-filmmaker{ href: '/filmmaker/new', analytics: analytics_data }
+          BE A FILMMAKER
+      %li
+        - analytics_data = { on: true, event: 'Post a project', location: 'How it works' }
+        %a.button.post-project{ href: '/organization/new', analytics: analytics_data }
+          POST A PROJECT
 
 .row.row-content{ ng: { controller: 'FollowCtrl' } }
   %br
@@ -127,9 +116,10 @@
         Big Ideas @ Berkeley Competition
       &nbsp;to launch the idea.
     %h1.text-section.show-for-small-only
-      Amass Media won funding from the
+      Amass Media won funding from the&nbsp;
       %a{ href: 'http://bigideas.berkeley.edu/contests/creative/', target: '_blank' }
         Big Ideas @ Berkeley Competition
+      \.
 
     %br
     %br

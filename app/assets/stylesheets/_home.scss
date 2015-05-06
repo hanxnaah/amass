@@ -16,57 +16,50 @@
 
 .home-how-it-works {
   background: $amass-green;
-  padding: 2em 0;
+  padding: 2rem 0;
 
+  &,
   h1,
-  h2 {
+  h5 {
     color: $white;
   }
 
-  .post-project,
-  .new-filmmaker {
-    margin-top: 15px;
+  h5 {
+    text-transform: uppercase;
+  }
+
+  .large-3.columns {
+    margin-top: 1rem;
   }
 
   .image {
+    $icon-width: 70px;
+
+    background-color: #444;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 80%;
+    border-radius: $icon-width / 2;
+    height: $icon-width;
+    width: $icon-width;
+    margin: 1rem auto;
 
     &.filmmaker {
-      background-image: image-url('filmmaker.png');
-      height: 55px;
-      width: 90px;
+      background-image: image-url('how-it-works/filmmaker-icon.png');
     }
 
     &.amass {
-      background-image: image-url('amass-icon.png');
-      height: 55px;
-      width: 70px;
+      background-image: image-url('how-it-works/amass-icon.png');
+      background-size: 75%;
     }
 
     &.video-grows {
-      background-image: image-url('socialimpact-icon.png');
-      height: 65px;
-      width: 70px;
+      background-image: image-url('how-it-works/socialimpact-icon.png');
+      background-size: 75%;
     }
 
     &.org {
-      background-image: image-url('org-icon.png');
-      height: 55px;
-      width: 60px;
-    }
-  }
-
-  .text-blurb-container {
-    .text-heading {
-      font-size: 125%;
-      margin-bottom: 10px;
-    }
-
-    .text-blurb {
-      line-height: 145%;
-      margin-top: 5px;
+      background-image: image-url('how-it-works/org-icon.png');
     }
   }
 }
