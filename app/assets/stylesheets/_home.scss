@@ -35,14 +35,14 @@
   .image {
     $icon-width: 70px;
 
-    background-color: #444;
+    background-color: $bg-gray-darker;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 80%;
     border-radius: $icon-width / 2;
     height: $icon-width;
-    width: $icon-width;
     margin: 1rem auto;
+    width: $icon-width;
 
     &.filmmaker {
       background-image: image-url('how-it-works/filmmaker-icon.png');
