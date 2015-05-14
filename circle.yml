@@ -13,3 +13,9 @@ test:
   - bundle exec rake jshint
   - bundle exec rake scss_lint
   - bundle exec rspec
+
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: amass-media-app
