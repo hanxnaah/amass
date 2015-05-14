@@ -98,25 +98,35 @@
   ]);
 
   amassControllers.controller('SuccessStoriesCtrl', [
-    '$scope', 'gon', '$analytics', '$timeout', '$filter',
-    function ($scope, gon, $analytics, $timeout, $filter) {
+    '$scope', 'gon', '$analytics', '$timeout',
+    function ($scope, gon, $analytics, $timeout) {
       $scope.successStories = gon.successStories;
+      $scope.loaded = false;
 
       var currentIndex = null;
       var playQueue = [];
 
       $scope.initVideoTracking = function () {
+        $scope.loaded = true;
+        $timeout(trackPlayEvents);
+        $scope.updateCurrentVideo(0);
+      };
+
+      $scope.updateCurrentVideo = function (currentSlide) {
+        currentIndex = currentSlide;
+      };
+
+      $scope.pauseCurrentVideo = function () {
         /* globals $ */
-        $('.slick-slide.slick-cloned').find('.flex-video').each(function () {
-          var $this = $(this);
+        $('.slick-active iframe').vimeo('pause');
+      };
 
-          var src = $this.find('iframe').attr('src');
-          var id = src.match(/&player_id=vimeo-([^&]*)/)[1];
+      $scope.trackSlickChange = function () {
+        $analytics.eventTrack('See another success story');
+      };
 
-          var imagePath = $filter('imageForSuccessStory')(id);
-          $this.html('<img src="' + imagePath + '" />');
-        });
-
+      function trackPlayEvents() {
+        /* globals $ */
         $('.slick-slide').not('.slick-cloned').find('iframe').on(
           'play',
           function () {
@@ -142,22 +152,7 @@
             });
           }
         );
-
-        $scope.updateCurrentVideo(0);
-      };
-
-      $scope.updateCurrentVideo = function (currentSlide) {
-        currentIndex = currentSlide;
-      };
-
-      $scope.pauseCurrentVideo = function () {
-        /* globals $ */
-        $('.slick-active iframe').vimeo('pause');
-      };
-
-      $scope.trackSlickChange = function () {
-        $analytics.eventTrack('See another success story');
-      };
+      }
     }
   ]);
 })();

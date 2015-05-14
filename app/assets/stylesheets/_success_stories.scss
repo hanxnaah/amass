@@ -43,3 +43,19 @@
   overflow: hidden;
   width: $success-image-width;
 }
+
+.success-story-video {
+  background: $black;
+}
+
+.success-story-video-placeholder {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: middle;
+  width: 100%;
+}

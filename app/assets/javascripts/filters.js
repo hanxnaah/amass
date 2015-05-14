@@ -5,7 +5,9 @@
 
   amassFilters.filter('imageForSuccessStory', ['$filter', function ($filter) {
     return function (vimeoVideoId) {
-      var rawImagePath = 'success-stories/thumbnail-' + vimeoVideoId + '.jpg';
+      var rawImagePath = 'success-stories/vimeo-' +
+        vimeoVideoId +
+        '-thumbnail.jpg';
       return $filter('assetPath')(rawImagePath);
     };
   }]);
