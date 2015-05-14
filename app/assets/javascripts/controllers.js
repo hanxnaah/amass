@@ -114,7 +114,7 @@
           var id = src.match(/&player_id=vimeo-([^&]*)/)[1];
 
           var imagePath = $filter('imageForSuccessStory')(id);
-          $this.html('<img src="' + imagePath +'" />');
+          $this.html('<img src="' + imagePath + '" />');
         });
 
         $('.slick-slide').not('.slick-cloned').find('iframe').on(
