@@ -1,0 +1,11 @@
+test:
+  pre:
+  - bundle exec rake assets:precompile
+  override:
+  - bundle exec travis lint --skip-completion-check
+  - bundle exec rake haml_lint
+  - bundle exec rubocop -D
+  - bundle exec rake jscs
+  - bundle exec rake jshint
+  - bundle exec rake scss_lint
+  - bundle exec rspec
