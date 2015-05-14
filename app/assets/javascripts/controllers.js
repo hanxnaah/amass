@@ -15,12 +15,18 @@
   function registerSharedControllerMethods($scope, resourceName, Resource,
       $analytics) {
 
-    $scope[resourceName] = new Resource();
+    if (!$scope.resetResource) {
+      $scope.resetResource = function () {
+        $scope[resourceName] = new Resource();
+      };
+    }
+    $scope.resetResource();
+
     $scope.invalidField = function (param) {
       return $scope.submitted && param;
     };
     $scope.clear = function () {
-      $scope[resourceName] = new Resource();
+      $scope.resetResource();
       $scope.created = false;
       $scope.submitted = false;
     };
@@ -35,6 +41,7 @@
             $scope.created = true;
 
             $analytics.eventTrack('Sign-up', { type: resourceName });
+            $scope.resetResource();
           },
           function () {
             $scope.saving = false;
@@ -61,13 +68,18 @@
   amassControllers.controller('OrganizationNewCtrl', [
     '$scope', '$anchorScroll', 'Organization', '$analytics',
     function ($scope, $anchorScroll, Organization, $analytics) {
+      $scope.resetResource = function () {
+        $scope.organization = new Organization();
+        $scope.organization.payment_includes_expenses = true;
+        $scope.organization.deadline = new Date();
+      };
+
       registerSharedControllerMethods(
         $scope,
         'organization',
         Organization,
         $analytics
       );
-      $scope.organization.payment_includes_expenses = true;
     }
   ]);
 

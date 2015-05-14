@@ -61,7 +61,9 @@
         Project Completion Date (Optional)
         - ng_data = { model: 'organization.deadline',
             class: '{error: invalidField(form.deadline.$invalid)}' }
-        %input{ type: 'date', name: 'deadline', ng: ng_data }
+        %input{ type: 'date', name: 'deadline', ng: ng_data, placeholder: 'yyyy-MM-dd' }
+      %small.error{ ng: { show: 'invalidField(form.deadline.$error.date)' } }
+        Must be a date.
 
       %label
         Inspiration Links (Links to videos that you'd like your video to look like; Optional)
