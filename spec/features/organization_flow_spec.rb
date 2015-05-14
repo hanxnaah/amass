@@ -12,7 +12,7 @@ feature 'organization flow' do
     fill_in 'contact_name', with: 'Alex'
     fill_in 'contact_email', with: 'ovie@capitals.com'
     fill_in 'description', with: 'We play hockey but lose in the playoffs :('
-    fill_in 'payment', with: '888'
+    fill_in 'payment', with: '888.8'
 
     change_organization_count = change(Organization, :count).by(1)
     change_mail_count = change(ActionMailer::Base.deliveries, :length).by(1)
@@ -22,7 +22,7 @@ feature 'organization flow' do
     end.to change_organization_count.and change_mail_count
 
     org = Organization.last
-    expect(org.payment).to eq(888)
+    expect(org.payment).to eq(888.80)
     expect(org.contact_email).to eq('ovie@capitals.com')
     expect(org.organization_name).to eq('Washington Capitals')
     expect(org.contact_name).to eq('Alex')

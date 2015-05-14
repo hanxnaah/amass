@@ -51,11 +51,12 @@
       %label{ ng: { class: '{error: invalidField(form.payment.$invalid)}' } }
         Payment
         - ng_data = { model: 'organization.payment',
-            class: '{error: invalidField(form.payment.$invalid)}' }
-        %input{ type: 'number', name: 'payment', ng: ng_data, required: true }
+            class: '{error: invalidField(form.payment.$invalid)}',
+            currency: true }
+        %input{ type: 'text', name: 'payment', ng: ng_data, required: true, min: 0 }
       %small.error{ ng: { show: 'invalidField(form.payment.$error.required)' } } required
-      %small.error{ ng: { show: 'invalidField(form.payment.$error.number)' } }
-        Payment must be a number.
+      %small.error{ ng: { show: 'invalidField(form.payment.$error.min)' } }
+        Enter the payment amount
 
       %label
         Project Completion Date (Optional)

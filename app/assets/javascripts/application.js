@@ -9,6 +9,7 @@
 //= require angulartics/angulartics
 //= require angulartics/angulartics-mixpanel
 //= require angulartics/angulartics-debug
+//= require ng-currency
 //= require ng-videosharing-embed
 //= require vimeo-jquery-api
 //
@@ -28,6 +29,7 @@
     'angulartics.mixpanel',
     'angulartics.debug',
     'asset-path',
+    'ng-currency',
     'templates',
     'slick',
     'amassControllers',

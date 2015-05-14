@@ -72,6 +72,7 @@
         $scope.organization = new Organization();
         $scope.organization.payment_includes_expenses = true;
         $scope.organization.deadline = new Date();
+        $scope.organization.payment = 0;
       };
 
       registerSharedControllerMethods(

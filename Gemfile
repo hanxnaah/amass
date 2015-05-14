@@ -25,6 +25,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-asset-path'
   gem 'rails-assets-angulartics'
   gem 'rails-assets-mixpanel'
+  gem 'rails-assets-ng-currency'
   gem 'rails-assets-ng-videosharing-embed'
   gem 'rails-assets-vimeo-jquery-api'
 end

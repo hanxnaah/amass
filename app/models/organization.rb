@@ -2,7 +2,7 @@ class Organization
   include Mongoid::Document
   include GlobalID::Identification
 
-  field :payment, type: Integer
+  field :payment, type: Float
   field :payment_includes_expenses, type: Boolean
   field :contact_email, type: String
   field :contact_name, type: String
