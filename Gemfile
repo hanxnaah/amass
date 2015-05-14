@@ -40,7 +40,6 @@ group :development, :test do
   gem 'mailcatcher'
   gem 'rubocop'
   gem 'scss-lint'
-  gem 'travis'
 end
 
 group :development do
