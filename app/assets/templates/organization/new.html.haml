@@ -78,7 +78,10 @@
             class: '{error: invalidField(form.extra_resources.$invalid)}' }
         %textarea{ rows: '4', name: 'extra_resources', ng: ng_data } }
 
-      %input.button.radius{ ng: { disabled: 'saving' }, type: 'submit', value: 'SUBMIT' }
+      %small.error{ ng: { show: 'invalidField(!form.$valid)' } }
+        Please fix the errors in red above.
+      - submit_ng_data = { disabled: 'saving || invalidField(!form.$valid)' }
+      %input.button.radius{ ng: submit_ng_data, type: 'submit', value: 'SUBMIT' }
 
   %div{ ng: { show: 'created' } }
     %h1 Thanks for signing up!
