@@ -3,17 +3,24 @@
 
   var amassFilters = angular.module('amassFilters', []);
 
+  amassFilters.filter('imageForSuccessStory', ['$filter', function ($filter) {
+    return function (vimeoVideoId) {
+      var rawImagePath = 'success-stories/thumbnail-' + vimeoVideoId + '.jpg';
+      return $filter('assetPath')(rawImagePath);
+    };
+  }]);
+
   amassFilters.filter('imageForVideoFor', ['$filter', function ($filter) {
     return function (videoFor) {
-      var rawImageUrl = 'video-for/' + dashify(videoFor.name) + '.jpg';
-      return $filter('assetPath')(rawImageUrl);
+      var rawImagePath = 'video-for/' + dashify(videoFor.name) + '.jpg';
+      return $filter('assetPath')(rawImagePath);
     };
   }]);
 
   amassFilters.filter('imageForFilmmaker', ['$filter', function ($filter) {
     return function (filmmaker) {
-      var rawImageUrl = 'filmmakers/' + dashify(filmmaker.name) + '.jpg';
-      return $filter('assetPath')(rawImageUrl);
+      var rawImagePath = 'filmmakers/' + dashify(filmmaker.name) + '.jpg';
+      return $filter('assetPath')(rawImagePath);
     };
   }]);
 

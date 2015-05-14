@@ -98,8 +98,8 @@
   ]);
 
   amassControllers.controller('SuccessStoriesCtrl', [
-    '$scope', 'gon', '$analytics', '$timeout',
-    function ($scope, gon, $analytics, $timeout) {
+    '$scope', 'gon', '$analytics', '$timeout', '$filter',
+    function ($scope, gon, $analytics, $timeout, $filter) {
       $scope.successStories = gon.successStories;
 
       var currentIndex = null;
@@ -107,13 +107,14 @@
 
       $scope.initVideoTracking = function () {
         /* globals $ */
-        $('.slick-slide.slick-cloned').find('iframe').each(function () {
+        $('.slick-slide.slick-cloned').find('.flex-video').each(function () {
           var $this = $(this);
 
-          var src = $this.attr('src');
-          src = src.replace(/&api=1/, '');
-          src = src.replace(/&player_id=[^&]*/, '');
-          $this.attr('src', src);
+          var src = $this.find('iframe').attr('src');
+          var id = src.match(/&player_id=vimeo-([^&]*)/)[1];
+
+          var imagePath = $filter('imageForSuccessStory')(id);
+          $this.html('<img src="' + imagePath +'" />');
         });
 
         $('.slick-slide').not('.slick-cloned').find('iframe').on(
