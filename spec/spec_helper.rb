@@ -18,7 +18,7 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 if ENV['CIRCLE_ARTIFACTS']
   require 'simplecov'
-  dir = File.join("..", "..", "..", ENV['CIRCLE_ARTIFACTS'], "coverage")
+  dir = File.join(ENV['CIRCLE_ARTIFACTS'], 'coverage')
   SimpleCov.coverage_dir(dir)
 end
 
