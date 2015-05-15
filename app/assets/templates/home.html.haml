@@ -15,11 +15,17 @@
     %br
     %ul.button-group.radius.text-center
       %li
-        - analytics_data = { on: true, event: 'Be a filmmaker', location: 'Home page image' }
+        - analytics_data = { on: true,
+            event: 'Go to sign-up',
+            location: 'Home-page image',
+            type: 'filmmaker' }
         %a.button.new-filmmaker{ href: '/filmmaker/new', analytics: analytics_data }
           BE A FILMMAKER
       %li
-        - analytics_data = { on: true, event: 'Post a project', location: 'Home page image' }
+        - analytics_data = { on: true,
+            event: 'Go to sign-up',
+            location: 'Home-page image',
+            type: 'organization' }
         %a.button.post-project{ href: '/organization/new', analytics: analytics_data }
           POST A PROJECT
 
@@ -103,11 +109,17 @@
   .row
     %ul.button-group.radius.text-center
       %li
-        - analytics_data = { on: true, event: 'Be a filmmaker', location: 'How it works' }
+        - analytics_data = { on: true,
+            event: 'Go to sign-up',
+            location: 'How it works',
+            type: 'filmmaker' }
         %a.button.new-filmmaker{ href: '/filmmaker/new', analytics: analytics_data }
           BE A FILMMAKER
       %li
-        - analytics_data = { on: true, event: 'Post a project', location: 'How it works' }
+        - analytics_data = { on: true,
+            event: 'Go to sign-up',
+            location: 'How it works',
+            type: 'organization' }
         %a.button.post-project{ href: '/organization/new', analytics: analytics_data }
           POST A PROJECT
 
