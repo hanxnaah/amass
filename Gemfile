@@ -53,6 +53,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
 end
 
 gem 'rails_12factor', group: :production
