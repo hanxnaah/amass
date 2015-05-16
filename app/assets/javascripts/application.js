@@ -2,20 +2,16 @@
 //= require angular
 //= require angular-route
 //= require ./foundation_and_overrides
-//= require slick-carousel
 //= require angular-asset-path
 //= require angular-rails-templates
-//= require angular-slick
 //= require angulartics/angulartics
 //= require angulartics/angulartics-mixpanel
 //= require angulartics/angulartics-debug
 //= require ng-currency
-//= require ng-videosharing-embed
-//= require vimeo-jquery-api
 //
+//= require ./success_stories/module
 //= require ./controllers
 //= require ./directives
-//= require ./filters
 //= require ./services
 //= require_tree ../templates
 //= require_self
@@ -25,16 +21,14 @@
 
   var amassApp = angular.module('amassApp', [
     'ngRoute',
-    'videosharing-embed',
     'angulartics.mixpanel',
     'angulartics.debug',
     'asset-path',
     'ng-currency',
     'templates',
-    'slick',
+    'amass.successStories',
     'amassControllers',
     'amassDirectives',
-    'amassFilters',
     'amassServices'
   ]);
 

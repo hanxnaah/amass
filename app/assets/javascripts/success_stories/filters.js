@@ -1,9 +1,9 @@
 (function () {
   'use strict';
 
-  var amassFilters = angular.module('amassFilters', []);
+  var filters = angular.module('amass.successStories');
 
-  amassFilters.filter('imageForSuccessStory', ['$filter', function ($filter) {
+  filters.filter('imageForSuccessStory', ['$filter', function ($filter) {
     return function (vimeoVideoId) {
       var rawImagePath = 'success-stories/vimeo-' +
         vimeoVideoId +
@@ -12,21 +12,21 @@
     };
   }]);
 
-  amassFilters.filter('imageForVideoFor', ['$filter', function ($filter) {
+  filters.filter('imageForVideoFor', ['$filter', function ($filter) {
     return function (videoFor) {
       var rawImagePath = 'video-for/' + dashify(videoFor.name) + '.jpg';
       return $filter('assetPath')(rawImagePath);
     };
   }]);
 
-  amassFilters.filter('imageForFilmmaker', ['$filter', function ($filter) {
+  filters.filter('imageForFilmmaker', ['$filter', function ($filter) {
     return function (filmmaker) {
       var rawImagePath = 'filmmakers/' + dashify(filmmaker.name) + '.jpg';
       return $filter('assetPath')(rawImagePath);
     };
   }]);
 
-  amassFilters.filter('safeHtml', ['$sce', function ($sce) {
+  filters.filter('safeHtml', ['$sce', function ($sce) {
     return function (html) {
       return $sce.trustAsHtml(html);
     };
