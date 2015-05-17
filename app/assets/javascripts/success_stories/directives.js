@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  var amassDirectives = angular.module('amassDirectives');
+  var directives = angular.module('amass.successStories');
 
   ['beforeChange', 'afterChange', 'init'].forEach(function (eventName) {
     var directive = 'slick' + capitalize(eventName);
 
-    amassDirectives.directive(directive, [
+    directives.directive(directive, [
       '$parse', '$rootScope',
       function ($parse, $rootScope) {
         return {

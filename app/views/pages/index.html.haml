@@ -1,5 +1,5 @@
 !!!
-%html{ ng: { app: 'amassApp' } }
+%html{ ng: { app: 'amass.app' } }
   %head
     %base{ href: '/' }
     %title Amass Media — Tell stories that matter
@@ -53,6 +53,6 @@
     = javascript_include_tag 'application'
 
     :javascript
-      angular.module('amassApp').config(function (assetPathProvider) {
+      angular.module('amass.app').config(function (assetPathProvider) {
         assetPathProvider.setAssets(#{read_asset_manifest});
       });

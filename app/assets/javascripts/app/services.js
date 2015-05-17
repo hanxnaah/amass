@@ -1,9 +1,7 @@
-//= require angular-resource
-
 (function () {
   'use strict';
 
-  var amassServices = angular.module('amassServices', ['ngResource']);
+  var amassServices = angular.module('amass.app');
 
   amassServices.factory('Filmmaker', [
     '$resource',

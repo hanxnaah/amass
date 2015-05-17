@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var amassControllers = angular.module('amassControllers', []);
+  var amassControllers = angular.module('amass.app');
 
   amassControllers.controller('NavBarCtrl', [
     '$scope', '$location',
