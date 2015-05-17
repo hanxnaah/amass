@@ -11,8 +11,8 @@
 //= require ../success_stories/module
 //= require ../filmmaker_new/module
 //= require ../organization_new/module
-//= require ../home/view
-//= require_tree ../../templates
+//= require ../follower/module
+//= require_tree ../pages
 //= require_self
 //= require ./controllers
 //= require ./services
@@ -27,6 +27,7 @@
     'asset-path',
     'ng-currency',
     'templates',
+    'amass.follower',
     'amass.filmmakerNew',
     'amass.organizationNew',
     'amass.successStories'
@@ -34,7 +35,7 @@
 
   amassApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'home/view.html'
+      templateUrl: 'pages/home/view.html'
     }).when('/filmmaker/new', {
       templateUrl: 'filmmaker_new/view.html',
       controller: 'FilmmakerNewCtrl'
@@ -42,9 +43,9 @@
       templateUrl: 'organization_new/view.html',
       controller: 'OrganizationNewCtrl'
     }).when('/contact', {
-      templateUrl: 'contact.html'
+      templateUrl: 'pages/contact/view.html'
     }).otherwise({
-      templateUrl: '404.html'
+      templateUrl: 'pages/404/view.html'
     });
   }]);
 
