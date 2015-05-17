@@ -10,13 +10,6 @@
     }
   ]);
 
-  amassServices.factory('Organization', [
-    '$resource',
-    function ($resource) {
-      return $resource('organizations', {}, {});
-    }
-  ]);
-
   amassServices.factory('Follower', [
     '$resource',
     function ($resource) {

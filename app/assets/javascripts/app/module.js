@@ -2,13 +2,14 @@
 //= require angular-route
 //= require angular-asset-path
 //= require angular-rails-templates
-//= require angular-resource
 //= require angulartics/angulartics
 //= require angulartics/angulartics-mixpanel
 //= require angulartics/angulartics-debug
 //= require ng-currency
 //
+//= require ../util
 //= require ../success_stories/module
+//= require ../organization_new/module
 //= require ../home/view
 //= require_tree ../../templates
 //= require_self
@@ -19,13 +20,13 @@
   'use strict';
 
   var amassApp = angular.module('amass.app', [
-    'ngResource',
     'ngRoute',
     'angulartics.mixpanel',
     'angulartics.debug',
     'asset-path',
     'ng-currency',
     'templates',
+    'amass.organizationNew',
     'amass.successStories'
   ]);
 
@@ -36,7 +37,7 @@
       templateUrl: 'filmmaker/new.html',
       controller: 'FilmmakerNewCtrl'
     }).when('/organization/new', {
-      templateUrl: 'organization/new.html',
+      templateUrl: 'organization_new/view.html',
       controller: 'OrganizationNewCtrl'
     }).when('/contact', {
       templateUrl: 'contact.html'

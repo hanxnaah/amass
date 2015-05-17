@@ -1,19 +1,8 @@
 (function () {
   'use strict';
 
-  var amassControllers = angular.module('amass.app');
-
-  amassControllers.controller('NavBarCtrl', [
-    '$scope', '$location',
-    function ($scope, $location) {
-      $scope.isSelected = function (viewLocation) {
-        return viewLocation === $location.path();
-      };
-    }
-  ]);
-
-  function registerSharedControllerMethods($scope, resourceName, Resource,
-      $analytics) {
+  window.registerSharedControllerMethods = function($scope, resourceName,
+      Resource, $analytics) {
 
     if (!$scope.resetResource) {
       $scope.resetResource = function () {
@@ -52,29 +41,4 @@
       }
     };
   }
-
-  amassControllers.controller('FilmmakerNewCtrl', [
-    '$scope', '$anchorScroll', 'Filmmaker', '$analytics',
-    function ($scope, $anchorScroll, Filmmaker, $analytics) {
-      registerSharedControllerMethods(
-        $scope,
-        'filmmaker',
-        Filmmaker,
-        $analytics
-      );
-    }
-  ]);
-
-  amassControllers.controller('FollowCtrl', [
-    '$scope', 'Follower', '$analytics',
-    function ($scope, Follower, $analytics) {
-      registerSharedControllerMethods(
-        $scope,
-        'follower',
-        Follower,
-        $analytics
-      );
-      $scope.follower.type = 'filmmaker';
-    }
-  ]);
 })();
