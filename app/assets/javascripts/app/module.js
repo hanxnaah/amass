@@ -9,6 +9,7 @@
 //= require ng-currency
 //
 //= require ../success_stories/module
+//= require ../home/view
 //= require_tree ../../templates
 //= require_self
 //= require ./controllers
@@ -30,7 +31,7 @@
 
   amassApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'home.html'
+      templateUrl: 'home/view.html'
     }).when('/filmmaker/new', {
       templateUrl: 'filmmaker/new.html',
       controller: 'FilmmakerNewCtrl'
