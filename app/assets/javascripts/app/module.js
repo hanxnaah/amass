@@ -9,6 +9,7 @@
 //
 //= require ../util
 //= require ../success_stories/module
+//= require ../filmmaker_new/module
 //= require ../organization_new/module
 //= require ../home/view
 //= require_tree ../../templates
@@ -26,6 +27,7 @@
     'asset-path',
     'ng-currency',
     'templates',
+    'amass.filmmakerNew',
     'amass.organizationNew',
     'amass.successStories'
   ]);
@@ -34,7 +36,7 @@
     $routeProvider.when('/', {
       templateUrl: 'home/view.html'
     }).when('/filmmaker/new', {
-      templateUrl: 'filmmaker/new.html',
+      templateUrl: 'filmmaker_new/view.html',
       controller: 'FilmmakerNewCtrl'
     }).when('/organization/new', {
       templateUrl: 'organization_new/view.html',

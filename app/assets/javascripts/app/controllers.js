@@ -53,18 +53,6 @@
     };
   }
 
-  amassControllers.controller('FilmmakerNewCtrl', [
-    '$scope', '$anchorScroll', 'Filmmaker', '$analytics',
-    function ($scope, $anchorScroll, Filmmaker, $analytics) {
-      registerSharedControllerMethods(
-        $scope,
-        'filmmaker',
-        Filmmaker,
-        $analytics
-      );
-    }
-  ]);
-
   amassControllers.controller('FollowCtrl', [
     '$scope', 'Follower', '$analytics',
     function ($scope, Follower, $analytics) {
