@@ -13,6 +13,7 @@
         $scope.organization.payment = 0;
       };
 
+      /* global window */
       window.registerSharedControllerMethods(
         $scope,
         'organization',

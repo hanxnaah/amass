@@ -6,7 +6,8 @@
   amassControllers.controller('FollowCtrl', [
     '$scope', 'Follower', '$analytics',
     function ($scope, Follower, $analytics) {
-      registerSharedControllerMethods(
+      /* global window */
+      window.registerSharedControllerMethods(
         $scope,
         'follower',
         Follower,

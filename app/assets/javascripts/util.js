@@ -1,7 +1,8 @@
 (function () {
   'use strict';
 
-  window.registerSharedControllerMethods = function($scope, resourceName,
+  /* global window */
+  window.registerSharedControllerMethods = function ($scope, resourceName,
       Resource, $analytics) {
 
     if (!$scope.resetResource) {
@@ -40,5 +41,5 @@
         );
       }
     };
-  }
+  };
 })();

@@ -6,6 +6,7 @@
   amassControllers.controller('FilmmakerNewCtrl', [
     '$scope', '$anchorScroll', 'Filmmaker', '$analytics',
     function ($scope, $anchorScroll, Filmmaker, $analytics) {
+      /* global window */
       window.registerSharedControllerMethods(
         $scope,
         'filmmaker',

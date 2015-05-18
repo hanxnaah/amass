@@ -13,7 +13,7 @@
     'ngRoute',
     'angulartics.mixpanel',
     'angulartics.debug',
-    'templates',
+    'templates'
   ]);
 
   amassApp.config(['$routeProvider', function ($routeProvider) {

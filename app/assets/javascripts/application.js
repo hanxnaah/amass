@@ -14,7 +14,7 @@
 (function () {
   'use strict';
 
-  var amassApp = angular.module('amass.app', [
+  angular.module('amass.app', [
     'amass.core',
     'amass.follower',
     'amass.filmmakerNew',
