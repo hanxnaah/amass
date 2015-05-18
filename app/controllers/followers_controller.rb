@@ -1,7 +1,14 @@
 class FollowersController < ApplicationController
   def create
     follower = Follower.new(follower_params)
-    status = follower.save ? 201 : 400
+    status =
+      if follower.save
+        AdminMailer.new_follower(follower).deliver_later
+        201
+      else
+        400
+      end
+
     render json: follower, status: status
   end
 

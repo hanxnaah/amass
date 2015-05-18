@@ -1,0 +1,7 @@
+:ruby
+  attributes = %w(email type)
+
+= render 'mailer_template',
+    title: 'A follower has signed up!',
+    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+      @follower.send(attribute)] }

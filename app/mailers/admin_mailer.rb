@@ -12,4 +12,9 @@ class AdminMailer < ApplicationMailer
     @organization = org
     mail(subject: "[Amass Media] Post a project: #{org.organization_name}")
   end
+
+  def new_follower(follower)
+    @follower = follower
+    mail(subject: "[Amass Media] New follower: #{follower.email}")
+  end
 end
