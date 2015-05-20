@@ -11,8 +11,18 @@ end
 
 Amass::Application.routes.draw do
   root to: 'pages#index'
+
+  match '/400', to: 'errors#not_found', via: :all
+  match '/404', to: 'errors#not_found', via: :all
+  match '/422', to: 'errors#internal_service_error', via: :all
+  match '/500', to: 'errors#internal_service_error', via: :all
+
   scope constraints: HtmlConstraint.new do
-    get '*path', to: 'pages#index'
+    [
+      '/organizations/sign-up',
+      '/filmmakers/sign-up',
+      '/contact',
+    ].each { |route| get route, to: 'pages#index' }
   end
 
   resources :organizations, only: [:create]

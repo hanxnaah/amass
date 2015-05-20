@@ -28,19 +28,19 @@
 
         %section.top-bar-section
           %ul.right
-            %li{ ng: { class: "{active: isSelected('/organization/new')}" } }
+            %li{ ng: { class: "{active: isSelected('/organizations/sign-up')}" } }
               - analytics_data = { on: true,
                   event: 'Go to sign-up',
                   location: 'Topbar',
                   type: 'organization' }
-              %a.show-for-medium-up{ href: '/organization/new', analytics: analytics_data }
+              %a.show-for-medium-up{ href: '/organizations/sign-up', analytics: analytics_data }
                 Post a Project
-            %li{ ng: { class: "{active: isSelected('/filmmaker/new')}" } }
+            %li{ ng: { class: "{active: isSelected('/filmmakers/sign-up')}" } }
               - analytics_data = { on: true,
                   event: 'Go to sign-up',
                   location: 'Topbar',
                   type: 'filmmaker' }
-              %a.show-for-medium-up{ href: '/filmmaker/new', analytics: analytics_data }
+              %a.show-for-medium-up{ href: '/filmmakers/sign-up', analytics: analytics_data }
                 Be a Filmmaker
             %li{ ng: { class: "{active: isSelected('/contact')}" } }
               - analytics_data = { on: true, event: 'Contact us', location: 'Topbar' }

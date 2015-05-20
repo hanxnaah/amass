@@ -19,10 +19,10 @@
   amassApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
       templateUrl: 'pages/home/view.html'
-    }).when('/filmmaker/new', {
+    }).when('/filmmakers/sign-up', {
       templateUrl: 'filmmaker_new/view.html',
       controller: 'FilmmakerNewCtrl'
-    }).when('/organization/new', {
+    }).when('/organizations/sign-up', {
       templateUrl: 'organization_new/view.html',
       controller: 'OrganizationNewCtrl'
     }).when('/contact', {
