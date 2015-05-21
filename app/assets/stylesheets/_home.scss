@@ -1,9 +1,3 @@
-.text-section {
-  line-height: 175%;
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-
 .home-main-image {
   background: image-url('home-main-image.jpg') center top no-repeat;
   height: rem-calc(550px);
@@ -11,6 +5,10 @@
   .row {
     max-width: 100%;
     width: rem-calc(550px);
+  }
+
+  p {
+    margin-top: 1rem;
   }
 }
 
