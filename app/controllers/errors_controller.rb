@@ -3,7 +3,7 @@ class ErrorsController < ApplicationController
     render status: :not_found, template: 'pages/index'
   end
 
-  def internal_server_error
+  def internal_service_error
     render status: :internal_service_error, template: 'pages/index'
   end
 end
