@@ -39,7 +39,6 @@ end
 
 group :development, :test do
   gem 'haml-lint'
-  gem 'mailcatcher'
   gem 'rubocop'
   gem 'scss-lint'
 end
