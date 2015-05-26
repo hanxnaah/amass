@@ -1,7 +1,9 @@
 //= require jquery
+//= require fastclick
+//= require ./foundation_and_overrides
+//
 //= require angular
 //= require angular-route
-//= require ./foundation_and_overrides
 //
 //= require ./util
 //= require ./core/module

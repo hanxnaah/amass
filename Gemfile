@@ -24,6 +24,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-slick'
   gem 'rails-assets-angular-asset-path'
   gem 'rails-assets-angulartics'
+  gem 'rails-assets-fastclick'
+  gem 'rails-assets-jquery'
   gem 'rails-assets-mixpanel'
   gem 'rails-assets-ng-currency'
   gem 'rails-assets-ng-videosharing-embed'

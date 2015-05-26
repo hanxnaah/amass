@@ -172,6 +172,7 @@ GEM
       rails-assets-SHA-1
       rails-assets-angular (>= 1.1.5)
       rails-assets-waypoints (~> 2.0.3)
+    rails-assets-fastclick (1.0.6)
     rails-assets-jquery (2.1.4)
     rails-assets-mixpanel (2.5.1)
     rails-assets-ng-currency (0.8.5)
@@ -325,6 +326,8 @@ DEPENDENCIES
   rails-assets-angular-asset-path!
   rails-assets-angular-slick!
   rails-assets-angulartics!
+  rails-assets-fastclick!
+  rails-assets-jquery!
   rails-assets-mixpanel!
   rails-assets-ng-currency!
   rails-assets-ng-videosharing-embed!
