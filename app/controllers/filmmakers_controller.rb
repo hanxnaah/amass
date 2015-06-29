@@ -15,6 +15,8 @@ class FilmmakersController < ApplicationController
   private
 
   def filmmaker_params
-    params.require(:filmmaker).permit(:name, :email, :skills, :portfolio_url)
+    params.require(:filmmaker).permit(
+      :name, :email, :skills, :portfolio_url, :city
+    )
   end
 end
