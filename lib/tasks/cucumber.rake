@@ -56,8 +56,8 @@ unless ARGV.any? { |a| a =~ /^gems/ }
     task default: :cucumber
 
     task features: :cucumber do
-      STDERR.puts "*** The 'features' task is deprecated. See rake -T cucumber " \
-        '***'
+      STDERR.puts "*** The 'features' task is deprecated. See rake -T " \
+        'cucumber ***'
     end
 
     # In case we don't have the generic Rails test:prepare hook, append a no-op
@@ -69,8 +69,8 @@ unless ARGV.any? { |a| a =~ /^gems/ }
   rescue LoadError
     desc 'cucumber rake task not available (cucumber not installed)'
     task :cucumber do
-      abort 'Cucumber rake task is not available. Be sure to install cucumber ' \
-        'as a gem or plugin'
+      abort 'Cucumber rake task is not available. Be sure to install ' \
+        'cucumber as a gem or plugin'
     end
   end
 end
