@@ -4,7 +4,7 @@ AllCops:
     - Guardfile
     - config.ru
     - Rakefile
-    - !ruby/regexp /.*\.rake/
+    - !ruby/regexp /.*\.rake\z/
   Exclude:
     - node_modules/**/*
     - vendor/**/*

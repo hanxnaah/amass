@@ -13,6 +13,7 @@ test:
   - bundle exec rake jshint
   - bundle exec rake scss_lint
   - bundle exec rspec
+  - bundle exec rake cucumber
 
 deployment:
   production:
