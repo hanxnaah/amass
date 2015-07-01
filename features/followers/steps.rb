@@ -1,9 +1,10 @@
-When 'I sign up as a follower with $email' do |email|
+When 'I sign up as a follower' do
   visit '/'
   expect(page).to have_content('Tell stories that matter')
 
+  @email = 'skywalker@ra.net'
   within '[ng-controller=FollowCtrl]' do
-    fill_in :email, with: email
+    fill_in :email, with: 'skywalker@ra.net'
     choose 'Other'
 
     expect do
@@ -14,6 +15,10 @@ When 'I sign up as a follower with $email' do |email|
   end
 
   follower = Follower.last
-  expect(follower.email).to eq(email)
+  expect(follower.email).to eq('skywalker@ra.net')
   expect(follower.type).to eq('other')
+end
+
+Then 'a follower admin notification is sent' do
+  step "an admin notification is sent titled 'New follower: #{@email}'"
 end
