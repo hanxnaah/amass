@@ -1,4 +1,4 @@
-When 'I sign up as an organization called $name' do |name|
+When 'I sign up as an organization' do
   visit '/'
   expect(page).to have_content('Tell stories that matter')
 
@@ -7,7 +7,8 @@ When 'I sign up as an organization called $name' do |name|
   end
   expect(page).to have_content('Make a free project posting')
 
-  fill_in 'organization_name', with: name
+  @name = 'Washington Capitals'
+  fill_in 'organization_name', with: 'Washington Capitals'
   fill_in 'contact_name', with: 'Alex'
   fill_in 'contact_email', with: 'ovie@capitals.com'
   fill_in 'description', with: 'We play hockey but lose in the playoffs :('
@@ -26,4 +27,8 @@ When 'I sign up as an organization called $name' do |name|
   expect(org.organization_name).to eq('Washington Capitals')
   expect(org.contact_name).to eq('Alex')
   expect(org.description).to eq('We play hockey but lose in the playoffs :(')
+end
+
+Then 'an organization admin notification is sent' do
+  step "an admin notification is sent titled 'Post a project: #{@name}'"
 end
