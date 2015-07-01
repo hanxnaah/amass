@@ -18,7 +18,3 @@ TrailingComma:
 
 HasAndBelongsToMany:
   Enabled: false
-
-AmbiguousRegexpLiteral:
-  Exclude:
-    - features/**/*_steps.rb
