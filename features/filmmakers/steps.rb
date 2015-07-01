@@ -1,4 +1,4 @@
-When 'I sign up as a filmmaker named $name' do |name|
+When 'I sign up as a filmmaker' do
   visit '/'
   expect(page).to have_content('Tell stories that matter')
 
@@ -7,7 +7,8 @@ When 'I sign up as a filmmaker named $name' do |name|
   end
   expect(page).to have_content('Join our filmmaker network!')
 
-  fill_in 'name', with: name
+  @name = 'Scooby Doo'
+  fill_in 'name', with: 'Scooby Doo'
   fill_in 'email', with: 'scooby@sd.org'
   fill_in 'skills', with: 'Eating Scooby Snacks'
 
@@ -19,7 +20,11 @@ When 'I sign up as a filmmaker named $name' do |name|
   end.to change_filmmaker_count.and change_mail_count
 
   filmmaker = Filmmaker.last
-  expect(filmmaker.name).to eq(name)
+  expect(filmmaker.name).to eq('Scooby Doo')
   expect(filmmaker.email).to eq('scooby@sd.org')
   expect(filmmaker.skills).to eq('Eating Scooby Snacks')
+end
+
+Then 'a filmmaker admin notification is sent' do
+  step "an admin notification is sent titled 'Be a filmmaker: #{@name}'"
 end
