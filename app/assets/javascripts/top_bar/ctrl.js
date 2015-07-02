@@ -1,9 +1,7 @@
 (function () {
   'use strict';
 
-  var amassControllers = angular.module('amass.core');
-
-  amassControllers.controller('NavBarCtrl', [
+  angular.module('amass.topBar').controller('TopBarCtrl', [
     '$scope', '$location',
     function ($scope, $location) {
       $scope.isSelected = function (viewLocation) {

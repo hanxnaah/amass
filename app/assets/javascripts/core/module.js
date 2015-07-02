@@ -1,4 +1,6 @@
 //= require angular-rails-templates
+//= require angular-foundation
+//= require angular-touch
 //= require angulartics/angulartics
 //= require angulartics/angulartics-mixpanel
 //= require angulartics/angulartics-debug
@@ -11,6 +13,8 @@
 
   var amassApp = angular.module('amass.core', [
     'ngRoute',
+    'ngTouch',
+    'mm.foundation',
     'angulartics.mixpanel',
     'angulartics.debug',
     'templates'

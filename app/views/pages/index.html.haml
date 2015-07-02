@@ -18,37 +18,9 @@
     = favicon_link_tag 'favicon.ico'
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
 
-  %body
-    .fixed.contain-to-grid
-      %nav.top-bar{ role: 'navigation', ng: { controller: 'NavBarCtrl' } }
-        %ul.title-area
-          %li.name
-            = link_to '/' do
-              .amass-logo
-
-        %section.top-bar-section
-          %ul.right
-            %li{ ng: { class: "{active: isSelected('/organizations/sign-up')}" } }
-              - analytics_data = { on: true,
-                  event: 'Go to sign-up',
-                  location: 'Topbar',
-                  type: 'organization' }
-              %a.show-for-medium-up{ href: '/organizations/sign-up', analytics: analytics_data }
-                Post a Project
-            %li{ ng: { class: "{active: isSelected('/filmmakers/sign-up')}" } }
-              - analytics_data = { on: true,
-                  event: 'Go to sign-up',
-                  location: 'Topbar',
-                  type: 'filmmaker' }
-              %a.show-for-medium-up{ href: '/filmmakers/sign-up', analytics: analytics_data }
-                Be a Filmmaker
-            %li{ ng: { class: "{active: isSelected('/contact')}" } }
-              - analytics_data = { on: true, event: 'Contact us', location: 'Topbar' }
-              %a.show-for-large-up{ href: '/contact', analytics: analytics_data }
-                Contact Us
-
-    %br.break-topbar
-    %div{ ng: { view: true, ng: true } }
+  %body.ng-cloak
+    %ng-include{ src: "'top_bar/view.html'" }
+    %ng-view
     %br.break-topbar
     = javascript_include_tag 'application'
 

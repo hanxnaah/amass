@@ -1,12 +1,11 @@
 //= require jquery
-//= require fastclick
-//= require ./foundation_and_overrides
 //
 //= require angular
 //= require angular-route
 //
 //= require ./util
 //= require ./core/module
+//= require ./top_bar/module
 //= require ./success_stories/module
 //= require ./team_bios/module
 //= require ./filmmaker_new/module
@@ -19,6 +18,7 @@
 
   angular.module('amass.app', [
     'amass.core',
+    'amass.topBar',
     'amass.follower',
     'amass.filmmakerNew',
     'amass.organizationNew',

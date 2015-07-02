@@ -21,8 +21,10 @@ gem 'uglifier'
 gem 'zurb-ink-rails'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-angular-slick'
   gem 'rails-assets-angular-asset-path'
+  gem 'rails-assets-angular-foundation'
+  gem 'rails-assets-angular-slick'
+  gem 'rails-assets-angular-touch'
   gem 'rails-assets-angulartics'
   gem 'rails-assets-fastclick'
   gem 'rails-assets-jquery'
