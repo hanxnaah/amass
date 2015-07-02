@@ -22,6 +22,7 @@ Amass::Application.routes.draw do
       '/organizations/sign-up',
       '/filmmakers/sign-up',
       '/contact',
+      '/about',
     ].each { |route| get route, to: 'pages#index' }
   end
 

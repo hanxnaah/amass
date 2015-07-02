@@ -8,6 +8,7 @@
 //= require ./util
 //= require ./core/module
 //= require ./success_stories/module
+//= require ./team_bios/module
 //= require ./filmmaker_new/module
 //= require ./organization_new/module
 //= require ./follower/module
@@ -21,6 +22,7 @@
     'amass.follower',
     'amass.filmmakerNew',
     'amass.organizationNew',
-    'amass.successStories'
+    'amass.successStories',
+    'amass.teamBios'
   ]);
 })();

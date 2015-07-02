@@ -1,0 +1,11 @@
+.row{ ng: { controller: 'TeamBiosCtrl' } }
+  %br
+  %h1.text-center The Team
+  %br
+  .row
+    .medium-3.columns{ ng: { repeat: 'teamBio in teamBios' } }
+      %h3 {{teamBio.nickname}}
+      %em {{teamBio.position}}
+      %p
+        %label Favorite movie:
+        {{teamBio.favoriteMovie}}

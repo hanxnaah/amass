@@ -1,0 +1,26 @@
+en:
+  team_bios:
+    -
+      nickname: Hannah
+      position: Everything
+      bio: >
+        Holman is awesome
+      favorite_movie: The Princess Diaries
+    -
+      nickname: Betty
+      position: Filmmaker
+      bio: >
+        Holman is awesome
+      favorite_movie: The Home Promised
+    -
+      nickname: Carolyn
+      position: Designer
+      bio: >
+        Holman is awesome
+      favorite_movie: Wall-E
+    -
+      nickname: Holman
+      position: Product/Technical Advisor
+      bio: >
+        Holman is awesome
+      favorite_movie: Eternal Sunshine of the Spotless Mind

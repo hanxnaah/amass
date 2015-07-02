@@ -27,6 +27,8 @@
       controller: 'OrganizationNewCtrl'
     }).when('/contact', {
       templateUrl: 'pages/contact/view.html'
+    }).when('/about', {
+      templateUrl: 'pages/about/view.html'
     }).otherwise({
       templateUrl: 'pages/404/view.html'
     });
