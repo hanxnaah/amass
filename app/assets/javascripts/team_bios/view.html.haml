@@ -8,7 +8,4 @@
       %em {{teamBio.position}}
       .team-bio__profile-image
         %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
-      %p
-        %label Favorite movie:
-        {{teamBio.favoriteMovie}}
-      %button.button{ ng: { click: 'open()' } } Open me!
+      %button.button{ ng: { click: 'open(teamBio)' } } Open me!

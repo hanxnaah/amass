@@ -2,24 +2,28 @@ en:
   team_bios:
     -
       nickname: Hannah
+      full_name: Hannah Yang
       position: Everything
       bio: >
         Holman is awesome
       favorite_movie: The Princess Diaries
     -
       nickname: Betty
+      full_name: Betty
       position: Filmmaker
       bio: >
         Holman is awesome
       favorite_movie: The Home Promised
     -
       nickname: Carolyn
+      full_name: Carolyn Kao
       position: Designer
       bio: >
         Holman is awesome
       favorite_movie: Wall-E
     -
       nickname: Holman
+      full_name: Holman Gao
       position: Product/Technical Advisor
       bio: >
         Holman is awesome

@@ -5,10 +5,15 @@
     '$scope', 'gon', '$modal',
     function ($scope, gon, $modal) {
       $scope.teamBios = gon.teamBios;
-      $scope.open = function () {
+      $scope.open = function (teamBio) {
         $modal.open({
           controller: 'TeamBiosModalCtrl',
-          templateUrl: 'team_bios/modal/view.html'
+          templateUrl: 'team_bios/modal/view.html',
+          resolve: {
+            teamBio: function () {
+              return teamBio;
+            }
+          }
         });
       };
     }

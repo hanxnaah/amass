@@ -2,14 +2,12 @@
   'use strict';
 
   angular.module('amass.teamBios').controller('TeamBiosModalCtrl', [
-    '$scope', '$modalInstance',
-    function ($scope, $modalInstance) {
-      $scope.ok = function () {
-        $modalInstance.close();
-      };
+    '$scope', '$modalInstance', 'teamBio',
+    function ($scope, $modalInstance, teamBio) {
+      $scope.teamBio = teamBio;
 
-      $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
+      $scope.close = function () {
+        $modalInstance.close();
       };
     }
   ]);
