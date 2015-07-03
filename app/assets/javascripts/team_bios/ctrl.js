@@ -6,7 +6,10 @@
     function ($scope, gon, $modal) {
       $scope.teamBios = gon.teamBios;
       $scope.open = function () {
-        $modal.open({ templateUrl: 'team_bios/modal/view.html' });
+        $modal.open({
+          controller: 'TeamBiosModalCtrl',
+          templateUrl: 'team_bios/modal/view.html'
+        });
       };
     }
   ]);
