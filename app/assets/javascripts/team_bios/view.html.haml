@@ -6,6 +6,8 @@
     .medium-3.columns{ ng: { repeat: 'teamBio in teamBios' } }
       %h3 {{teamBio.nickname}}
       %em {{teamBio.position}}
+      .team-bio-profile-image
+        %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
       %p
         %label Favorite movie:
         {{teamBio.favoriteMovie}}

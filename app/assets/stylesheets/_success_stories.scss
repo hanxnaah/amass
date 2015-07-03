@@ -4,58 +4,58 @@
 
 .success-story {
   margin: auto 1em;
-}
 
-// .success-story-profiles {
-//   @include clearfix();
-//
-//   position: relative;
-// }
-//
-// .success-story-profiles-content {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-// }
+  // &-profiles {
+  //   @include clearfix();
+  //
+  //   position: relative;
+  // }
+  //
+  // &-profiles-content {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
 
-.success-story-profile-linker {
-  $linker-width: rem-calc(50px);
+  &-profile-linker {
+    $linker-width: rem-calc(50px);
 
-  background: $amass-green asset-url('how-it-works/amass-icon.png') no-repeat 6px 5px;
-  background-size: 85%;
-  border-radius: $linker-width / 2;
-  display: none;
-  height: $linker-width;
-  left: 50%;
-  margin-left: -$linker-width / 2;
-  position: absolute;
-  top: 100px;
-  width: $linker-width;
-  z-index: 1;
-}
+    background: $amass-green asset-url('how-it-works/amass-icon.png') no-repeat 6px 5px;
+    background-size: 85%;
+    border-radius: $linker-width / 2;
+    display: none;
+    height: $linker-width;
+    left: 50%;
+    margin-left: -$linker-width / 2;
+    position: absolute;
+    top: 100px;
+    width: $linker-width;
+    z-index: 1;
+  }
 
-.success-story-profile-image {
-  $success-image-width: rem-calc(185px);
+  &-profile-image {
+    $success-image-width: rem-calc(185px);
 
-  border-radius: $success-image-width / 2;
-  margin: .5em auto;
-  max-width: 100%;
-  overflow: hidden;
-  width: $success-image-width;
-}
+    border-radius: $success-image-width / 2;
+    margin: .5em auto;
+    max-width: 100%;
+    overflow: hidden;
+    width: $success-image-width;
+  }
 
-.success-story-video {
-  background: $black;
-}
+  &-video {
+    background: $black;
+  }
 
-.success-story-video-placeholder {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  vertical-align: middle;
-  width: 100%;
+  &-video-placeholder {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    width: 100%;
+  }
 }
