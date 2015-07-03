@@ -1,5 +1,5 @@
 .team-bio {
-  &-profile-image {
+  &__profile-image {
     $success-image-width: rem-calc(185px);
 
     border-radius: $success-image-width / 2;

@@ -1,4 +1,4 @@
-@import 'variables/index';
+@import 'core/index';
 
 @function image-url($path) {
   @return asset-url('slick-carousel/slick/' + $path);

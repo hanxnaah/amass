@@ -3,7 +3,7 @@
 $include-js-meta-styles: true; // Warning! Meta styles are a dependancy of the Javascript.
 $include-html-global-classes: true;
 
-@import 'variables/index';
+@import 'core/index';
 
 @import 'normalize';
 @import 'foundation';

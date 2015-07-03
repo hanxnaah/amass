@@ -1,0 +1,9 @@
+@mixin e($name) {
+  &__$name {
+  }
+}
+
+@mixin m($name) {
+  &--name {
+  }
+}
