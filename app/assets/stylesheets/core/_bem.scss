@@ -1,9 +1,11 @@
 @mixin e($name) {
-  &__$name {
+  &__#{$name} {
+    @content;
   }
 }
 
 @mixin m($name) {
-  &--name {
+  &--#{$name} {
+    @content;
   }
 }

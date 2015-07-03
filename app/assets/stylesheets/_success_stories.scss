@@ -17,7 +17,7 @@
   //   left: 0;
   // }
 
-  &-profile-linker {
+  @include e(profile-linker) {
     $linker-width: rem-calc(50px);
 
     background: $amass-green asset-url('how-it-works/amass-icon.png') no-repeat 6px 5px;
@@ -33,7 +33,7 @@
     z-index: 1;
   }
 
-  &-profile-image {
+  @include e(profile-image) {
     $success-image-width: rem-calc(185px);
 
     border-radius: $success-image-width / 2;
@@ -43,11 +43,11 @@
     width: $success-image-width;
   }
 
-  &-video {
+  @include e(video) {
     background: $black;
   }
 
-  &-video-placeholder {
+  @include e(video-placeholder) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% auto;

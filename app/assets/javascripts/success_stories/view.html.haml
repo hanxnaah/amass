@@ -9,10 +9,10 @@
     .success-story{ ng: { repeat: 'successStory in successStories' } }
       .row
         .medium-6.columns
-          .flex-video.success-story-video
+          .flex-video.success-story__video
             %div{ ng: { switch: 'loaded' } }
               - placeholder_url = 'url({{successStory.vimeoVideoId|imageForSuccessStory}})'
-              .success-story-video-placeholder{ style: "background-image: #{placeholder_url}",
+              .success-story__video-placeholder{ style: "background-image: #{placeholder_url}",
                   ng: { switch: { default: true } } }
               %div{ ng: { switch: { when: 'true' } } }
                 %embed-video{ 'iframe-id' => "{{'vimeo-' + successStory.vimeoVideoId}}",
@@ -23,12 +23,12 @@
                     title: '0',
                     byline: '0' }
         .medium-6.columns.success-story-profiles
-          .success-story-profile-linker
+          .success-story__profile-linker
           .row.success-story-profiles-content
             .small-6.columns.text-center
               %strong Video for:
               %br
-              .success-story-profile-image
+              .success-story__profile-image
                 %img{ ng: { src: '{{successStory.videoFor|imageForVideoFor}}' } }
               %span{ ng: { switch: '!!successStory.videoFor.website' } }
                 %span{ ng: { switch: { when: 'false' } } }
