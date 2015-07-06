@@ -12,18 +12,3 @@
             %em {{teamBio.position}}
           .team-bio__profile-image
             %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
-        - %w(website twitter linkedin github).each do |media|
-          %a{ ng: { if: "teamBio.#{media}", href: "{{teamBio.#{media}}}" } }
-            :ruby
-              icon_name =
-                case media
-                when 'website'
-                  'home'
-                when 'github'
-                  'github-alt'
-                else
-                  media
-                end
-            %span.fa-stack.fa-lg.team-bio__icon
-              %i.fa.fa-circle.fa-stack-2x
-              %i{ class: "fa fa-#{icon_name} fa-stack-1x" }
