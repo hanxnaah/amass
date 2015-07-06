@@ -1,8 +1,30 @@
-%h3 {{teamBio.fullName}}
-%p {{teamBio.bio}}
-.team-bio__profile-image
-  %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
-%p
-  %label Favorite movie:
-  {{teamBio.favoriteMovie}}
-%a.close-reveal-modal{ ng: { click: 'close()' } } &#215;
+.row
+  .large-3.columns
+    %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
+    %br
+    %br
+    %p
+      - %w(website twitter linkedin github).each do |media|
+        %a{ ng: { if: "teamBio.#{media}", href: "{{teamBio.#{media}}}" } }
+          :ruby
+            icon_name =
+              case media
+              when 'website'
+                'home'
+              when 'github'
+                'github-alt'
+              else
+                media
+              end
+          %span.fa-stack.fa-lg
+            %i.fa.fa-circle.fa-stack-2x
+            %i{ class: "fa fa-#{icon_name} fa-stack-1x fa-inverse" }
+  .large-9.columns
+    %h3 {{teamBio.fullName}}
+    %p
+      %em {{teamBio.position}}
+    %p {{teamBio.bio}}
+    %p
+      %label Favorite movie:
+      {{teamBio.favoriteMovie}}
+    %a.close-reveal-modal{ ng: { click: 'close()' } } &#215;
