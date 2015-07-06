@@ -29,6 +29,12 @@
     }).when('/organizations/sign-up', {
       templateUrl: 'organization_new/view.html',
       controller: 'OrganizationNewCtrl'
+    }).when('/success-stories', {
+      templateUrl: 'success_stories/list/view.html',
+      controller: 'SuccessStoriesListCtrl'
+    }).when('/success-stories/:successStoryId', {
+      templateUrl: 'success_stories/single/view.html',
+      controller: 'SuccessStoriesSingleCtrl'
     }).when('/contact', {
       templateUrl: 'pages/contact/view.html'
     }).when('/about', {

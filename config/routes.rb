@@ -21,6 +21,8 @@ Amass::Application.routes.draw do
     [
       '/organizations/sign-up',
       '/filmmakers/sign-up',
+      '/success-stories',
+      '/success-stories/:success_story_id',
       '/contact',
       '/about',
     ].each { |route| get route, to: 'pages#index' }

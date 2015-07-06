@@ -1,0 +1,42 @@
+.row.amass-section
+  %h1 Success Stories
+  .success-story{ ng: { repeat: 'successStory in successStories' } }
+    .row
+      .medium-6.columns
+        .flex-video.success-story__video
+          %div{ ng: { switch: 'loaded' } }
+            - placeholder_url = 'url({{successStory.vimeoVideoId|imageForSuccessStory}})'
+            .success-story__video-placeholder{ style: "background-image: #{placeholder_url}",
+                ng: { switch: { default: true } } }
+            %div{ ng: { switch: { when: 'true' } } }
+              %embed-video{ 'iframe-id' => "{{'vimeo-' + successStory.vimeoVideoId}}",
+                  api: '1',
+                  player_id: "{{'vimeo-' + successStory.vimeoVideoId}}",
+                  ng: { href: "{{'https://vimeo.com/' + successStory.vimeoVideoId}}" },
+                  portrait: '0',
+                  title: '0',
+                  byline: '0' }
+      .medium-6.columns.success-story-profiles
+        .success-story__profile-linker
+        .row.success-story-profiles-content
+          .small-6.columns.text-center
+            %strong Video for:
+            %br
+            .success-story__profile-image
+              %img{ ng: { src: '{{successStory.videoFor|imageForVideoFor}}' } }
+            %span{ ng: { switch: '!!successStory.videoFor.website' } }
+              %span{ ng: { switch: { when: 'false' } } }
+                {{successStory.videoFor.name}}
+              %span{ ng: { switch: { default: true } } }
+                %a{ ng: { href: '{{successStory.videoFor.website}}' }, target: '_blank' }
+                  {{successStory.videoFor.name}}
+          .small-6.columns.text-center
+            %strong Filmmaker:
+            %br
+            .success-story-profile-image
+              %img{ ng: { src: '{{successStory.filmmaker|imageForFilmmaker}}' } }
+            {{successStory.filmmaker.name}}
+    %br
+    .show-for-medium-up
+      %p{ ng: { 'bind-html' => 'successStory.videoFor.info|safeHtml' } }
+      %p{ ng: { 'bind-html' => 'successStory.filmmaker.info|safeHtml' } }

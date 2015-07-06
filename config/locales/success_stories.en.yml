@@ -1,6 +1,7 @@
 en:
   success_stories:
     -
+      slug: community-yoga-project-greg-armstrong
       vimeo_video_id: '99172312'
       video_for:
         name: Community Yoga Project
@@ -18,6 +19,7 @@ en:
           promotional, movement-based, and music videos.  He has worked with
           nonprofits, for profits, music artists, etc.
     -
+      slug: labor-link-john-burke
       vimeo_video_id: '116570432'
       video_for:
         website: http://goodworldsolutions.org/
@@ -35,6 +37,7 @@ en:
           environmental sustainability, religious rituals, and music. His work
           has been featured in the Oakland International Film Festival
     -
+      slug: induz-greg-armstrong
       vimeo_video_id: '101770406'
       video_for:
         website: http://induz.org/
@@ -51,6 +54,7 @@ en:
           promotional, movement-based, and music videos.  He has worked with
           nonprofits, for profits, music artists, etc.
     -
+      slug: bernadette-hobson-christine-beggs
       vimeo_video_id: '98571250'
       video_for:
         name: Bernadette Hobson
