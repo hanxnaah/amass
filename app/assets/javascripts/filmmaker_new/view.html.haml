@@ -37,8 +37,8 @@
         OPTIONAL Link to portfolio
         - ng_data = { model: 'filmmaker.portfolio_url',
             class: '{error: invalidField(form.portfolio_url.$invalid)}' }
-        %input{ type: 'url', name: 'portfolio_url', ng: ng_data }
-      %small.error{ ng: { show: 'invalidField(form.portfolio_url.$error.url)' } } invalid link
+        %input{ type: 'url', name: 'portfolio_url', ng: ng_data, validate: { 'friendly-url' => true } }
+      %small.error{ ng: { show: 'invalidField(form.portfolio_url.$error.friendlyUrl)' } } invalid link
 
       %small.error{ ng: { show: 'invalidField(!form.$valid)' } }
         Please fix the errors in red above.
