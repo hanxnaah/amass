@@ -11,7 +11,7 @@
         }
         delete ngModel.$validators.url;
 
-        ngModel.$validators.friendlyUrl = function (modelValue, viewValue) {
+        ngModel.$validators.friendlyUrl = function (modelValue) {
           if (isValidUrl(modelValue)) {
             return true;
           }
