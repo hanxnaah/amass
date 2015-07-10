@@ -5,7 +5,7 @@
 //
 //= require ./util
 //= require ./core/module
-//= require ./top_bar/module
+//= require ./shared/top_bar/module
 //= require ./success_stories/module
 //= require ./team_bios/module
 //= require ./filmmaker_new/module
