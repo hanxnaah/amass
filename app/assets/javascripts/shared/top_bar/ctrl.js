@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('amass.topBar').controller('TopBarCtrl', [
+  angular.module('amass.shared').controller('TopBarCtrl', [
     '$scope', '$location',
     function ($scope, $location) {
       $scope.isSelected = function (viewLocation) {

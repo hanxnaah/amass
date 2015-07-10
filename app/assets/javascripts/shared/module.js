@@ -4,5 +4,5 @@
 (function () {
   'use strict';
 
-  angular.module('amass.topBar', []);
+  angular.module('amass.shared', []);
 })();

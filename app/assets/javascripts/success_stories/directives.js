@@ -11,8 +11,8 @@
       function ($parse, $rootScope) {
         return {
           restrict: 'A',
-          compile: function ($element, attr) {
-            var fn = $parse(attr[directive], null, true);
+          compile: function ($element, attributes) {
+            var fn = $parse(attributes[directive], null, true);
             return function (scope, element) {
               element.on(
                 eventName,
