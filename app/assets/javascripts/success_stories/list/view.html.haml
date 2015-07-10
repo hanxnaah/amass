@@ -1,7 +1,12 @@
+.amass__heading
+  .row.row-content
+    %h1 Success Stories
+
 .row.amass-section
-  %h1 Success Stories
   .success-story{ ng: { repeat: 'successStory in successStories' } }
     .row
+      %h2
+        %a{ href: '/success-stories/{{successStory.slug}}' } Title
       .medium-6.columns
         .flex-video.success-story__video
           %div{ ng: { switch: 'loaded' } }
@@ -33,7 +38,7 @@
           .small-6.columns.text-center
             %strong Filmmaker:
             %br
-            .success-story-profile-image
+            .success-story__profile-image
               %img{ ng: { src: '{{successStory.filmmaker|imageForFilmmaker}}' } }
             {{successStory.filmmaker.name}}
     %br
