@@ -1369,8 +1369,8 @@ $input-error-message-font-color-alt: $alert-color;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: $white;
-$topbar-bg: $topbar-bg-color;
+$topbar-bg-color: transparent;
+// $topbar-bg: $topbar-bg-color;
 
 // Height and margin
 $topbar-height: rem-calc(60);
@@ -1381,7 +1381,7 @@ $topbar-height: rem-calc(60);
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+$topbar-dropdown-bg: $topbar-bg-color;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-bg: $oil;
 // $topbar-dropdown-link-bg-hover: $oil;

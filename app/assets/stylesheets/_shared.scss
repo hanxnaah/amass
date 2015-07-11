@@ -1,7 +1,13 @@
 .amass {
+  @include e(topbar) {
+    background: rgba($white, .95);
+  }
+
   @include e(heading) {
+    $my-padding: .5rem;
+
     background: $amass-green;
-    padding: .5rem 0;
+    padding: ($my-padding + $topbar-height) 0 $my-padding;
 
     h1 {
       color: $white;

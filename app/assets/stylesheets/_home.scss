@@ -1,10 +1,12 @@
 .home-main-image {
-  background: image-url('home-main-image.jpg') center top no-repeat;
-  height: rem-calc(550px);
+  $my-offset: rem-calc(30px);
+  background: image-url('home-main-image.jpg') center $my-offset no-repeat #afd9cd;
+  height: rem-calc(500px) + $my-offset;
 
   .row {
     max-width: 100%;
     width: rem-calc(550px);
+    padding-top: 3rem + $topbar-height;
   }
 
   p {

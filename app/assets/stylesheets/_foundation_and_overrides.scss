@@ -7,3 +7,8 @@ $include-html-global-classes: true;
 
 @import 'normalize';
 @import 'foundation';
+
+// Foundation top-bar JS adds padding-top.  Let's override it
+body {
+  padding-top: 0 !important;
+}
