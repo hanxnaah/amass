@@ -10,5 +10,6 @@ $include-html-global-classes: true;
 
 // Foundation top-bar JS adds padding-top.  Let's override it
 body {
+  // scss-lint:disable ImportantRule
   padding-top: 0 !important;
 }
