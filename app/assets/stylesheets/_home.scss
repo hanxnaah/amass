@@ -9,6 +9,10 @@
     max-width: 100%;
     padding-top: 3rem + $topbar-height;
     width: rem-calc(550px);
+
+    @media #{$screen} and (max-width:#{upper-bound($small-range)}) {
+      padding-top: 1rem + $topbar-height;
+    }
   }
 
   p {
