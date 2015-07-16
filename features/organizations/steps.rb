@@ -5,7 +5,7 @@ When 'I sign up as an organization' do
   within '.top-bar' do
     click_link 'Post a Project'
   end
-  expect(page).to have_content('Make a free project posting')
+  expect(page).to have_content('Make a project posting')
 
   @name = 'Washington Capitals'
   fill_in 'organization_name', with: 'Washington Capitals'
