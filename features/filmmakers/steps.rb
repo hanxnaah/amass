@@ -15,7 +15,7 @@ When 'I sign up as a filmmaker' do
   change_filmmaker_count = change(Filmmaker, :count).by(1)
   change_mail_count = change(ActionMailer::Base.deliveries, :length).by(1)
   expect do
-    click_button 'SUBMIT'
+    click_button 'SIGN ME UP!'
     expect(page).to have_content('Thanks for signing up!')
   end.to change_filmmaker_count.and change_mail_count
 
