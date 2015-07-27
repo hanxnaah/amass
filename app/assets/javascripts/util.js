@@ -28,7 +28,7 @@
             $scope.saving = false;
             $scope.formError = 'There was a problem with your request. ' +
               'Please try again later.';
-          })
+          });
       }
     };
   };
