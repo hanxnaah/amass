@@ -13,5 +13,12 @@ describe FilmmakersController do
       filmmaker = Filmmaker.last
       expect(filmmaker.city).to eq('Silver Spring')
     end
+
+    it 'returns a JSON' do
+      post(:create, filmmaker: filmmaker_params)
+
+      json = JSON.parse(response.body)
+      expect(json['_id']['$oid']).to eq(Filmmaker.last.id.to_s)
+    end
   end
 end
