@@ -48,6 +48,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-rubocop'
   gem 'spring'
   gem 'spring-commands-rspec'
 end
