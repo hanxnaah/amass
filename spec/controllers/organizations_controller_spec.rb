@@ -11,7 +11,7 @@ describe OrganizationsController do
       post(:create, organization: organization_params)
 
       json = JSON.parse(response.body)
-      expect(json['_id']['$oid']).to eq(Organization.last.id.to_s)
+      expect(json['_id']).to eq(Organization.last.id.to_s)
     end
   end
 end

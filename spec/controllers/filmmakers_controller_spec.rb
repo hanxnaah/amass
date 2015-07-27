@@ -18,7 +18,7 @@ describe FilmmakersController do
       post(:create, filmmaker: filmmaker_params)
 
       json = JSON.parse(response.body)
-      expect(json['_id']['$oid']).to eq(Filmmaker.last.id.to_s)
+      expect(json['_id']).to eq(Filmmaker.last.id.to_s)
     end
   end
 end
