@@ -2,21 +2,29 @@
   $my-offset: rem-calc(30px);
   $my-bg: #afd9cd;
 
-  background: image-url('home-main-image.jpg') center $my-offset no-repeat $my-bg;
+  background: center $my-offset no-repeat $my-bg;
   height: rem-calc(500px) + $my-offset;
 
   .row {
     max-width: 100%;
     padding-top: 3rem + $topbar-height;
     width: rem-calc(550px);
-
-    @media #{$screen} and (max-width:#{upper-bound($small-range)}) {
-      padding-top: 1rem + $topbar-height;
-    }
   }
 
   p {
     margin-top: 1rem;
+  }
+
+  @media #{$small-only} {
+    background-image: image-url('home-main-image-small.jpg');
+
+    .row {
+      padding-top: 1rem + $topbar-height;
+    }
+  }
+
+  @media #{$medium-up} {
+    background-image: image-url('home-main-image.jpg');
   }
 }
 
