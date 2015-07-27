@@ -32,7 +32,7 @@
   }
 
   @media #{$medium-up} {
-    background-image: image-url('home-main-image.jpg');
+    content: image-url('home-main-image.jpg');
   }
 }
 
@@ -54,4 +54,13 @@
     margin-bottom: 0;
     vertical-align: baseline;
   }
+}
+
+a {
+  text-decoration: underline;
+}
+
+[ng-cloak] {
+  // scss-lint:disable ImportantRule
+  display: none !important;
 }

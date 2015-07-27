@@ -1,6 +1,10 @@
 .amass {
   @include e(topbar) {
     background: rgba($white, .95);
+
+    a {
+      text-decoration: none;
+    }
   }
 
   @include e(heading) {
