@@ -1,3 +1,3 @@
 task :jscs do
-  sh 'jscs app/assets'
+  sh './node_modules/.bin/jscs app/assets'
 end
