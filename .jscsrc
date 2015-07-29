@@ -1,7 +1,7 @@
 {
   "preset": "google",
+  "esnext": true,
   "excludeFiles": ["node_modules/**", "vendor/**", "public/assets/**", "spec/assets/support/phantomjs_shims.js"],
-  "fileExtensions": [".js", ".jsx"],
 
   "disallowTrailingComma": true,
 
