@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "jshint": "latest",
-    "jscs": "< 2"
+    "jscs": "latest"
   },
   "repository": {
     "type" : "git",

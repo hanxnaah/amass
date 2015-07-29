@@ -9,6 +9,8 @@
 
   "disallowSpacesInAnonymousFunctionExpression": null,
 
+  "disallowSpacesInFunctionExpression": null,
+
   "disallowSpacesInsideObjectBrackets": null,
 
   "requireCamelCaseOrUpperCaseIdentifiers": null,
