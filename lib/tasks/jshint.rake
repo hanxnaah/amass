@@ -1,3 +1,3 @@
 task :jshint do
-  sh 'jshint app/assets/javascripts'
+  sh './node_modules/.bin/jshint app/assets/javascripts'
 end
