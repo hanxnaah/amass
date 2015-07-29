@@ -16,4 +16,6 @@ class Organization
   field :project_name, type: String
   field :project_blurb, type: String
   field :inspiration_links, type: String
+
+  has_one :survey_response, as: :user
 end

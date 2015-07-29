@@ -7,4 +7,6 @@ class Filmmaker
   field :skills, type: String
   field :city, type: String
   field :portfolio_url, type: String
+
+  has_one :survey_response, as: :user
 end
