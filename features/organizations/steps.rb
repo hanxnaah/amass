@@ -18,7 +18,7 @@ When 'I sign up as an organization' do
   change_mail_count = change(ActionMailer::Base.deliveries, :length).by(1)
   expect do
     click_button 'POST MY PROJECT!'
-    expect(page).to have_content('Thanks for signing up!')
+    expect(page).to have_content("You're project has been posted!")
   end.to change_organization_count.and change_mail_count
 
   org = Organization.last
