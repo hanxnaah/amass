@@ -16,9 +16,9 @@ body {
 
 .button.outline {
   background-color: transparent;
-  color: $amass-orange;
   border-color: $amass-orange;
   border-width: 2px;
+  color: $amass-orange;
 
   &:hover {
     background-color: rgba($amass-orange, .2);
