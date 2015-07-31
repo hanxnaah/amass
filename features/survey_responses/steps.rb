@@ -6,5 +6,5 @@ When 'I fill out a survey response' do
 end
 
 Then 'a survey response admin notification is sent' do
-  step "an admin notification is sent titled 'Heard about us from: #{@name}'"
+  step "an admin notification is sent titled 'Referred from: #{@name}'"
 end

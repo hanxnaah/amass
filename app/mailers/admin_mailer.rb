@@ -20,7 +20,7 @@ class AdminMailer < ApplicationMailer
 
   def new_survey_response(survey_response)
     @survey_response = survey_response
-    subject = "[Amass Media] Referral from: #{survey_response.hear_about_us}"
+    subject = "[Amass Media] Referred from: #{survey_response.hear_about_us}"
     mail(subject: subject)
   end
 end
