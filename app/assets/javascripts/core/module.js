@@ -2,7 +2,7 @@
 //= require angular-foundation
 //= require angular-touch
 //= require angulartics/angulartics
-//= require angulartics/angulartics-mixpanel
+//= require angulartics-mixpanel
 //= require angulartics/angulartics-debug
 //
 //= require_self
@@ -15,6 +15,7 @@
     'ngRoute',
     'ngTouch',
     'mm.foundation',
+    'angulartics',
     'angulartics.mixpanel',
     'angulartics.debug',
     'templates'

@@ -27,6 +27,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-angular-slick'
   gem 'rails-assets-angular-touch'
   gem 'rails-assets-angulartics'
+  gem 'rails-assets-angulartics-mixpanel'
   gem 'rails-assets-fastclick'
   gem 'rails-assets-jquery'
   gem 'rails-assets-mixpanel'

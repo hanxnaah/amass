@@ -213,6 +213,8 @@ GEM
       rails-assets-SHA-1
       rails-assets-angular (>= 1.1.5)
       rails-assets-waypoints (~> 3.1.1)
+    rails-assets-angulartics-mixpanel (0.1.1)
+      rails-assets-angulartics (~> 0.20)
     rails-assets-fastclick (1.0.6)
     rails-assets-jquery (2.1.4)
     rails-assets-mixpanel (2.5.2)
@@ -370,6 +372,7 @@ DEPENDENCIES
   rails-assets-angular-slick!
   rails-assets-angular-touch!
   rails-assets-angulartics!
+  rails-assets-angulartics-mixpanel!
   rails-assets-fastclick!
   rails-assets-jquery!
   rails-assets-mixpanel!
