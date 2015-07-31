@@ -4,8 +4,8 @@
   var amassControllers = angular.module('amass.filmmakerNew');
 
   amassControllers.controller('FilmmakerNewCtrl', [
-    '$scope', '$anchorScroll', 'Filmmaker', '$analytics',
-    function ($scope, $anchorScroll, Filmmaker, $analytics) {
+    '$scope', 'Filmmaker', '$analytics',
+    function ($scope, Filmmaker, $analytics) {
       /* global window */
       window.registerSharedControllerMethods(
         $scope,

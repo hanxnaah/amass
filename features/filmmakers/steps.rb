@@ -25,6 +25,10 @@ When 'I sign up as a filmmaker' do
   expect(filmmaker.skills).to eq('Eating Scooby Snacks')
 end
 
-Then 'a filmmaker admin notification is sent' do
+Then 'a filmmaker sign-up admin notification is sent' do
   step "an admin notification is sent titled 'Be a filmmaker: #{@name}'"
+end
+
+Then 'a filmmaker survey response admin notification is sent' do
+  step 'a survey response admin notification is sent'
 end

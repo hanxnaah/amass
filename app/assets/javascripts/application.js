@@ -11,6 +11,7 @@
 //= require ./filmmaker_new/module
 //= require ./organization_new/module
 //= require ./follower/module
+//= require ./survey_response/module
 //= require_tree ./pages
 
 (function () {
@@ -23,6 +24,7 @@
     'amass.filmmakerNew',
     'amass.organizationNew',
     'amass.successStories',
+    'amass.surveyResponse',
     'amass.teamBios'
   ]);
 })();

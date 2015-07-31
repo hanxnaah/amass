@@ -4,6 +4,7 @@ class SurveyResponsesController < ApplicationController
 
     status =
       if survey_response.save
+        AdminMailer.new_survey_response(survey_response).deliver_later
         201
       else
         400

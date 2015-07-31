@@ -12,7 +12,8 @@
       &nbsp;for any questions
 
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
-      .form-error{ ng: { show: 'formError' } } {{formError}}
+      %small.error{ ng: { show: 'formError' } } {{formError}}
+
       %label{ ng: { class: '{error: invalidField(form.organization_name.$invalid)}' } }
         Organization Name
         - ng_data = { model: 'organization.organization_name',
@@ -84,6 +85,7 @@
       - submit_ng_data = { disabled: 'saving || invalidField(!form.$valid)' }
       %input.button.radius{ ng: submit_ng_data, type: 'submit', value: 'POST MY PROJECT!' }
 
-  %div{ ng: { show: 'created' } }
-    %h1 Thanks for signing up!
-    %p We hope to find you a filmmaker soon.
+  %div{ ng: { if: 'created' } }
+    %h1 You're project has been posted!
+    %p We will contact you when we have a found a filmmaker for your project.
+    %survey-response-form{ 'user-id' => '{{organization._id}}' }

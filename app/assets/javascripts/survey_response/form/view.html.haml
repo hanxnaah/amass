@@ -1,0 +1,14 @@
+.survey-response-form.panel.radius
+  %form{ novalidate: true, name: 'form', ng: { submit: 'create()', hide: 'created' } }
+    %small.error{ ng: { show: 'formError' } } {{formError}}
+    %label
+      If you have time to help us out, can you let us know who referred you?
+      - ng_data = { model: 'surveyResponse.hear_about_us' }
+      %input{ type: 'text', name: 'hear_about_us', ng: ng_data }
+
+    - submit_ng_data = { disabled: 'saving' }
+    %input.button.radius{ ng: submit_ng_data, type: 'submit', value: 'HELP US OUT!' }
+
+  %div{ ng: { show: 'created' } }
+    %h2 Thanks!
+    %p Your input will help us improve the product!

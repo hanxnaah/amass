@@ -17,4 +17,10 @@ class AdminMailer < ApplicationMailer
     @follower = follower
     mail(subject: "[Amass Media] New follower: #{follower.email}")
   end
+
+  def new_survey_response(survey_response)
+    @survey_response = survey_response
+    subject = "[Amass Media] Referral from: #{survey_response.hear_about_us}"
+    mail(subject: subject)
+  end
 end

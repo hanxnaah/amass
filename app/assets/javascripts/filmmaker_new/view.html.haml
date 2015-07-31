@@ -8,7 +8,7 @@
       Sign up to be a filmmaker now to get notified about project opportunities
 
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
-      .form-error{ ng: { show: 'formError' } } {{formError}}
+      %small.error{ ng: { show: 'formError' } } {{formError}}
 
       %label{ ng: { class: '{error: invalidField(form.name.$invalid)}' } }
         Name
@@ -48,6 +48,7 @@
       - submit_ng_data = { disabled: 'saving || invalidField(!form.$valid)' }
       %input.button.radius{ ng: submit_ng_data, type: 'submit', value: 'SIGN ME UP!' }
 
-  %div{ ng: { show: 'created' } }
-    %h1 Thanks for signing up!
-    %p We hope to find you a project soon.
+  %div{ ng: { if: 'created' } }
+    %h1 You've been added to our network!
+    %p We will let you know when any projects are available.
+    %survey-response-form{ 'user-id' => '{{filmmaker._id}}' }

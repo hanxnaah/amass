@@ -1,0 +1,18 @@
+:ruby
+  user = @survey_response.user
+
+  attributes =
+    if user.is_a?(Filmmaker)
+      %w(name email)
+    elsif user.is_a?(Organization)
+      %w(organization_name contact_name contact_email)
+    end
+
+  data = attributes.map do |attribute|
+    [attribute.capitalize.gsub(/_/, ' '), user.send(attribute)]
+  end
+
+= render 'mailer_template',
+    title: 'Someone filled out the survey!',
+    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+      user.send(attribute)] }

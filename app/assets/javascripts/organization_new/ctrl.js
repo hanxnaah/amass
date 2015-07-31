@@ -4,8 +4,8 @@
   var amassControllers = angular.module('amass.organizationNew');
 
   amassControllers.controller('OrganizationNewCtrl', [
-    '$scope', '$anchorScroll', 'Organization', '$analytics',
-    function ($scope, $anchorScroll, Organization, $analytics) {
+    '$scope', 'Organization', '$analytics',
+    function ($scope, Organization, $analytics) {
       /* global window */
       window.registerSharedControllerMethods(
         $scope,

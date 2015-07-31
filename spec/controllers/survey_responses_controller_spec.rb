@@ -15,6 +15,12 @@ describe SurveyResponsesController do
         expect(SurveyResponse.last.user).to eq(user)
         expect(SurveyResponse.last.hear_about_us).to eq('Google')
       end
+
+      it 'sends an email' do
+        expect do
+          post(:create, survey_response: survey_response_params)
+        end.to change(ActionMailer::Base.deliveries, :length).by(1)
+      end
     end
 
     describe 'when user is an organization' do
