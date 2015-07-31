@@ -32,3 +32,7 @@ end
 Then 'an organization admin notification is sent' do
   step "an admin notification is sent titled 'Post a project: #{@name}'"
 end
+
+Then 'an organization survey response admin notification is sent' do
+  step 'a survey response admin notification is sent'
+end
