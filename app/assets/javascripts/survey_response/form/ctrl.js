@@ -4,12 +4,11 @@
   angular.module('amass.surveyResponse').controller('SurveyResponseFormCtrl', [
     '$scope', 'SurveyResponse',
     function ($scope, SurveyResponse) {
-      console.log($scope.userId);
       $scope.surveyResponse = new SurveyResponse({ user_id: $scope.userId });
       $scope.create = function () {
         $scope.saving = true;
         $scope.surveyResponse.$save()
-          .then(function (resource) {
+          .then(function () {
             $scope.saving = false;
             $scope.created = true;
           })
