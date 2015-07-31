@@ -13,3 +13,27 @@ body {
   // scss-lint:disable ImportantRule
   padding-top: 0 !important;
 }
+
+.button.outline {
+  background-color: transparent;
+  color: $amass-orange;
+  border-color: $amass-orange;
+  border-width: 2px;
+
+  &:hover {
+    background-color: rgba($amass-orange, .2);
+  }
+}
+
+.label-radio {
+  display: inline-block;
+  font-weight: normal;
+
+  > span {
+    // Following is copied from foundation/forms 'input[type=checkbox] + label'
+    margin-#{$default-float}: $form-spacing * .5;
+    margin-#{$opposite-direction}: $form-spacing;
+    margin-bottom: 0;
+    vertical-align: baseline;
+  }
+}
