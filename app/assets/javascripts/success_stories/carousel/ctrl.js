@@ -6,13 +6,13 @@
       '$scope', 'gon', '$analytics', '$timeout',
       function ($scope, gon, $analytics, $timeout) {
         $scope.successStories = gon.successStories;
-        $scope.loaded = false;
+        $scope.carouselLoaded = false;
 
         var currentIndex = null;
         var playQueue = [];
 
         $scope.initVideoTracking = function () {
-          $scope.loaded = true;
+          $scope.carouselLoaded = true;
           $timeout(trackPlayEvents);
           $scope.updateCurrentVideo(0);
         };

@@ -34,7 +34,7 @@
       templateUrl: 'success_stories/list/view.html',
       controller: 'SuccessStoriesListCtrl'
     }).when('/success-stories/:successStoryId', {
-      templateUrl: 'success_stories/single/view.html',
+      templateUrl: 'success_stories/single/page.html',
       controller: 'SuccessStoriesSingleCtrl'
     }).when('/contact', {
       templateUrl: 'pages/contact/view.html'

@@ -1,0 +1,12 @@
+%amass-heading{ title: '{{successStory.title}}' }
+
+.amass__breadcrumbs
+  .row
+    .amass__breadcrumb
+      %a{ href: '/' } Home
+    .amass__breadcrumb
+      %a{ href: '/success-stories' } Success Stories
+    .amass__breadcrumb.current {{successStory.title}}
+
+.row.amass-section
+  %success-story{ 'success-story' => 'successStory' }
