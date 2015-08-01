@@ -6,7 +6,8 @@
       'after-change' => 'updateCurrentVideo(currentSlide)' }
   %slick{ dots: 'true', slick: slick_data, draggable: 'false' }
     %div{ ng: { repeat: 'successStory in successStories' } }
-      %success-story{ 'success-story' => 'successStory', 'should-load-video' => '{{carouselLoaded}}' }
+      %success-story{ 'success-story' => 'successStory',
+          'should-load-video' => '{{carouselLoaded}}' }
   %br
   .text-center
     %a.button.outline.radius{ href: '/success-stories' } See More Stories
