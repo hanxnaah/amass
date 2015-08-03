@@ -31,8 +31,8 @@
       templateUrl: 'organization_new/view.html',
       controller: 'OrganizationNewCtrl'
     }).when('/success-stories', {
-      templateUrl: 'success_stories/list/view.html',
-      controller: 'SuccessStoriesListCtrl'
+      templateUrl: 'success_stories/grid/view.html',
+      controller: 'SuccessStoriesGridCtrl'
     }).when('/success-stories/:successStoryId', {
       templateUrl: 'success_stories/single/page.html',
       controller: 'SuccessStoriesSingleCtrl'

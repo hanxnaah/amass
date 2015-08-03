@@ -55,3 +55,34 @@
     width: 100%;
   }
 }
+
+.success-stories-grid {
+  @include e(item) {
+    border: $transparent 2px solid;
+    border-radius: $global-radius;
+    display: block;
+    margin-bottom: 1rem;
+    position: relative;
+
+    h4 {
+      background: rgba($amass-orange, .5);
+      bottom: 0;
+      color: $white;
+      left: 0;
+      margin: 0;
+      padding: .5rem 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+    &:hover {
+      border-color: $amass-orange;
+
+      h4 {
+        background: rgba($amass-orange, .6);
+        text-decoration: underline;
+      }
+    }
+  }
+}
