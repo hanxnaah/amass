@@ -7,7 +7,7 @@
     .amass__breadcrumb.current Success Stories
 
 .row.amass-section
-  %div.medium-6.columns{ ng: { repeat: 'successStory in successStories' } }
+  .medium-6.columns{ ng: { repeat: 'successStory in successStories' } }
     %a.success-stories-grid__item.radius{ href: '/success-stories/{{successStory.slug}}' }
       %h4 {{successStory.title}}
       %img{ ng: { src: '{{successStory.vimeoVideoId|imageForSuccessStory}}' } }
