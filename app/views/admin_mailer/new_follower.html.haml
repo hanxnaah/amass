@@ -3,5 +3,5 @@
 
 = render 'mailer_template',
     title: 'A follower has signed up!',
-    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+    data: attributes.map { |attribute| [attribute.capitalize.tr('_', ' '),
       @follower.send(attribute)] }

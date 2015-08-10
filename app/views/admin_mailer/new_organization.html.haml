@@ -6,5 +6,5 @@
 
 = render 'mailer_template',
     title: 'An organization has signed up!',
-    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+    data: attributes.map { |attribute| [attribute.capitalize.tr('_', ' '),
       @organization.send(attribute)] }

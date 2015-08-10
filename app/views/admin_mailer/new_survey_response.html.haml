@@ -9,5 +9,5 @@
 
 = render 'mailer_template',
     title: 'Someone filled out the survey!',
-    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+    data: attributes.map { |attribute| [attribute.capitalize.tr('_', ' '),
       user.send(attribute)] }

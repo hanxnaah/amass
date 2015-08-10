@@ -2,5 +2,5 @@
 
 = render 'mailer_template',
     title: 'A filmmaker has signed up!',
-    data: attributes.map { |attribute| [attribute.capitalize.gsub(/_/, ' '),
+    data: attributes.map { |attribute| [attribute.capitalize.tr('_', ' '),
       @filmmaker.send(attribute)] }
