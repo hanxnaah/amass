@@ -297,9 +297,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    scss-lint (0.38.0)
+    scss_lint (0.41.0)
       rainbow (~> 2.0)
-      sass (~> 3.4.1)
+      sass (~> 3.4.15)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -385,7 +385,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   sass-rails
-  scss-lint
+  scss_lint
   sdoc
   selenium-webdriver
   simplecov
@@ -394,3 +394,6 @@ DEPENDENCIES
   sprockets (< 3)
   uglifier
   zurb-ink-rails
+
+BUNDLED WITH
+   1.10.6

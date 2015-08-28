@@ -45,7 +45,7 @@ group :development, :test do
   gem 'haml-lint'
   gem 'rubocop'
   gem 'rubocop-rspec'
-  gem 'scss-lint'
+  gem 'scss_lint'
 end
 
 group :development do
