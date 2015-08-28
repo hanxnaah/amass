@@ -42,10 +42,10 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'haml-lint'
-  gem 'rubocop'
-  gem 'rubocop-rspec'
-  gem 'scss_lint'
+  gem 'haml-lint', require: false
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'scss_lint', require: false
 end
 
 group :development do
