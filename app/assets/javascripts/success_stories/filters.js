@@ -58,6 +58,6 @@
   }
 
   function getHashOfArray(array) {
-    return JSON.stringify(array);
+    return angular.toJson(array);
   }
 })();
