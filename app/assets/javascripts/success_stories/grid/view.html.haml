@@ -6,8 +6,9 @@
       %a{ href: '/' } Home
     .amass__breadcrumb.current Success Stories
 
-.row.amass-section
-  .medium-6.columns{ ng: { repeat: 'successStory in successStories' } }
-    %a.success-stories-grid__item{ href: '/success-stories/{{successStory.slug}}' }
-      %h4 {{successStory.title}}
-      %img{ ng: { src: '{{successStory.vimeoVideoId|imageForSuccessStory}}' } }
+.amass-section
+  .row{ ng: { repeat: 'groupedSuccessStories in successStories|inGroupsOf:2' } }
+    .medium-6.columns{ ng: { repeat: 'successStory in groupedSuccessStories' } }
+      %a.success-stories-grid__item{ href: '/success-stories/{{successStory.slug}}' }
+        %h4 {{successStory.title}}
+        %img{ ng: { src: '{{successStory.vimeoVideoId|imageForSuccessStory}}' } }
