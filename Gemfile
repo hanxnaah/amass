@@ -59,7 +59,7 @@ end
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
+  gem 'database_cleaner', '~> 1.4.0'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
