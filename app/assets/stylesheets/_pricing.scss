@@ -1,0 +1,60 @@
+.pricing_dashboard{
+    text-align: center;
+
+    p{
+      font-size: 1.5em;
+      color: $gray;
+
+      span.green{
+          color: $green;
+      }
+    }
+
+    img{
+      max-width: 350px;
+      margin-bottom: 20px;
+    }
+}
+
+.project_include{
+    background: $orange;
+    color: $white;
+
+    h2{
+      color: $white;
+    }
+
+    ul{
+      list-style: none;
+      margin-left: 0;
+      padding-top: 5px;
+
+      li{
+          padding-bottom: 5px;
+          font-size: 1.2em;
+
+        i{
+          margin-right: 10px;
+        }
+      }
+    }
+}
+
+.faq{
+  .question{
+    color: $gray;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-top: 15px;
+    &:before {
+        content: "Q: ";
+
+    }
+  }
+
+  .answer{
+    &:before {
+        content: "A: ";
+    }
+  }
+}
