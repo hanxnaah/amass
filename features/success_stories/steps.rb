@@ -11,7 +11,7 @@ Then 'I see a different success story' do
   expect(page).to have_content('Labor Link')
   expect(page).to have_no_content('Community Yoga Project')
 
-  within_frame 'vimeo-116570432' do
+  within_frame 'labor-link-john-burke' do
     # expect(page).to have_css('#player')
   end
 end
