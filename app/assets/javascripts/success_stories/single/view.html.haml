@@ -7,9 +7,10 @@
           .success-story__video-placeholder{ style: "background-image: #{placeholder_url}",
               ng: { switch: { when: 'false' } } }
           %div{ ng: { switch: { when: 'true' } } }
-            %embed-video{ 'iframe-id' => '{{successStory|successStoryId}}',
+            %embed-video{ 'iframe-id' => '{{successStory.getVideoId()}}',
                 api: '1',
-                player_id: '{{successStory|successStoryId}}',
+                enablejsapi: '1',
+                player_id: '{{successStory.getVideoId()}}',
                 ng: { href: '{{successStory|successStoryVideoUrl}}' },
                 portrait: '0',
                 title: '0',

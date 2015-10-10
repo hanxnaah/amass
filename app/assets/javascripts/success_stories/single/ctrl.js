@@ -3,10 +3,9 @@
 
   angular.module('amass.successStories')
     .controller('SuccessStoriesSingleCtrl', [
-      '$scope', 'gon', '$routeParams',
-      function ($scope, gon, $routeParams) {
-        // need es5-shim
-        gon.successStories.forEach(function (successStory) {
+      '$scope', '$routeParams', 'SuccessStoryStore',
+      function ($scope, $routeParams, SuccessStoryStore) {
+        angular.forEach(SuccessStoryStore.getAll(), function (successStory) {
           if (successStory.slug === $routeParams.successStoryId) {
             $scope.successStory = successStory;
           }
