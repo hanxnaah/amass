@@ -11,4 +11,4 @@
     .medium-6.columns{ ng: { repeat: 'successStory in groupedSuccessStories' } }
       %a.success-stories-grid__item{ href: '/success-stories/{{successStory.slug}}' }
         %h4 {{successStory.title}}
-        %img{ ng: { src: '{{successStory.vimeoVideoId|imageForSuccessStory}}' } }
+        %img{ ng: { src: '{{successStory|successStoryImage}}' } }

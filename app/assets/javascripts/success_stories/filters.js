@@ -3,15 +3,6 @@
 
   var filters = angular.module('amass.successStories');
 
-  filters.filter('imageForSuccessStory', ['$filter', function ($filter) {
-    return function (vimeoVideoId) {
-      var rawImagePath = 'success-stories/vimeo-' +
-        vimeoVideoId +
-        '-thumbnail.jpg';
-      return $filter('assetPath')(rawImagePath);
-    };
-  }]);
-
   filters.filter('imageForVideoFor', ['$filter', function ($filter) {
     return function (videoFor) {
       var rawImagePath = 'video-for/' + dashify(videoFor.name) + '.jpg';
