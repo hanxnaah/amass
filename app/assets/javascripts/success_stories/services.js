@@ -18,12 +18,10 @@
 
       successStory.getVideoId = function () {
         switch (this.getVideoType()) {
-        case 'vimeo':
-          return 'vimeo-' + this.vimeoVideoId;
-          break;
-        case 'youtube':
-          return 'youtube-' + this.youtubeId;
-          break;
+          case 'vimeo':
+            return 'vimeo-' + this.vimeoVideoId;
+          case 'youtube':
+            return 'youtube-' + this.youtubeId;
         }
       };
     });

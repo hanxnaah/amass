@@ -15,13 +15,10 @@
   filters.filter('successStoryVideoUrl', function () {
     return function (successStory) {
       switch (successStory.getVideoType()) {
-      case 'vimeo':
-        return 'https://vimeo.com/' + successStory.vimeoVideoId;
-        break;
-
-      case 'youtube':
-        return 'https://youtube.com/watch?v=' + successStory.youtubeId;
-        break;
+        case 'vimeo':
+          return 'https://vimeo.com/' + successStory.vimeoVideoId;
+        case 'youtube':
+          return 'https://youtube.com/watch?v=' + successStory.youtubeId;
       }
     };
   });

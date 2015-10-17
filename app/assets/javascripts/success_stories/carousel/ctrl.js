@@ -25,21 +25,22 @@
           var currentStory = $scope.successStories[currentIndex];
 
           switch (currentStory.getVideoType()) {
-          case 'vimeo':
-            /* globals $ */
-            $('.slick-active iframe').vimeo('pause');
-            break;
+            case 'vimeo':
+              /* globals $ */
+              $('.slick-active iframe').vimeo('pause');
+              break;
 
-          case 'youtube':
-            var player = new YT.Player(currentStory.getVideoId(), {
-              events: {
-                onReady: function () {
-                  player.pauseVideo();
+            case 'youtube':
+              /* globals YT */
+              var player = new YT.Player(currentStory.getVideoId(), {
+                events: {
+                  onReady: function () {
+                    player.pauseVideo();
+                  }
                 }
-              }
-            });
-            break;
-          };
+              });
+              break;
+          }
         };
 
         $scope.trackSlickChange = function () {
