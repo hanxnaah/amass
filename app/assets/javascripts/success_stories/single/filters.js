@@ -5,22 +5,21 @@
 
   filters.filter('successStoryImage', ['$filter', function ($filter) {
     return function (successStory) {
-      var rawImagePath = 'success-stories/vimeo-' +
-        successStory.vimeoVideoId +
+      var rawImagePath = 'success-stories/' +
+        successStory.getVideoId() +
         '-thumbnail.jpg';
       return $filter('assetPath')(rawImagePath);
     };
   }]);
 
-  filters.filter('successStoryId', function () {
-    return function (successStory) {
-      return successStory.slug;
-    };
-  });
-
   filters.filter('successStoryVideoUrl', function () {
     return function (successStory) {
-      return 'https://vimeo.com/' + successStory.vimeoVideoId;
+      switch (successStory.getVideoType()) {
+        case 'vimeo':
+          return 'https://vimeo.com/' + successStory.vimeoVideoId;
+        case 'youtube':
+          return 'https://youtube.com/watch?v=' + successStory.youtubeId;
+      }
     };
   });
 

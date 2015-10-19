@@ -3,9 +3,9 @@
 
   angular.module('amass.successStories')
     .controller('SuccessStoriesCarouselCtrl', [
-      '$scope', 'gon', '$analytics', '$timeout',
-      function ($scope, gon, $analytics, $timeout) {
-        $scope.successStories = gon.successStories;
+      '$scope', 'SuccessStoryStore', '$analytics', '$timeout',
+      function ($scope, SuccessStoryStore, $analytics, $timeout) {
+        $scope.successStories = SuccessStoryStore.getAll();
         $scope.carouselLoaded = false;
 
         var currentIndex = null;
@@ -22,8 +22,25 @@
         };
 
         $scope.pauseCurrentVideo = function () {
-          /* globals $ */
-          $('.slick-active iframe').vimeo('pause');
+          var currentStory = $scope.successStories[currentIndex];
+
+          switch (currentStory.getVideoType()) {
+            case 'vimeo':
+              /* globals $ */
+              $('.slick-active iframe').vimeo('pause');
+              break;
+
+            case 'youtube':
+              /* globals YT */
+              var player = new YT.Player(currentStory.getVideoId(), {
+                events: {
+                  onReady: function () {
+                    player.pauseVideo();
+                  }
+                }
+              });
+              break;
+          }
         };
 
         $scope.trackSlickChange = function () {
