@@ -3,14 +3,14 @@
     .medium-6.columns
       .flex-video.success-story__video
         %div{ ng: { switch: '!!shouldLoadVideo' } }
-          - placeholder_url = 'url({{successStory.vimeoVideoId|imageForSuccessStory}})'
+          - placeholder_url = 'url({{successStory|successStoryImage}})'
           .success-story__video-placeholder{ style: "background-image: #{placeholder_url}",
               ng: { switch: { when: 'false' } } }
           %div{ ng: { switch: { when: 'true' } } }
-            %embed-video{ 'iframe-id' => "{{'vimeo-' + successStory.vimeoVideoId}}",
+            %embed-video{ 'iframe-id' => '{{successStory|successStoryId}}',
                 api: '1',
-                player_id: "{{'vimeo-' + successStory.vimeoVideoId}}",
-                ng: { href: "{{'https://vimeo.com/' + successStory.vimeoVideoId}}" },
+                player_id: '{{successStory|successStoryId}}',
+                ng: { href: '{{successStory|successStoryVideoUrl}}' },
                 portrait: '0',
                 title: '0',
                 byline: '0' }
