@@ -40,7 +40,7 @@
       templateUrl: 'pages/contact/view.html'
     }).when('/about', {
       templateUrl: 'pages/about/view.html'
-  }).when('/pricing', {
+    }).when('/pricing', {
       templateUrl: 'pages/pricing/view.html'
     }).otherwise({
       templateUrl: 'pages/404/view.html'

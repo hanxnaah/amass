@@ -21,6 +21,10 @@
               type: 'filmmaker' }
           %a.show-for-medium-up{ href: '/filmmakers/sign-up', analytics: analytics_data }
             Be a Filmmaker
+        %li{ ng: { class: "{active: isSelected('/pricing')}" } }
+          - analytics_data = { on: true, event: 'Pricing', location: 'Topbar' }
+          %a.show-for-large-up{ href: '/pricing', analytics: analytics_data }
+            Pricing
         %li{ ng: { class: "{active: isSelected('/contact')}" } }
           - analytics_data = { on: true, event: 'Contact us', location: 'Topbar' }
           %a.show-for-large-up{ href: '/contact', analytics: analytics_data }
