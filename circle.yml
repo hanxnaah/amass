@@ -2,6 +2,8 @@ machine:
   environment:
     SLOW: true
     PATH: ./node_modules/.bin:$PATH
+  ruby:
+    version: rbx-2.2.2
 
 test:
   pre:
