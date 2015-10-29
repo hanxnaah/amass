@@ -51,3 +51,8 @@ a {
   // scss-lint:disable ImportantRule
   display: none !important;
 }
+
+//  helper class
+.bold {
+  font-weight: $font-weight-bold;
+}
