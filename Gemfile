@@ -62,7 +62,7 @@ group :test do
   gem 'database_cleaner', '~> 1.4.0'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'rspec_junit_formatter', '0.2.2'
+  gem 'rspec_junit_formatter'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
