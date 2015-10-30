@@ -10,6 +10,15 @@
     }
   }
 
+  .pricing-indicator-img {
+    background-image: url('pricing/dashboard.png');
+    background-position: center;
+    background-size: cover;
+    height: 193px;
+    margin: 0 auto;
+    width: 320px;
+  }
+
   img {
     margin-bottom: 20px;
     max-width: 350px;
