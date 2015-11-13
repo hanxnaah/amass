@@ -23,7 +23,7 @@ Amass::Application.routes.draw do
       '/filmmakers/sign-up',
       '/success-stories',
       '/success-stories/:success_story_id',
-      '/contact',
+      '/team/:team_bio_id',
       '/about',
       '/pricing',
     ].each { |route| get route, to: 'pages#index' }

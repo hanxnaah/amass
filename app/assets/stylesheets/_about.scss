@@ -1,0 +1,16 @@
+.about {
+  @include e(main-image) {
+    $my-offset: rem-calc(50px);
+    $my-bg: #dfeeee;
+
+    background: center $my-offset no-repeat $my-bg;
+    background-image: image-url('about-main-image.jpg');
+    background-size: 80%;
+    height: rem-calc(450px);
+
+    h1 {
+      padding-top: 1rem + $topbar-height;
+      text-align: center;
+    }
+  }
+}

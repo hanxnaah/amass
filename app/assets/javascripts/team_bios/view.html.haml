@@ -1,14 +1,15 @@
 .team-bios.amass-section{ ng: { controller: 'TeamBiosCtrl' } }
   .row.row-content
-    %h1
-      The Team&nbsp;
-      %small Click to learn more!
+    %h1.text-center
+      The Team
     %br
-    .row
-      .team-bio.medium-3.columns.text-center{ ng: { repeat: 'teamBio in teamBios' } }
-        .team-bio__basic-profile{ ng: { click: 'open(teamBio)' } }
-          %h3 {{teamBio.nickname}}
-          %p
-            %em {{teamBio.position}}
-          .team-bio__profile-image
-            %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
+  .row
+    - my_class = "{ 'large-offset-1': $first, end: $last }"
+    - ng_data = { ng: { repeat: 'teamBio in teamBios', class: my_class } }
+    .team-bio.large-2.medium-4.columns.text-center{ ng: ng_data }
+      %a.team-bio__basic-profile{ ng: { href: '/team/{{teamBio.slug}}' } }
+        %h3 {{teamBio.nickname}}
+        %p
+          %em {{teamBio.position}}
+        .team-bio__profile-image
+          %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }

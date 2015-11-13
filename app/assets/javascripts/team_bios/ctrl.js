@@ -2,20 +2,9 @@
   'use strict';
 
   angular.module('amass.teamBios').controller('TeamBiosCtrl', [
-    '$scope', 'gon', '$modal',
-    function ($scope, gon, $modal) {
-      $scope.teamBios = gon.teamBios;
-      $scope.open = function (teamBio) {
-        $modal.open({
-          controller: 'TeamBiosModalCtrl',
-          templateUrl: 'team_bios/modal/view.html',
-          resolve: {
-            teamBio: function () {
-              return teamBio;
-            }
-          }
-        });
-      };
+    '$scope', 'TeamBioStore',
+    function ($scope, TeamBioStore) {
+      $scope.teamBios = TeamBioStore.getAll();
     }
   ]);
 })();

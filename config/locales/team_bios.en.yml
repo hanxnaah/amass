@@ -3,62 +3,65 @@ en:
     -
       nickname: Hannah
       full_name: Hannah Yang
-      position: Everything
-      linkedin: https://www.linkedin.com/pub/hannah-yang/29/791/943
+      position: Co-Founder
+      linkedin: https://www.linkedin.com/in/hannahcyang
+      twitter: https://twitter.com/hannahcyang
       bio: >
-        VHS artisan twee, paleo ethical yr four dollar toast messenger bag.
-        Organic chia actually Marfa gluten-free. Selfies lo-fi flannel fap
-        bicycle rights ethical. Odd Future distillery scenester butcher tousled
-        bespoke. Organic drinking vinegar meh narwhal, selvage letterpress PBR
-        small batch chambray raw denim gluten-free. DIY forage dreamcatcher,
-        Odd Future shabby chic McSweeney's salvia polaroid gastropub mumblecore
-        bitters flexitarian paleo wayfarers. Narwhal brunch occupy, McSweeney's
-        aesthetic authentic sartorial asymmetrical.
-      favorite_movie: The Princess Diaries
+        Hannah freelanced and produced videos for nonprofits while in college
+        and discovered the opportunity for emerging videographer to provide
+        services to smaller sized organizations. Prior to Amass, she worked at
+        Deloitte Consulting and founded Clicking Together
+        (<a href="http://clickingtogether.org">clickingtogether.org</a>) and
+        EthiCAL Apparel
+        (<a href="http://ethicalapparel.org">ethicalapparel.org</a>). She is
+        passionate about the power of businesses in social change
+      favorite_movie: Born into Brothels
+    -
+      nickname: Yang
+      full_name: Yang Zeng
+      position: Co-Founder
+      bio: >
+        Yang previously worked at Mobile Fringe and helped produce the
+        documentary The Home Promised, which screened in five cities
+        internationally. He currently volunteers at the Reel Asian
+        International Film Festival in Toronto and is also passionate about
+        tech and cooking!
+      linkedin: https://www.linkedin.com/in/yang-zeng-596863b
+      favorite_movie: Donnie Darko
     -
       nickname: Betty
-      full_name: Betty
-      position: Filmmaker
+      full_name: Betty Xie
+      position: Marketing
       bio: >
-        VHS artisan twee, paleo ethical yr four dollar toast messenger bag.
-        Organic chia actually Marfa gluten-free. Selfies lo-fi flannel fap
-        bicycle rights ethical. Odd Future distillery scenester butcher tousled
-        bespoke. Organic drinking vinegar meh narwhal, selvage letterpress PBR
-        small batch chambray raw denim gluten-free. DIY forage dreamcatcher,
-        Odd Future shabby chic McSweeney's salvia polaroid gastropub mumblecore
-        bitters flexitarian paleo wayfarers. Narwhal brunch occupy, McSweeney's
-        aesthetic authentic sartorial asymmetrical.
+        Betty works at the Reel Asian International Film Festival and directed
+        the documentary The Home Promised. She has plans to produce more
+        documentaries this coming year and is passionate about the intersection
+        of film and social change.
       twitter: https://twitter.com/XieBetty
-      website: http://www.xiebetty.com/
+      website: http://www.xiebetty.com/about
+      linkedin: https://www.linkedin.com/in/bettyxie
       favorite_movie: The Home Promised
     -
       nickname: Carolyn
       full_name: Carolyn Kao
+      website: http://www.carolynkao.com
       linkedin: https://www.linkedin.com/pub/carolyn-kao/49/243/57b
-      position: Designer
+      position: Design
       bio: >
-        VHS artisan twee, paleo ethical yr four dollar toast messenger bag.
-        Organic chia actually Marfa gluten-free. Selfies lo-fi flannel fap
-        bicycle rights ethical. Odd Future distillery scenester butcher tousled
-        bespoke. Organic drinking vinegar meh narwhal, selvage letterpress PBR
-        small batch chambray raw denim gluten-free. DIY forage dreamcatcher,
-        Odd Future shabby chic McSweeney's salvia polaroid gastropub mumblecore
-        bitters flexitarian paleo wayfarers. Narwhal brunch occupy, McSweeney's
-        aesthetic authentic sartorial asymmetrical.
-      favorite_movie: Wall-E
+        Carolyn currently works at Pinterest and also creates designs for her
+        own greeting card business. She is a designer, illustrator, and
+        storyteller at heart.
+      favorite_movie: Still Waiting
     -
       nickname: Holman
       full_name: Holman Gao
-      position: Product/Technical Advisor
+      position: Tech Advisor
       bio: >
-        VHS artisan twee, paleo ethical yr four dollar toast messenger bag.
-        Organic chia actually Marfa gluten-free. Selfies lo-fi flannel fap
-        bicycle rights ethical. Odd Future distillery scenester butcher tousled
-        bespoke. Organic drinking vinegar meh narwhal, selvage letterpress PBR
-        small batch chambray raw denim gluten-free. DIY forage dreamcatcher,
-        Odd Future shabby chic McSweeney's salvia polaroid gastropub mumblecore
-        bitters flexitarian paleo wayfarers. Narwhal brunch occupy, McSweeney's
-        aesthetic authentic sartorial asymmetrical.
+        Holman previously worked at Chalk Schools, where as an early employee,
+        he took on a range of responsibilities from UX to database design.
+        He also led mobile development while at Room 77, which was acquired by
+        Google.  He enjoys volunteering, climbing, and playing guitar while
+        singing in his free time.
       website: http://golmansax.com/
       github: https://github.com/golmansax
       favorite_movie: Eternal Sunshine of the Spotless Mind

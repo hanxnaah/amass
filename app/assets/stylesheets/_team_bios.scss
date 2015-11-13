@@ -8,6 +8,14 @@
 }
 
 .team-bio {
+  @include e(page-padding) {
+    height: $topbar-height;
+  }
+
+  @include e(detailed-bio) {
+    margin: 3rem auto;
+  }
+
   @include e(icon) {
     .fa-stack-2x {
       color: $white;
@@ -26,6 +34,8 @@
   }
 
   @include e(basic-profile) {
+    text-decoration: none;
+
     h3 {
       margin-bottom: .25em;
     }
