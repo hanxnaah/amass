@@ -12,6 +12,10 @@ require 'cucumber/rails'
 # Capybara.default_selector = :xpath
 Capybara.default_driver = :selenium
 
+# Use this if you installed Firefox through brew cask
+# Selenium::WebDriver::Firefox::Binary.path = '/opt/homebrew-cask/Caskroom/'
+#   'firefox/40.0.3/Firefox.app/Contents/MacOS/firefox'
+
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
 # your application behaves in the production environment, where an error page
