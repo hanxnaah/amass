@@ -1,5 +1,14 @@
-.row
-  .large-3.columns
+.team-bio__page-padding
+.amass__breadcrumbs
+  .row
+    .amass__breadcrumb
+      %a{ href: '/' } Home
+    .amass__breadcrumb
+      %a{ href: '/about' } About
+    .amass__breadcrumb.current {{teamBio.fullName}}
+
+.row.team-bio__detailed-bio
+  .large-offset-1.large-3.columns
     %img{ ng: { src: '{{teamBio|imageForTeamBio}}' } }
     %br
     %br
@@ -19,12 +28,13 @@
           %span.fa-stack.fa-lg
             %i.fa.fa-circle.fa-stack-2x
             %i{ class: "fa fa-#{icon_name} fa-stack-1x fa-inverse" }
-  .large-9.columns
-    %h3 {{teamBio.fullName}}
+  .large-7.end.columns
+    %h1 {{teamBio.fullName}}
     %p
       %em {{teamBio.position}}
-    %p {{teamBio.bio}}
+    %p{ ng: { 'bind-html': 'teamBio.bio|safeHtml' } }
     %p
       %label Favorite movie:
       {{teamBio.favoriteMovie}}
-    %a.close-reveal-modal{ ng: { click: 'close()' } } &#215;
+
+%ng-include{ src: "'team_bios/view.html'" }

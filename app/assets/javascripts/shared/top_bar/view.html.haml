@@ -25,8 +25,8 @@
           - analytics_data = { on: true, event: 'Pricing', location: 'Topbar' }
           %a.show-for-large-up{ href: '/pricing', analytics: analytics_data }
             Pricing
-
-        %li{ ng: { class: "{active: isSelected('/contact')}" } }
-          - analytics_data = { on: true, event: 'Contact us', location: 'Topbar' }
-          %a.show-for-large-up{ href: '/contact', analytics: analytics_data }
-            Contact Us
+        -#
+          %li{ ng: { class: "{active: isSelected('/about')}" } }
+            - analytics_data = { on: true, event: 'About us', location: 'Topbar' }
+            %a.show-for-large-up{ href: '/about', analytics: analytics_data }
+              About Us

@@ -36,8 +36,9 @@
     }).when('/success-stories/:successStoryId', {
       templateUrl: 'success_stories/single/page.html',
       controller: 'SuccessStoriesSingleCtrl'
-    }).when('/contact', {
-      templateUrl: 'pages/contact/view.html'
+    }).when('/team/:teamBioId', {
+      templateUrl: 'team_bios/single/page.html',
+      controller: 'TeamBiosSingleCtrl'
     }).when('/about', {
       templateUrl: 'pages/about/view.html'
     }).when('/pricing', {
