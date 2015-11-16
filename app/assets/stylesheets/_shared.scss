@@ -8,7 +8,7 @@
   }
 
   @include e(heading) {
-    $my-padding: .5rem;
+    $my-padding: 1.5rem;
 
     background: $amass-green;
     padding: ($my-padding + $topbar-height) 0 $my-padding;
