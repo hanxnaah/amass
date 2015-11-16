@@ -5,7 +5,7 @@
     %br
   .row
     - my_class = "{ 'large-offset-1': $first, end: $last }"
-    - ng_data = { ng: { repeat: 'teamBio in teamBios', class: my_class } }
+    - ng_data = { repeat: 'teamBio in teamBios', class: my_class }
     .team-bio.large-2.medium-4.columns.text-center{ ng: ng_data }
       %a.team-bio__basic-profile{ ng: { href: '/team/{{teamBio.slug}}' } }
         %h3 {{teamBio.nickname}}
