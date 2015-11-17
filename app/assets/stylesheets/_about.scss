@@ -1,16 +1,44 @@
 .about {
-  @include e(main-image) {
-    $my-offset: rem-calc(50px);
-    $my-bg: #dfeeee;
+  @include e(main-content) {
+    $green-tint: rgba(#359386, .9);
+    $my-width: rem-calc(1100px);
 
-    background: center $my-offset no-repeat $my-bg;
-    background-image: image-url('about-main-image.jpg');
-    background-size: 80%;
-    height: rem-calc(450px);
+    background: linear-gradient($green-tint, $green-tint),
+      no-repeat center bottom / $my-width image-url('about-main-image.jpg');
+    color: $white;
+    margin-top: $topbar-height;
+    padding: 3rem 0;
 
-    h1 {
-      padding-top: 1rem + $topbar-height;
-      text-align: center;
+    h2 {
+      color: inherit;
+      margin-bottom: 2rem;
+    }
+
+    @media #{$small-only} {
+      $my-small-width: rem(550px);
+
+      background: linear-gradient($green-tint, $green-tint),
+        no-repeat left bottom / $my-small-width image-url('about-main-image-small.jpg');
+      padding: 1.5rem 0;
+    }
+  }
+
+  @include e(vision) {
+    $left-gray: #d7d7d2;
+    $right-gray: #c0bfbb;
+    $my-width: 950px;
+    $my-height: 500px;
+
+    background: no-repeat center bottom / $my-width image-url('about-vision-image.jpg'),
+      linear-gradient(to right, $left-gray, $right-gray);
+    height: rem-calc($my-height);
+    text-align: center;
+
+    @media #{$small-only} {
+      $small-ratio: 2 / 3;
+
+      background-size: rem-calc($my-width * $small-ratio);
+      height: rem-calc($my-height * $small-ratio);
     }
   }
 }

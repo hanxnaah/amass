@@ -10,11 +10,10 @@ en:
         Hannah freelanced and produced videos for nonprofits while in college
         and discovered the opportunity for emerging videographer to provide
         services to smaller sized organizations. Prior to Amass, she worked at
-        Deloitte Consulting and founded Clicking Together
-        (<a href="http://clickingtogether.org">clickingtogether.org</a>) and
-        EthiCAL Apparel
-        (<a href="http://ethicalapparel.org">ethicalapparel.org</a>). She is
-        passionate about the power of businesses in social change
+        Deloitte Consulting and founded
+        <a href="http://clickingtogether.org">Clicking Together</a> and
+        <a href="http://ethicalapparel.org">EthiCAL Apparel</a>.
+        She is passionate about the power of businesses in social change
       favorite_movie: Born into Brothels
     -
       nickname: Yang
@@ -51,11 +50,12 @@ en:
         Carolyn currently works at Pinterest and also creates designs for her
         own greeting card business. She is a designer, illustrator, and
         storyteller at heart.
-      favorite_movie: Still Waiting
+      favorite_movie: The Grand Budapest Hotel
     -
       nickname: Holman
       full_name: Holman Gao
       position: Tech Advisor
+      full_position: Product/Technical Advisor
       bio: >
         Holman previously worked at Chalk Schools, where as an early employee,
         he took on a range of responsibilities from UX to database design.

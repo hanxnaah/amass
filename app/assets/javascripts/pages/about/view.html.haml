@@ -1,41 +1,25 @@
-.about__main-image
+-#
+  .about__main-image
+  %amass-heading{ title: 'About Us' }
 
-.row.row-content.amass-section
-  %h1 MISSION
+.about__main-content
+  .row.row-content
+    .large-8.large-offset-4.columns
+      %h2= t('about.mission_heading')
+      %p= t('about.mission_text')
+      %p Amass Media wants to fill the gap.
 
-  %p
-    Amass Media aims to provide every organization, no matter their size, with
-    access to video storytelling to raise critical funding, drive web traffic,
-    spread awareness, and much more.
-
-  %p
-    Today, video production is largely inaccessible to many because
-    videographers are often found through word of mouth and professional
-    production companies are often too expensive for smaller organizations.
-    Furthermore, video buyers’ limited knowledge of the video production
-    process makes it difficult to successfully execute projects.
-
-  %h1
-    VISION
-
-  %p
-    A world where everyone, especially social changemakers working in the most
-    remote areas of the world, regardless of their ability to pay, can find a
-    videographer to tell their stories to reach their mission critical next
-    step.
-
-  %p
-    We are a for-profit social enterprise that serves both for-profit companies
-    and nonprofits to fulfill our mission.
+.about__vision
 
 %ng-include{ src: "'team_bios/view.html'" }
 
-.row
-  %br
-  %br
-  %h1 Contact
-  %p Questions, concerns, comments, want to join us, or anything else?
-  %p
-    Please feel free to contact us at&nbsp;
-    = link_to 'contact@amassmedia.org', 'mailto:contact@amassmedia.org'
-    \.
+.row.row-content
+  .large-offset-1
+    %br
+    %br
+    %h1 Contact
+    %p Questions, concerns, comments, want to join us, or anything else?
+    %p
+      Please feel free to contact us at&nbsp;
+      = link_to 'contact@amassmedia.org', 'mailto:contact@amassmedia.org'
+      \.
