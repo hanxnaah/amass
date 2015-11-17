@@ -31,7 +31,7 @@
   .large-7.end.columns
     %h1 {{teamBio.fullName}}
     %p
-      %em {{teamBio.position}}
+      %em {{teamBio.fullPosition || teamBio.position}}
     %p{ ng: { 'bind-html': 'teamBio.bio|safeHtml' } }
     %p
       %label Favorite movie:
