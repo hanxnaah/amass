@@ -78,11 +78,19 @@
 }
 
 .home-press {
+  img {
+    height: 60px;
+  }
+
   p {
+    color: $white;
+    font-size: .9rem;
     font-style: italic;
+    text-align: center;
   }
 
   blockquote {
+    font-size: .9rem;
     text-align: left;
   }
 
