@@ -76,3 +76,26 @@
     }
   }
 }
+
+.home-press {
+  p {
+    font-style: italic;
+  }
+
+  blockquote {
+    text-align: left;
+  }
+
+  .large-6 {
+    margin-top: 1rem;
+  }
+
+}
+
+form {
+  .email-signup {
+    margin: 0 auto;
+    max-width: 350px;
+    text-align: center;
+  }
+}
