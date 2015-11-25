@@ -78,8 +78,14 @@
 }
 
 .home-press {
+  background-color: $press-gray;
+  padding: 2rem 0;
+  text-align: center;
+
   img {
     height: 60px;
+    margin: 10px 0;
+    padding: 0 50px;
   }
 
   p {
@@ -100,10 +106,15 @@
 
 }
 
-// form {
-//   .email-signup {
-//     margin: 0 auto;
-//     max-width: 350px;
-//     text-align: center;
-//   }
-// }
+.follower {
+  padding: 3rem 0;
+
+  form {
+    margin: 0 auto;
+    max-width: 325px;
+
+    input {
+      text-align: center;
+    }
+  }
+}

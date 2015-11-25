@@ -1,6 +1,6 @@
-.row.row-content{ ng: { controller: 'FollowCtrl' } }
+.follower.row.row-content{ ng: { controller: 'FollowCtrl' } }
   .text-center{ ng: { hide: 'created' } }
-    %p Be the first to hear about what's coming up!
+    %h3 Be the first to hear about what's coming up!
     %form{ novalidate: true, name: 'form', ng: { submit: 'create()' } }
       .form-error{ ng: { show: 'formError' } } {{formError}}
 
