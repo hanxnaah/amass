@@ -29,7 +29,7 @@
             %i.fa.fa-circle.fa-stack-2x
             %i{ class: "fa fa-#{icon_name} fa-stack-1x fa-inverse" }
   .large-7.end.columns
-    %h1 {{teamBio.fullName}}
+    %h1{ 'view-title' => true } {{teamBio.fullName}}
     %p
       %em {{teamBio.fullPosition || teamBio.position}}
     %p{ ng: { 'bind-html': 'teamBio.bio|safeHtml' } }

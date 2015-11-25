@@ -2,7 +2,7 @@
 %html{ ng: { app: 'amass.app' } }
   %head
     %base{ href: '/' }
-    %title Amass Media — Tell stories that matter
+    %title{ ng: { 'bind-template' => '{{viewTitle|buildTitle}}' } } Amass Media — Tell stories that matter
 
     %link{ rel: 'apple-touch-icon-precomposed', href: asset_path('apple-touch-icon.png') }
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic'

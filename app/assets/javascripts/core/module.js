@@ -1,6 +1,7 @@
 //= require angular-rails-templates
 //= require angular-foundation
 //= require angular-touch
+//= require angularjs-viewhead
 //= require angulartics/angulartics
 //= require angulartics-mixpanel
 //= require angulartics/angulartics-debug
@@ -18,7 +19,8 @@
     'angulartics',
     'angulartics.mixpanel',
     'angulartics.debug',
-    'templates'
+    'templates',
+    'viewhead'
   ]);
 
   amassApp.config(['$routeProvider', function ($routeProvider) {
