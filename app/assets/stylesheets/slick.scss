@@ -21,11 +21,11 @@ $slick-opacity-default: 1;
   height: $slick-arrow-size;
   width: $slick-arrow-size;
 
-  &:hover:before {
+  &:hover::before {
     color: scale-color($slick-arrow-color, $lightness: -14%);
   }
 
-  &:before {
+  &::before {
     @include transition(color 300ms ease-out, opacity 300ms ease-out);
 
     font-size: rem-calc(50px);
@@ -49,11 +49,11 @@ $slick-opacity-default: 1;
   margin-left: 0;
 
   li button {
-    &:before {
+    &::before {
       @include transition(color 300ms ease-out, opacity 300ms ease-out);
     }
 
-    &:hover:before {
+    &:hover::before {
       color: scale-color($slick-dot-color, $lightness: -14%);
     }
   }

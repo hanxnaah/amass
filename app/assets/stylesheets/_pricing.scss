@@ -59,13 +59,13 @@
     font-weight: bold;
     padding-top: 15px;
 
-    &:before {
+    &::before {
       content: 'Q: ';
     }
   }
 
   .answer {
-    &:before {
+    &::before {
       content: 'A: ';
     }
   }
