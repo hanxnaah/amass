@@ -9,4 +9,16 @@
       return title + ' | Amass Media';
     };
   });
+
+  filters.filter('safeHtml', ['$sce', function ($sce) {
+    return function (html) {
+      return $sce.trustAsHtml(html);
+    };
+  }]);
+
+  filters.filter('stripHtml', function () {
+    return function (text) {
+      return text.replace(/<[^>]+>/gm, '');
+    };
+  });
 })();

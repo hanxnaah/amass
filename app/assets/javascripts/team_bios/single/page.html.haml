@@ -30,6 +30,9 @@
             %i{ class: "fa fa-#{icon_name} fa-stack-1x fa-inverse" }
   .large-7.end.columns
     %h1{ 'view-title' => true } {{teamBio.fullName}}
+    %meta{ 'view-head' => true,
+      name: 'description',
+      content: '{{teamBio.fullPosition || teamBio.position}}. {{teamBio.bio|stripHtml}}' }
     %p
       %em {{teamBio.fullPosition || teamBio.position}}
     %p{ ng: { 'bind-html': 'teamBio.bio|safeHtml' } }

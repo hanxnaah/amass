@@ -17,12 +17,6 @@
     };
   }]);
 
-  filters.filter('safeHtml', ['$sce', function ($sce) {
-    return function (html) {
-      return $sce.trustAsHtml(html);
-    };
-  }]);
-
   filters.filter('inGroupsOf', function () {
     var cache = {};
 
