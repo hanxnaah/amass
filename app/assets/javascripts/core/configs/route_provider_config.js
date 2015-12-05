@@ -54,7 +54,7 @@
             });
           }
         ]
-      },
+      }
     }).when('/about', {
       templateUrl: 'pages/about/view.html'
     }).when('/pricing', {
