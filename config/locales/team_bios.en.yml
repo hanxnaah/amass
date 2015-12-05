@@ -3,6 +3,7 @@ en:
     -
       nickname: Hannah
       full_name: Hannah Yang
+      slug: hannah-yang
       position: Co-Founder
       linkedin: https://www.linkedin.com/in/hannahcyang
       twitter: https://twitter.com/hannahcyang
@@ -18,6 +19,7 @@ en:
     -
       nickname: Yang
       full_name: Yang Zeng
+      slug: yang-zeng
       position: Co-Founder
       bio: >
         Yang previously worked at Mobile Fringe and helped produce the
@@ -30,6 +32,7 @@ en:
     -
       nickname: Betty
       full_name: Betty Xie
+      slug: betty-xie
       position: Marketing
       bio: >
         Betty works at the Reel Asian International Film Festival and directed
@@ -43,6 +46,7 @@ en:
     -
       nickname: Carolyn
       full_name: Carolyn Kao
+      slug: carolyn-kao
       website: http://www.carolynkao.com
       linkedin: https://www.linkedin.com/pub/carolyn-kao/49/243/57b
       position: Design
@@ -54,6 +58,7 @@ en:
     -
       nickname: Holman
       full_name: Holman Gao
+      slug: holman-gao
       position: Tech Advisor
       full_position: Product/Technical Advisor
       bio: >
