@@ -13,6 +13,17 @@
     return {
       getAll: function () {
         return teamBios;
+      },
+
+      get: function (slug) {
+        var myTeamBio;
+        angular.forEach(teamBios, function (teamBio) {
+          if (teamBio.slug === slug) {
+            myTeamBio = teamBio;
+          }
+        });
+
+        return myTeamBio;
       }
     };
   }]);

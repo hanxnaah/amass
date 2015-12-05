@@ -50,14 +50,31 @@
                 resolve(mySuccessStory);
               }
 
-              reject('Cannot find success story');
+              reject('Cannot find success story for id: ' + id);
             });
           }
         ]
       },
     }).when('/team/:teamBioId', {
       templateUrl: 'team_bios/single/page.html',
-      controller: 'TeamBiosSingleCtrl'
+      controller: 'TeamBiosSingleCtrl',
+      resolve: {
+        teamBio: [
+          '$route', 'TeamBioStore', '$q',
+          function ($route, TeamBioStore, $q) {
+            return $q(function (resolve, reject) {
+              var id = $route.current.params.teamBioId;
+              var myTeamBio = TeamBioStore.get(id);
+
+              if (myTeamBio) {
+                resolve(myTeamBio);
+              }
+
+              reject('Cannot find team bio for id: ' + id);
+            });
+          }
+        ]
+      },
     }).when('/about', {
       templateUrl: 'pages/about/view.html'
     }).when('/pricing', {
