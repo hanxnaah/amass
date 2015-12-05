@@ -22,13 +22,13 @@ Amass::Application.routes.draw do
       '/organizations/sign-up',
       '/filmmakers/sign-up',
       '/success-stories',
-      '/success-stories/:success_story_id',
-      '/team/:team_bio_id',
       '/about',
       '/pricing',
     ].each { |route| get route, to: 'pages#index' }
   end
 
+  resources :success_stories, :path => '/success-stories', only: :show
+  resources :team_bios, :path => '/team', only: :show
   resources :organizations, only: [:create]
   resources :filmmakers, only: [:create]
   resources :followers, only: [:create]

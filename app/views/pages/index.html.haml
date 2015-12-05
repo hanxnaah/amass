@@ -21,7 +21,11 @@
   %body.ng-cloak
     .amass-image-preloader
     %amass-top-bar
-    %ng-view
+
+    -# invalid_page set through $rootScope on routeChange events
+    %ng-view{ ng: { if: '!invalid_page' } }
+    %ng-include{ src: "'pages/404/view.html'", ng: { if: 'invalid_page' } }
+
     %br.break-topbar
 
     = javascript_include_tag 'https://www.youtube.com/iframe_api'

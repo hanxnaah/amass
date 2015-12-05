@@ -19,5 +19,12 @@ class ApplicationController < ActionController::Base
 
   def init_gon
     gon.mixpanel_key = ENV.fetch('MIXPANEL_KEY') { '' }
+    gon.success_stories = t('success_stories')
+    gon.team_bios = t('team_bios')
+    gon.faqs = t('faqs')
+  end
+
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
   end
 end
