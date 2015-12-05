@@ -34,7 +34,7 @@
             });
           }
         ]
-      },
+      }
     }).when('/team/:teamBioId', {
       templateUrl: 'team_bios/single/page.html',
       controller: 'TeamBiosSingleCtrl',
