@@ -27,10 +27,10 @@ Amass::Application.routes.draw do
     ].each { |route| get route, to: 'pages#index' }
   end
 
-  resources :success_stories, :path => '/success-stories', only: :show
-  resources :team_bios, :path => '/team', only: :show
+  resources :success_stories, path: '/success-stories', only: :show
+  resources :team_bios, path: '/team', only: :show
   resources :organizations, only: [:create]
   resources :filmmakers, only: [:create]
   resources :followers, only: [:create]
-  resources :survey_responses, only: [:create]
+  resources :survey_responses, path: '/survey-responses', only: [:create]
 end

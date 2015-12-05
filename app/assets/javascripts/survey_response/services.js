@@ -4,7 +4,7 @@
   angular.module('amass.surveyResponse').factory('SurveyResponse', [
     '$resource',
     function ($resource) {
-      return $resource('survey_responses', {}, {});
+      return $resource('survey-responses', {}, {});
     }
   ]);
 })();
