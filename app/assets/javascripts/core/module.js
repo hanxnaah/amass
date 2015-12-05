@@ -37,7 +37,24 @@
       controller: 'SuccessStoriesGridCtrl'
     }).when('/success-stories/:successStoryId', {
       templateUrl: 'success_stories/single/page.html',
-      controller: 'SuccessStoriesSingleCtrl'
+      controller: 'SuccessStoriesSingleCtrl',
+      resolve: {
+        successStory: [
+          '$route', 'SuccessStoryStore', '$q',
+          function ($route, SuccessStoryStore, $q) {
+            return $q(function (resolve, reject) {
+              var id = $route.current.params.successStoryId;
+              var mySuccessStory = SuccessStoryStore.get(id);
+
+              if (mySuccessStory) {
+                resolve(mySuccessStory);
+              }
+
+              reject('Cannot find success story');
+            });
+          }
+        ]
+      },
     }).when('/team/:teamBioId', {
       templateUrl: 'team_bios/single/page.html',
       controller: 'TeamBiosSingleCtrl'
@@ -58,8 +75,12 @@
     '$rootScope', '$location', '$anchorScroll', '$routeParams',
     function ($rootScope, $location, $anchorScroll, $routeParams) {
       $rootScope.$on('$routeChangeSuccess', function () {
-        $location.hash($routeParams.scrollTo);
+        $location.path($routeParams.scrollTo);
         $anchorScroll();
+      });
+
+      $rootScope.$on('$routeChangeError', function () {
+        $location.path('/404').replace();
       });
     }
   ]);

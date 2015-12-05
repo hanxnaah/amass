@@ -29,6 +29,17 @@
     return {
       getAll: function () {
         return successStories;
+      },
+
+      get: function (slug) {
+        var mySuccessStory;
+        angular.forEach(successStories, function (successStory) {
+          if (successStory.slug === slug) {
+            mySuccessStory = successStory;
+          }
+        });
+
+        return mySuccessStory;
       }
     };
   }]);
