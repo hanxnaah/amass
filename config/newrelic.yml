@@ -15,7 +15,7 @@ common: &default_settings
   # You must specify the license key associated with your New Relic
   # account.  This key binds your Agent's data to your account in the
   # New Relic service.
-  license_key: '10cddb4b7d5c766861a12de4fda298bcfa55f56e'
+  license_key: ENV['NEW_RELIC_LICENSE_KEY']
 
   # Agent Enabled (Ruby/Rails Only)
   # Use this setting to force the agent to run or not run.
@@ -199,7 +199,7 @@ development:
   # executed since starting the mongrel.
   # NOTE: There is substantial overhead when running in developer mode.
   # Do not use for production or load testing.
-  developer_mode: true
+  developer_mode: false
 
   # Enable textmate links
   # textmate: true
